@@ -1,0 +1,315 @@
+import React, { useState, useEffect } from "react";
+import "react-bootstrap";
+import { Route, withRouter } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import BMIs from "../../Images/bmi.jpg";
+import "../../App.css";
+
+const { CircularProgress, LinearProgress } = require("@material-ui/core");
+
+class BMApp extends React.Component {
+  gotoSelect = () => {
+    this.props.history.push("/usertabs");
+  };
+  constructor() {
+    super();
+
+    this.state = {
+      heightFeet: "",
+      heightInch: "",
+      weight: "",
+    };
+
+    this.handleHeightFeetChange = this.handleHeightFeetChange.bind(this);
+    this.handleHeightInchChange = this.handleHeightInchChange.bind(this);
+    this.handleWeightChange = this.handleWeightChange.bind(this);
+    this.calculateBMI = this.calculateBMI.bind(this);
+  }
+
+  handleHeightFeetChange(event) {
+    this.setState({
+      heightFeet: event.target.value,
+    });
+  }
+
+  handleHeightInchChange(event) {
+    this.setState({
+      heightInch: event.target.value,
+    });
+  }
+
+  handleWeightChange(event) {
+    this.setState({
+      weight: event.target.value,
+    });
+  }
+
+  calculateBMI() {
+    if (this.state.weight && this.state.heightFeet && this.state.heightInch) {
+      // BMI Formula = (WEIGHT[in pounds] / (HEIGHT[in inches] * HEIGHT[in inches])) * 703;
+      let INCHES_IN_FEET = 12;
+
+      var height = Number(this.state.heightFeet);
+      // convert feet to inches
+      height *= INCHES_IN_FEET;
+      // add the inches input field
+      height += Number(this.state.heightInch);
+
+      let weight = this.state.weight;
+
+      var bmi = (weight / (height * height)) * 703;
+      bmi = bmi.toFixed(2);
+
+      return bmi;
+    }
+  }
+
+  getBMIResults(bmi) {
+    let bmiResults = {
+      label: "",
+      alertClass: "",
+    };
+
+    if (bmi <= 18.5) {
+      bmiResults.label = "Underweight";
+      bmiResults.alertClass = "alert-danger";
+    } else if (bmi <= 24.9) {
+      bmiResults.label = "Normal weight";
+      bmiResults.alertClass = "alert-success";
+    } else if (bmi <= 29.9) {
+      bmiResults.label = "Overweight";
+      bmiResults.alertClass = "alert-warning";
+    } else if (bmi >= 30) {
+      bmiResults.label = "Obesity";
+      bmiResults.alertClass = "alert-danger";
+    } else {
+      bmiResults.label = "BMI";
+      bmiResults.alertClass = "alert-primary";
+    }
+
+    return bmiResults;
+  }
+
+  render() {
+    let bmi = this.calculateBMI();
+    let results = this.getBMIResults(bmi);
+
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12" style={{ justifyContent: "center" }}>
+            <h1>Let us Analyze your BMI</h1>
+            <p>Enter your weight(lbs) and height(ft and inches) below !</p>
+          </div>
+        </div>
+        <div
+          className="row bms"
+          style={{ alignContent: "center", justifyContent: "center" }}
+        >
+          <div>
+            <form>
+              <div className="form-group">
+                <legend>Weight</legend>
+                <div className="row">
+                  <div style={{ width: "100%", padding: "0 20px 0 20px" }}>
+                    <input
+                      className="form-control"
+                      id="bmiWeight"
+                      type="number"
+                      min="1"
+                      max="1000"
+                      value={this.state.weight}
+                      onChange={this.handleWeightChange}
+                    />
+                    <label className="control-label" htmlFor="bmiWeight">
+                      lb
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <legend>Height</legend>
+                <div className="row">
+                  <div style={{ width: "100%", padding: "0 20px 0 20px" }}>
+                    <input
+                      className="form-control"
+                      id="bmiHeightFeet"
+                      type="number"
+                      min="1"
+                      max="12"
+                      value={this.state.heightFeet}
+                      onChange={this.handleHeightFeetChange}
+                    />
+                    <label className="control-label" htmlFor="bmiHeightFeet">
+                      ft
+                    </label>
+                  </div>
+                  <div style={{ width: "100%", padding: "0 20px 0 20px" }}>
+                    <input
+                      className="form-control"
+                      id="bmiHeightInch"
+                      type="number"
+                      min="0"
+                      max="12"
+                      value={this.state.heightInch}
+                      onChange={this.handleHeightInchChange}
+                    />
+                    <label className="control-label" htmlFor="bmiHeightInch">
+                      in
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div>
+              {/* <button onClick={BmiDisplay}>reasult</button> */}
+              {/* <button onClick={this.BmiDisplay}>show</button>
+              {
+                this.render &&             
+                <button type="submit" onClick={BmiDisplay}>Preview</button>
+              }
+              {isPreviewShown && <BmiDisplay/>} */}
+              <BmiDisplay
+                bmi={bmi}
+                label={results.label}
+                alertClass={results.alertClass}
+              />
+            </div>
+          </div>
+         
+          <Weight bmi={bmi} label={results.label} fnc={this.gotoSelect} />
+          {/* <Button variant="outline-light" onClick={this.gotoSelect}  >Let's See</Button> */}
+        </div>
+      </div>
+    );
+  }
+}
+
+function BmiDisplay(props) {
+  return (
+    <div className={"bmi-result alert " + props.alertClass}>
+      <div>{props.bmi || "--.-"}</div>
+      <div>{props.label}</div>
+    </div>
+  );
+}
+// const DeleayComponent = (props) => {
+//   const [show, setShow] = React.useState(false);
+
+//   React.useEffect(() => {
+//     setTimeout(() => {
+//       setShow(true);
+//     }, 2000);
+//     if (props.bmi <= 18.5) {
+//       alert("Underweight");
+//     } else if (props.bmi <= 24.9) {
+//       alert("Normal");
+//     } else if (props.bmi <= 29.9) {
+//       alert("Over");
+//     }
+//   }, [show]);
+
+//   if (!show) return null;
+
+//   return (
+//     <>
+//       {/* <h3>Too Low we sugges to increase your weight.... See our exercise and diet plan to increase or Gain weight</h3> */}
+//     </>
+//   );
+// };
+
+function Weight(props) {
+  const [level, setlevel] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setlevel((newlevel) => (newlevel >= 100 ? 0 : newlevel + 10));
+    }, 500);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  if (props.bmi <= 18.5) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <LinearProgress variant="buffer" value={level} style={{ width: 200 }} />
+        <img src={BMIs} width='200px'/>
+        <h2 className="wordings">
+          According to your BMI ({props.bmi}) Your Weight is Low, we sugess you
+          to Gain some weight
+        </h2>
+        <h4 className="wordings2">
+          Don't know how to gain? Follow our Exercise and Diet plan Accordingly
+        </h4>
+        <Button variant="outline-light" onClick={props.fnc}>
+          Let's See
+        </Button>
+      </div>
+    );
+  } else if (props.bmi <= 24.9) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <h2 className="wordings">
+          According to your BMI ({props.bmi}) Your Weight is Normal, we sugess
+          you to Maintain your Body
+        </h2>
+        <h4 className="wordings2">
+          Don't know how to ? Follow our Exercise and Diet plan Accordingly
+        </h4>
+        <Button variant="outline-light" onClick={props.fnc}>
+          Let's See
+        </Button>
+      </div>
+    );
+  } else {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <h2 className="wordings">
+          According to your BMI ({props.bmi}) Your Weight is Too much, we sugess
+          you to Lean some weight
+        </h2>
+        <h4 className="wordings2">
+          Don't know how to Lean? Follow our Exercise and Diet plan Accordingly
+        </h4>
+        <Button variant="outline-light" onClick={props.fnc}>
+          Let's See
+        </Button>
+      </div>
+    );
+  }
+}
+
+//   ReactDOM.render(
+//     <App />,
+//     document.getElementById('root')
+//   );
+
+export default withRouter(BMApp);

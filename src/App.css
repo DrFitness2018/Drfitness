@@ -1,0 +1,161 @@
+.App {
+  text-align: center;
+  background-color: #121212;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.formss {
+  width: 50%;
+  justify-content: center;
+  border: solid 2px;
+  border-color: #757575;
+  padding: 20px;
+}
+.formssP {
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+}
+.selection {
+  /* background: #121212; */
+  background-color: #212121;
+  /* display: flex;
+  flex-direction:row; */
+  justify-content: center;
+  /* height: 88.35vh; */
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+.selection2 {
+  background: #212121;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+.userBox {
+  display: "flex";
+  flex-direction: "column";
+  justify-content: center;
+  align-items: center;
+  border: solid 2px;
+  border-color: white;
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .selection {
+    height: 100%;
+  }
+  .selection2 {
+    flex-direction: column;
+  }
+  .userBox {
+    width: 100%;
+  }
+  .formss {
+    width: 90%;
+  }
+  .bms {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .wordings {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+  .wordings2 {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .wordingsUserGain {
+    font-size: 1rem;
+  }
+  .HeadingUserGain {
+    font-size: 1.5rem;
+  }
+}
+
+.marquee {
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+  height: max-content;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 90%;
+  /* padding: 20%; */
+  /* border-radius: 5%; */
+}
+.monday {
+  border-radius: 90%;
+  text-align: center;
+  /* font-weight: 600; */
+  font-size: 1.8rem;
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: fit-content;
+  color:white;
+  background-color: #166d3b;
+  background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+.appbarjo {
+  background-color: #121212;
+}
+.App-header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #121212;
+  font-weight: 600;
+  text-align: center;
+  /* font-size: 1.5em; */
+
+  padding: 20px;
+}
+.splash {
+  color: #76ff03;
+}
+.App-link {
+  color: #61dafb;
+}
+
+.text {
+  color: whitesmoke;
+  text-align: justify;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  align-items: center;
+  justify-content: center;
+}
+.textarea {
+  display: flex;
+  padding: 30px;
+  width: 50%;
+  justify-content: center;
+  color: whitesmoke;
+  text-align: justify;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  padding: 40px;
+}
