@@ -15,7 +15,15 @@ import './App.css';
     // },[])
 
     return(
-      <div className="App">
+      <div 
+      style={{
+        display:'flex',
+        flexDirection:'column',
+        // alignItems:'center',
+        justifyContent:'center',
+        backgroundColor: "#166d3b",
+        background: "-webkit-linear-gradient(#233329, #166d3b)",
+      }}>
       <Header />
       <Approuter />
       </div>

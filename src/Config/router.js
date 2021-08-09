@@ -28,8 +28,7 @@ export default class AppRouter extends React.Component{
                 <Route path='/ConReg' component={ConReg} />
                 <Route path='/userDash' component={userDash} />
                 <Route path='/usertabs' component={usertabs} />
-                <Route path='/BMJS' component={BMJS} />
-                
+                <Route path='/BMJS' component={BMJS} />                
             </Router>
         )
     }

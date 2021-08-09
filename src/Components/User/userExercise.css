@@ -1,0 +1,31 @@
+.leftHeadRightImage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  width: 100%;
+}
+.heading{
+    font-size: 5rem;
+    font-family:fantasy;
+}
+.RightHeadLeftImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+  }
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 1.5rem;
+        font-family:fantasy;
+    }
+    .leftHeadRightImage {
+        flex-direction: column;
+      }
+      .RightHeadLeftImage{
+        flex-direction: column-reverse;
+
+      }
+}

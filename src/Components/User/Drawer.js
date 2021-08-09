@@ -193,7 +193,9 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    backgroundColor: "#121212",
+    // backgroundColor: "black",
+    // background: "-webkit-linear-gradient(#233329, #166d3b)",
+    backgroundColor:'#233329',
     opacity:"95%",
     color: "white",
   },
@@ -201,6 +203,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
+      
     }),
   },
   appBarShift: {
@@ -214,6 +217,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
     color:'white'
+    
   },
   hide: {
     display: "none",
@@ -221,9 +225,13 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    
   },
   drawerPaper: {
     width: drawerWidth,
+    background: "-webkit-linear-gradient(#233329, #166d3b)",
+    opacity:100,
+    color:'white'
   },
   drawerHeader: {
     display: "flex",
@@ -232,6 +240,7 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
+    // color:'white'
   },
   content: {
     flexGrow: 1,
@@ -296,6 +305,7 @@ export default function PersistentDrawerLeft() {
         classes={{
           paper: classes.drawerPaper,
         }}
+        // style={{color:'white'}}
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
@@ -310,7 +320,7 @@ export default function PersistentDrawerLeft() {
         <List>
           {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>
+              <ListItemIcon style={{color:'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -321,7 +331,7 @@ export default function PersistentDrawerLeft() {
         <List>
           {["All mail", "Trash", "Spam"].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>
+              <ListItemIcon style={{color:'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />

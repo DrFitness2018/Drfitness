@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import "../../App.css";
+import "./userExercise.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +56,7 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
     color: "black",
   },
 }));
@@ -74,7 +74,7 @@ export default function NavTabs() {
       <AppBar
         position="static"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#233329",
           color: "white",
         }}
       >
@@ -97,25 +97,61 @@ export default function NavTabs() {
             textAlign: "center",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "#f5f5f5",
+            // backgroundColor: "#f5f5f5",
+            color: "white",
           }}
         >
-          <h2 style={{ fontWeight: "bold" }}> Follow Exercises</h2>
-          <img src="//i0.wp.com/thumbs.gfycat.com/RelievedGregariousIberianmole-size_restricted.gif?w=1155\u0026h=1226\"></img>
-          <h4>Squats</h4>
-          <img src="//i0.wp.com/thumbs.gfycat.com/EasyGoldenIndianpalmsquirrel-size_restricted.gif?w=1155\u0026h=1236\"></img>
-          <h4>Overhead press</h4>
-          <img src="//i0.wp.com/thumbs.gfycat.com/BiodegradableDistantFreshwatereel-size_restricted.gif?w=1155\u0026h=1220\"></img>
-          <h4>Pull-ups</h4>
-          <img
-            width="400px"
-            src="https://i0.wp.com/thumbs.gfycat.com/AnyShinyGharial-size_restricted.gif?w=1575"
-          ></img>
-          <h4>Push-ups</h4>
-          <img src="//i0.wp.com/thumbs.gfycat.com/ConcernedHeftyCrayfish-size_restricted.gif?w=1155\u0026h=1228\"></img>
-          <h4>Bench press</h4>
-          <img src="	https://i0.wp.com/thumbs.gfycat.com/UnknownPleasedKodiakbear-size_restricted.gif?w=1575"></img>
-          <h4>Lunges</h4>
+          <h2
+            // style={{
+            //   fontWeight: "bold",
+            //   textAlign: "center",
+            //   fontFamily: "serif",
+            //   padding: 30,
+            // }}
+            style={{
+              color: "white",
+              borderRadius: 50,
+              padding: 10,
+              // fontFamily:
+              //   "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
+              fontFamily: "fantasy",
+              fontSize: "1.8rem",
+              backgroundColor: "#63d471",
+              backgroundImage:"linear-gradient(315deg, #63d471 0%, #166d3b 74%)",
+              width: "max-content",
+              // marginLeft: 20,
+            }}
+          >
+            {" "}
+            These Exercises will help you Gain weight
+          </h2>
+          <div className="leftHeadRightImage">
+            <h1 className="heading">Squats</h1>
+            <img src="//i0.wp.com/thumbs.gfycat.com/RelievedGregariousIberianmole-size_restricted.gif?w=1155\u0026h=1226\"></img>
+          </div>
+          <div className="RightHeadLeftImage">
+            <img src="//i0.wp.com/thumbs.gfycat.com/EasyGoldenIndianpalmsquirrel-size_restricted.gif?w=1155\u0026h=1236\"></img>
+            <h1 className="heading">Overhead press</h1>
+          </div>
+          <div className="leftHeadRightImage">
+            <h1 className="heading">Pull-ups</h1>
+            <img src="//i0.wp.com/thumbs.gfycat.com/BiodegradableDistantFreshwatereel-size_restricted.gif?w=1155\u0026h=1220\"></img>
+          </div>
+          <div className="RightHeadLeftImage">
+            <img
+              width="400px"
+              src="https://i0.wp.com/thumbs.gfycat.com/AnyShinyGharial-size_restricted.gif?w=1575"
+            ></img>
+            <h4 className="heading">Push-ups</h4>
+          </div>
+          <div className="leftHeadRightImage">
+            <h1 className="heading">Bench press</h1>
+            <img src="//i0.wp.com/thumbs.gfycat.com/ConcernedHeftyCrayfish-size_restricted.gif?w=1155\u0026h=1228\"></img>
+          </div>
+          <div className="RightHeadLeftImage">
+            <img src="	https://i0.wp.com/thumbs.gfycat.com/UnknownPleasedKodiakbear-size_restricted.gif?w=1575"></img>
+            <h1 className="heading">Lunges</h1>
+          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

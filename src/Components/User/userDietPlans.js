@@ -62,7 +62,7 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
     color: "black",
   },
   paper: {
@@ -97,7 +97,7 @@ export default function NavTabs() {
       <AppBar
         position="static"
         style={{
-          backgroundColor: "#121212",
+          backgroundColor: "#233329",
           color: "white",
         }}
       >
@@ -121,10 +121,11 @@ export default function NavTabs() {
             textAlign: "left",
             flexDirection: "column",
             textTransform: "capitalize",
-            backgroundColor: "#f5f5f5",
+            // backgroundColor: "#f5f5f5",
             width: "100%",
             padding: 20,
             fontFamily: "sans-serif",
+            color:'white'
           }}
         >
           <Marquee className="marquee" speed={100} gradient={false}>
@@ -157,23 +158,25 @@ export default function NavTabs() {
             className="HeadingUserGain"
             style={{
               // color:'pink
-              background: "-webkit-linear-gradient(#000000, #166d3b)",
+              // background: "-webkit-linear-gradient(#000000, #166d3b)",
+              color:'white',
               WebkitBackgroundClip: "text",
               fontWeight: "600",
-              WebkitTextFillColor: "transparent",
+              // WebkitTextFillColor: "transparent",
               // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
               // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
             }}
-          >
+            >
             Want to Gain More than 5 KG a Month ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
               fontWeight: "normal",
-              background: "-webkit-linear-gradient(#000000, #166d3b)",
+              color:'white',
+              // background: "-webkit-linear-gradient(#000000, #166d3b)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              // WebkitTextFillColor: "transparent",
             }}
           >
             Follow our diet plan for a month accordingly and gain 3000 Calories
@@ -250,10 +253,19 @@ export default function NavTabs() {
             </li>
           </ul> */}
           <div>
-            <h3 className="monday">Monday</h3>
+            <h3 className="monday" 
+            style={{
+              fontWeight: "bold",
+              color: "white",
+              backgroundColor: "darkgreen",
+              borderRadius: 50,
+              textAlign: "center",
+              padding: 10,
+              opacity: "90%",
+            }}>Monday</h3>
             <ul style={{ textAlign: "left" }}>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Breakfast:{" "}
                 </span>
@@ -262,7 +274,7 @@ export default function NavTabs() {
                 of peanut butter{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>
@@ -271,7 +283,7 @@ export default function NavTabs() {
                 nuts
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Lunch:{" "}
                 </span>{" "}
@@ -281,7 +293,7 @@ export default function NavTabs() {
                 butter
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>{" "}
@@ -289,7 +301,7 @@ export default function NavTabs() {
                 blueberries
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Dinner:{" "}
                 </span>{" "}
@@ -298,28 +310,22 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
+              className="monday" 
               style={{
-                // fontWeight: "bold",
+                fontWeight: "bold",
                 color: "white",
-                // backgroundColor: "darkgreen",
+                backgroundColor: "darkgreen",
                 borderRadius: 50,
-                // textAlign: "center",
+                textAlign: "center",
                 padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                // opacity: "80%",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
+                opacity: "90%",
               }}
             >
               Tuesday
             </h3>
             <ul style={{ textAlign: "justify" }}>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Breakfast:{" "}
                 </span>
@@ -328,14 +334,14 @@ export default function NavTabs() {
                 and 2 tablespoons (33 grams) of almond butter
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>
                 1 granola bar, 1 piece of fruit, and 2 pieces of string cheese
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Lunch:{" "}
                 </span>{" "}
@@ -344,7 +350,7 @@ export default function NavTabs() {
                 hummus, and apple slices on the side
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>{" "}
@@ -352,7 +358,7 @@ export default function NavTabs() {
                 or plant-based milk
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Dinner:{" "}
                 </span>{" "}
@@ -362,6 +368,7 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
+            className="monday"
               style={{
                 fontWeight: "bold",
                 color: "white",
@@ -377,7 +384,7 @@ export default function NavTabs() {
 
             <ul style={{ textAlign: "justify" }}>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Breakfast:{" "}
                 </span>
@@ -386,14 +393,14 @@ export default function NavTabs() {
                 milk{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>
                 1 nut-based granola bar and 1 ounce (28 grams) of almonds
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Lunch:{" "}
                 </span>{" "}
@@ -402,7 +409,7 @@ export default function NavTabs() {
                 of homemade sweet potato fries cooked in olive oil
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>{" "}
@@ -410,7 +417,7 @@ export default function NavTabs() {
                 strawberries
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Dinner:{" "}
                 </span>{" "}
@@ -429,13 +436,14 @@ export default function NavTabs() {
                 padding: 10,
                 opacity: "80%",
               }}
+              className="monday" 
             >
               Thursday
             </h3>
 
             <ul style={{ textAlign: "justify" }}>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Breakfast:{" "}
                 </span>
@@ -444,7 +452,7 @@ export default function NavTabs() {
                 dairy or plant-based milk to drink{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>
@@ -452,7 +460,7 @@ export default function NavTabs() {
                 slice of whole-wheat bread{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Lunch:{" "}
                 </span>{" "}
@@ -460,14 +468,14 @@ export default function NavTabs() {
                 lentils, and a salad topped with 1/4 cup (30 grams) of walnuts{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>{" "}
                 2 sliced, hard-boiled eggs atop a mixed green salad{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Dinner:{" "}
                 </span>{" "}
@@ -490,13 +498,14 @@ export default function NavTabs() {
                 padding: 10,
                 opacity: "80%",
               }}
+              className="monday" 
             >
               Friday
             </h3>
 
             <ul style={{ textAlign: "justify" }}>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Breakfast:{" "}
                 </span>
@@ -504,7 +513,7 @@ export default function NavTabs() {
                 1 cup (240 ml) of dairy or plant-based milk{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>
@@ -512,7 +521,7 @@ export default function NavTabs() {
                 granola and 1/2 cup (70 grams) of raspberries{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Lunch:{" "}
                 </span>{" "}
@@ -521,14 +530,14 @@ export default function NavTabs() {
                 grams) of nuts{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Snack:{" "}
                 </span>{" "}
                 1/2 cup (130 grams) of chickpeas atop greens{" "}
               </li>
               <li>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Dinner:{" "}
                 </span>{" "}
@@ -565,7 +574,7 @@ export default function NavTabs() {
                   width: "50%",
                 }}
               >
-                <li style={{ color: "green" }}>
+                <li style={{ color: "#63d471" }}>
                   <span style={{ color: "white", fontWeight: "bold" }}>
                     {" "}
                     Fried foods:{" "}
@@ -574,7 +583,7 @@ export default function NavTabs() {
                   French fries, onion rings, doughnuts, chicken strips, cheese
                   sticks, etc.{" "}
                 </li>
-                <li style={{ color: "green" }}>
+                <li style={{ color: "#63d471" }}>
                   <span style={{ color: "white", fontWeight: "bold" }}>
                     {" "}
                     Fast food:{" "}
@@ -582,7 +591,7 @@ export default function NavTabs() {
                   <br></br>
                   tacos, burgers, pizza, hot dogs, etc.
                 </li>
-                <li style={{ color: "green" }}>
+                <li style={{ color: "#63d471" }}>
                   <span style={{ color: "white", fontWeight: "bold" }}>
                     {" "}
                     Sugary foods and drinks:{" "}
@@ -591,7 +600,7 @@ export default function NavTabs() {
                   soda, candy, sports drinks, sugary baked goods, sweetened tea,
                   ice cream, sweet coffee drinks, etc.
                 </li>
-                <li style={{ color: "green" }}>
+                <li style={{ color: "#63d471" }}>
                   <span style={{ color: "white", fontWeight: "bold" }}>
                     {" "}
                     Refined carbs:{" "}
@@ -951,8 +960,9 @@ export default function NavTabs() {
             textAlign: "left",
             flexDirection: "column",
             textTransform: "capitalize",
-            backgroundColor: "#f5f5f5",
+            // backgroundColor: "#f5f5f5",
             width: "100%",
+            color:'white',
             padding: 20,
             fontFamily: "sans-serif",
           }}
@@ -970,22 +980,24 @@ export default function NavTabs() {
             style={{
               // color:'pink
               fontWeight: "600",
-              background: "-webkit-linear-gradient(#000000, #166d3b)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              // background: "-webkit-linear-gradient(#000000, #166d3b)",
+              // WebkitBackgroundClip: "text",
+              // WebkitTextFillColor: "transparent",
+              color:'white'
               // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
               // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
             }}
-          >
+            >
             Want to Lean weight ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
-              fontWeight: "normal",
-              background: "-webkit-linear-gradient(#000000, #166d3b)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              color:'white',
+              fontWeight: "normal"
+              // background: "-webkit-linear-gradient(#000000, #166d3b)",
+              // WebkitBackgroundClip: "text",
+              // WebkitTextFillColor: "transparent",
             }}
           >
             The following evidence-based eating and lifestyle changes have been
@@ -1010,7 +1022,7 @@ export default function NavTabs() {
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   When it comes to losing weight, protein is the king of
                   nutrients{" "}
@@ -1039,7 +1051,7 @@ export default function NavTabs() {
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Another relatively easy change you can make is to eliminate
                   liquid sugar calories from your diet.{" "}
@@ -1068,7 +1080,7 @@ export default function NavTabs() {
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   One very simple trick to increase weight loss is to drink more
                   water{" "}
@@ -1099,7 +1111,7 @@ export default function NavTabs() {
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   When you eat fewer calories, your body compensates by saving
                   energy, making you burn fewer calories{" "}
@@ -1130,14 +1142,16 @@ export default function NavTabs() {
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "green", fontWeight: "bold" }}>
+                <span style={{ color: "#63d471", fontWeight: "bold" }}>
                   {" "}
-                  Cutting carbs is a very effective way to lose weight, as it reduces appetite and makes you eat fewer calories 
-                  {" "}
+                  Cutting carbs is a very effective way to lose weight, as it
+                  reduces appetite and makes you eat fewer calories{" "}
                 </span>
-                Studies have shown that eating a low carb diet until fullness can make you lose about two to three times more weight than a calorie-restricted, low fat diet.
-
-What’s more, low carb diets have many other benefits for health, especially for people with type 2 diabetes or metabolic syndrome 
+                Studies have shown that eating a low carb diet until fullness
+                can make you lose about two to three times more weight than a
+                calorie-restricted, low fat diet. What’s more, low carb diets
+                have many other benefits for health, especially for people with
+                type 2 diabetes or metabolic syndrome
               </li>
             </ul>
           </div>

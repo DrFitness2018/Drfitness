@@ -5,10 +5,10 @@ import logo from "../Images/DF.png";
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <div className="App-header">
-        <img src={logo} width="100" style={{marginRight:'20px'}}></img>
-        <Wave text="Dr Fitness" effect="stretch" effectChange={2.0} />
+        <img src={logo} width="100" style={{marginRight:''}}></img>
+        {/* <Wave text="Dr Fitness" effect="stretch" effectChange={2.0} /> */}
       </div>
     </div>
   );
