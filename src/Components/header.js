@@ -5,7 +5,7 @@ import logo from "../Images/logoMuqqa.png";
 
 function App() {
   return (
-    <div >
+    <div style={{margin:"0%"}}>
       <div className="App-header" style={{
                 // backgroundColor: "rgba(28, 59, 23, 0.61)",
                 // backgroundColor: "rgba(144, 202, 249, 0.61)",

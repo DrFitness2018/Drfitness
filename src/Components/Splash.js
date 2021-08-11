@@ -12,13 +12,13 @@ class Splash extends React.Component {
   };
   render() {
     return (
-      <div
+      <div style={{height: "100vh", margin: "0%"}}>
+        <div
         style={{
           display: "flex",
           flexDirection: "column",
-          padding: "10px",
           alignItems: "center",
-          height: 532,
+          paddingTop:"30px",
           // backgroundColor: "#166d3b",
           // backgroundColor: "red",
           // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)",
@@ -51,7 +51,7 @@ class Splash extends React.Component {
             // backdropFilter: "blur(5px)",
             boxShadow:'0px 5px 20px  #63d471',
             // color:'#212121'
-            color:'#ffff'
+            color:'#ffff',
           }}
         >
           <h1>
@@ -120,6 +120,7 @@ class Splash extends React.Component {
           ></img> */}
           </div>
         </div>
+      </div>
       </div>
     );
   }
