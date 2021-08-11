@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -10,6 +10,8 @@ import Button from "@material-ui/core/Button";
 import Popper from "@material-ui/core/Popper";
 import Fade from "@material-ui/core/Fade";
 import Marquee from "react-fast-marquee";
+import Cards from "../User/DietCards";
+import "./userDietPlans.css";
 
 // import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import "../../App.css";
@@ -63,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#f5f5f5",
     color: "black",
   },
   paper: {
@@ -72,7 +75,182 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function CardsMultipleMonday() {
+  return (
+    <>
+      <Cards
+        FoodTime="Break Fast"
+        Description="1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
+            plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams)
+            of peanut butter "
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description=" trail mix made with 1 cup (80 grams) of dry cereal, 1/4 cup (30
+              grams) of granola, 1/4 cup (34 grams) of dried fruit, and 20
+              nuts"
+      />
+      <Cards
+        FoodTime="Lunch"
+        Description=" 1 cup (100 grams) of spaghetti with 3/4 cups (183 grams) of
+              tomato sauce and 4 ounces (112 grams) of cooked ground beef, as
+              well as 1 medium breadstick with 1 tablespoon (14 grams) of
+              butter"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="1 cup (226 grams) of cottage cheese and 1/2 cup (70 grams) of
+              blueberries"
+      />
+      <Cards
+        FoodTime="Dinner"
+        Description="4 ounces (110 grams) of salmon, 1 cup (100 grams) of brown rice,
+              and 5 asparagus spears"
+      />
+    </>
+  );
+}
+function CardsMultipleTuesday() {
+  return (
+    <>
+      <Cards
+        FoodTime="Break Fast"
+        Description="smoothie made with 2 cups (480 ml) of dairy or plant-based milk,
+      1 cup (227 grams) of yogurt, 1 cup (140 grams) of blueberries,
+      and 2 tablespoons (33 grams) of almond butter"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="  1 granola bar, 1 piece of fruit, and 2 pieces of string cheese"
+      />
+      <Cards
+        FoodTime="Lunch"
+        Description="  12-inch sub sandwich with meat, cheese, and veggies with 3
+      ounces (85 grams) of baby carrots, 2 tablespoons (28 grams) of
+      hummus, and apple slices on the side"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="1 scoop of whey protein powder mixed in 1 cup (240 ml) of dairy
+      or plant-based milk"
+      />
+      <Cards
+        FoodTime="Dinner"
+        Description="    4-ounce (113-gram) sirloin steak, 1 medium-sized (173-gram)
+      baked potato with 1 tablespoon (14 grams) of butter, and 1 cup
+      (85 grams) of broccoli"
+      />
+    </>
+  );
+}
+function CardsMultipleWednesday() {
+  return (
+    <>
+      <Cards
+        FoodTime="Break Fast"
+        Description="3 whole-wheat waffles with 2 tablespoons (33 grams) of peanut
+      butter, 1 orange, and 2 cups (480 ml) of dairy or plant-based
+      milk "
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="  1 nut-based granola bar and 1 ounce (28 grams) of almonds"
+      />
+      <Cards
+        FoodTime="Lunch"
+        Description="  6-ounce (170-gram) 90%-lean burger on a whole-wheat bun with 1
+      tomato slice and lettuce leaf, as well as 1 1/2 cup (86 grams)
+      of homemade sweet potato fries cooked in olive oil"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="  1 cup (227 grams) of Greek yogurt and 1 cup (140 grams) of
+      strawberries"
+      />
+      <Cards
+        FoodTime="Dinner"
+        Description=" 4-ounce (112-gram) chicken breast, 1/2 cup (84 grams) of quinoa,
+      and 1 1/3 cups (85 grams) of sugar snap peas"
+      />
+    </>
+  );
+}
+function CardsMultipleThursday() {
+  return (
+    <>
+      <Cards
+        FoodTime="Break Fast"
+        Description=" 3-egg omelet with sliced onions, red and green bell peppers, and
+      1/4 cup (28 grams) of shredded cheese with 2 cups (480 ml) of
+      dairy or plant-based milk to drink "
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="   2 tablespoons (33 grams) of peanut butter and 1 banana on 1
+      slice of whole-wheat bread"
+      />
+      <Cards
+        FoodTime="Lunch"
+        Description=" 8 ounces (226 grams) of tilapia fillets, 1/4 cup (32 grams) of
+      lentils, and a salad topped with 1/4 cup (30 grams) of walnuts"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description=" 2 sliced, hard-boiled eggs atop a mixed green salad"
+      />
+      <Cards
+        FoodTime="Dinner"
+        Description="  turkey chili made with a 4-ounce (114-gram) turkey breast,
+      chopped onions, garlic, celery, and sweet peppers, 1/2 cup (123
+      grams) of canned, diced tomatoes, and 1/2 cup (120 grams) of
+      cannellini beans, topped with 1/4 cup (28 grams) of shredded
+      cheese. Add oregano, bay leaves, chili powder, and cumin as
+      desired for taste."
+      />
+    </>
+  );
+}
+function CardsMultipleFriday() {
+  return (
+    <>
+      <Cards
+        FoodTime="Break Fast"
+        Description=" 3 whole eggs, 1 apple, and 1 cup (80 grams) of oatmeal made with
+      1 cup (240 ml) of dairy or plant-based milk "
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description=" 1 cup (226 grams) of plain yogurt with 1/4 cup (30 grams) of
+      granola and 1/2 cup (70 grams) of raspberries"
+      />
+      <Cards
+        FoodTime="Lunch"
+        Description="   6-ounce (168-gram) chicken breast, 1 medium-sized (151-gram)
+      sweet potato, 3/4 cup (85 grams) of green beans, and 1 ounce (28
+      grams) of nuts"
+      />
+      <Cards
+        FoodTime="Snacks"
+        Description="  1/2 cup (130 grams) of chickpeas atop greens"
+      />
+      <Cards
+        FoodTime="Dinner"
+        Description=" burrito bowl with 6 ounces (170 grams) of chopped sirloin steak,
+      1/2 cup (130 grams) of black beans, 1/2 cup (90 grams) of brown
+      rice, 1 cup (35 grams) of shredded lettuce and spinach, and 2
+      tablespoons (16 grams) of salsa"
+      />
+    </>
+  );
+}
+
 export default function NavTabs() {
+  const [show, SetShow] = useState(false);
+  const [showt, SetShowt] = useState(false);
+  const [showw, SetShoww] = useState(false);
+  const [showth, SetShowth] = useState(false);
+  const [showf, SetShowf] = useState(false);
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -123,9 +301,9 @@ export default function NavTabs() {
             textTransform: "capitalize",
             // backgroundColor: "#f5f5f5",
             width: "100%",
-            padding: 20,
+            padding: 10,
             fontFamily: "sans-serif",
-            color:'white'
+            color: "#212121",
           }}
         >
           <Marquee className="marquee" speed={100} gradient={false}>
@@ -157,396 +335,92 @@ export default function NavTabs() {
           <h2
             className="HeadingUserGain"
             style={{
-              // color:'pink
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
-              color:'white',
+              color: "#212121",
               WebkitBackgroundClip: "text",
               fontWeight: "600",
-              // WebkitTextFillColor: "transparent",
-              // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
-              // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
             }}
-            >
+          >
             Want to Gain More than 5 KG a Month ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
               fontWeight: "normal",
-              color:'white',
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
+              color: "#212121",
               WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
             }}
           >
-            Follow our diet plan for a month accordingly and gain 3000 Calories
-            a day!
+            Follow our diet plan for a month accordingly and gain 2500-3000
+            Calories a day!
           </h4>
-          {/* <ol>
-            <li>
-              <h4> lean proteins, such as chicken and fish </h4>
-            </li>
-            <li>
-              <h4>red meat with no growth hormones, such as grass-fed beef</h4>
-            </li>
-            <li>
-              <h4>
-                full-fat dairy, such as whole milk and full-fat Greek yogurt
-              </h4>
-            </li>
-            <li>
-              <h4>eggs</h4>
-            </li>
-            <li>
-              <h4>fat-rich fruits, such as avocados</h4>
-            </li>
-            <li>
-              <h4>nuts, such as almonds</h4>
-            </li>
-            <li>
-              <h4>whole-grain breads</h4>
-            </li>
-          </ol> */}
-          {/* <h3 style={{ fontWeight: "bold", color: "darkgreen" }}>Monday</h3>
-          <ul style={{ textAlign: "left" }}>
-            <li>
-              <span style={{ color: "green", fontWeight: "bold" }}>
-                {" "}
-                Breakfast:{" "}
-              </span>
-              1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
-              plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams) of
-              peanut butter{" "}
-            </li>
-            <li>
-              <span style={{ color: "green", fontWeight: "bold" }}>
-                {" "}
-                Snack:{" "}
-              </span>
-              trail mix made with 1 cup (80 grams) of dry cereal, 1/4 cup (30
-              grams) of granola, 1/4 cup (34 grams) of dried fruit, and 20 nuts
-            </li>
-            <li>
-              <span style={{ color: "green", fontWeight: "bold" }}>
-                {" "}
-                Lunch:{" "}
-              </span>{" "}
-              1 cup (100 grams) of spaghetti with 3/4 cups (183 grams) of tomato
-              sauce and 4 ounces (112 grams) of cooked ground beef, as well as 1
-              medium breadstick with 1 tablespoon (14 grams) of butter
-            </li>
-            <li>
-              <span style={{ color: "green", fontWeight: "bold" }}>
-                {" "}
-                Snack:{" "}
-              </span>{" "}
-              1 cup (226 grams) of cottage cheese and 1/2 cup (70 grams) of
-              blueberries
-            </li>
-            <li>
-              <span style={{ color: "green", fontWeight: "bold" }}>
-                {" "}
-                Dinner:{" "}
-              </span>{" "}
-              4 ounces (110 grams) of salmon, 1 cup (100 grams) of brown rice,
-              and 5 asparagus spears
-            </li>
-          </ul> */}
-          <div>
-            <h3 className="monday" 
-            style={{
-              fontWeight: "bold",
-              color: "white",
-              backgroundColor: "darkgreen",
-              borderRadius: 50,
-              textAlign: "center",
-              padding: 10,
-              opacity: "90%",
-            }}>Monday</h3>
-            <ul style={{ textAlign: "left" }}>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Breakfast:{" "}
-                </span>
-                1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
-                plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams)
-                of peanut butter{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>
-                trail mix made with 1 cup (80 grams) of dry cereal, 1/4 cup (30
-                grams) of granola, 1/4 cup (34 grams) of dried fruit, and 20
-                nuts
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Lunch:{" "}
-                </span>{" "}
-                1 cup (100 grams) of spaghetti with 3/4 cups (183 grams) of
-                tomato sauce and 4 ounces (112 grams) of cooked ground beef, as
-                well as 1 medium breadstick with 1 tablespoon (14 grams) of
-                butter
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>{" "}
-                1 cup (226 grams) of cottage cheese and 1/2 cup (70 grams) of
-                blueberries
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Dinner:{" "}
-                </span>{" "}
-                4 ounces (110 grams) of salmon, 1 cup (100 grams) of brown rice,
-                and 5 asparagus spears
-              </li>
-            </ul>
-            <h3
-              className="monday" 
+
+          <div 
+          style={{
+            padding:0,
+            // backgroundColor:'lightgray'
+          }}>
+            
+            <Button
+              variant="outlined"
               style={{
-                fontWeight: "bold",
-                color: "white",
-                backgroundColor: "darkgreen",
-                borderRadius: 50,
-                textAlign: "center",
-                padding: 10,
-                opacity: "90%",
+                width: "100%",
+                marginTop:20,
+                backgroundColor:'pink'
               }}
+              onClick={() => SetShow(!show)}
+            >
+              Monday
+            </Button>
+            <div className="cards">{show ? <CardsMultipleMonday /> : null}</div>
+
+            <Button
+              variant="outlined"
+              style={{
+                width: "100%",
+                marginTop:20
+
+              }}
+              onClick={() => SetShowt(!showt)}
             >
               Tuesday
-            </h3>
-            <ul style={{ textAlign: "justify" }}>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Breakfast:{" "}
-                </span>
-                smoothie made with 2 cups (480 ml) of dairy or plant-based milk,
-                1 cup (227 grams) of yogurt, 1 cup (140 grams) of blueberries,
-                and 2 tablespoons (33 grams) of almond butter
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>
-                1 granola bar, 1 piece of fruit, and 2 pieces of string cheese
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Lunch:{" "}
-                </span>{" "}
-                12-inch sub sandwich with meat, cheese, and veggies with 3
-                ounces (85 grams) of baby carrots, 2 tablespoons (28 grams) of
-                hummus, and apple slices on the side
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>{" "}
-                1 scoop of whey protein powder mixed in 1 cup (240 ml) of dairy
-                or plant-based milk
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Dinner:{" "}
-                </span>{" "}
-                4-ounce (113-gram) sirloin steak, 1 medium-sized (173-gram)
-                baked potato with 1 tablespoon (14 grams) of butter, and 1 cup
-                (85 grams) of broccoli
-              </li>
-            </ul>
-            <h3
-            className="monday"
+            </Button>
+            <div className="cards">{showt ? <CardsMultipleTuesday /> : null}</div>
+            <Button
+              variant="outlined"
               style={{
-                fontWeight: "bold",
-                color: "white",
-                backgroundColor: "darkgreen",
-                borderRadius: 50,
-                textAlign: "center",
-                padding: 10,
-                opacity: "80%",
+                width: "100%",
+                marginTop:20
+
               }}
+              onClick={() => SetShoww(!showw)}
             >
               Wednesday
-            </h3>
-
-            <ul style={{ textAlign: "justify" }}>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Breakfast:{" "}
-                </span>
-                3 whole-wheat waffles with 2 tablespoons (33 grams) of peanut
-                butter, 1 orange, and 2 cups (480 ml) of dairy or plant-based
-                milk{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>
-                1 nut-based granola bar and 1 ounce (28 grams) of almonds
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Lunch:{" "}
-                </span>{" "}
-                6-ounce (170-gram) 90%-lean burger on a whole-wheat bun with 1
-                tomato slice and lettuce leaf, as well as 1 1/2 cup (86 grams)
-                of homemade sweet potato fries cooked in olive oil
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>{" "}
-                1 cup (227 grams) of Greek yogurt and 1 cup (140 grams) of
-                strawberries
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Dinner:{" "}
-                </span>{" "}
-                4-ounce (112-gram) chicken breast, 1/2 cup (84 grams) of quinoa,
-                and 1 1/3 cups (85 grams) of sugar snap peas{" "}
-              </li>
-            </ul>
-
-            <h3
+            </Button>
+            <div className="cards">{showw ? <CardsMultipleWednesday /> : null}</div>
+            <Button
+              variant="outlined"
               style={{
-                fontWeight: "bold",
-                color: "white",
-                backgroundColor: "darkgreen",
-                borderRadius: 50,
-                textAlign: "center",
-                padding: 10,
-                opacity: "80%",
+                width: "100%",
+                marginTop:20
+
               }}
-              className="monday" 
+              onClick={() => SetShowth(!showth)}
             >
               Thursday
-            </h3>
-
-            <ul style={{ textAlign: "justify" }}>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Breakfast:{" "}
-                </span>
-                3-egg omelet with sliced onions, red and green bell peppers, and
-                1/4 cup (28 grams) of shredded cheese with 2 cups (480 ml) of
-                dairy or plant-based milk to drink{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>
-                2 tablespoons (33 grams) of peanut butter and 1 banana on 1
-                slice of whole-wheat bread{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Lunch:{" "}
-                </span>{" "}
-                8 ounces (226 grams) of tilapia fillets, 1/4 cup (32 grams) of
-                lentils, and a salad topped with 1/4 cup (30 grams) of walnuts{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>{" "}
-                2 sliced, hard-boiled eggs atop a mixed green salad{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Dinner:{" "}
-                </span>{" "}
-                turkey chili made with a 4-ounce (114-gram) turkey breast,
-                chopped onions, garlic, celery, and sweet peppers, 1/2 cup (123
-                grams) of canned, diced tomatoes, and 1/2 cup (120 grams) of
-                cannellini beans, topped with 1/4 cup (28 grams) of shredded
-                cheese. Add oregano, bay leaves, chili powder, and cumin as
-                desired for taste.{" "}
-              </li>
-            </ul>
-
-            <h3
+            </Button>
+            <div className="cards">{showth ? <CardsMultipleThursday /> : null}</div>
+            <Button
+              variant="outlined"
               style={{
-                fontWeight: "bold",
-                color: "white",
-                backgroundColor: "darkgreen",
-                borderRadius: 50,
-                textAlign: "center",
-                padding: 10,
-                opacity: "80%",
+                width: "100%",
+                marginTop:20
+
               }}
-              className="monday" 
+              onClick={() => SetShowf(!showf)}
             >
               Friday
-            </h3>
-
-            <ul style={{ textAlign: "justify" }}>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Breakfast:{" "}
-                </span>
-                3 whole eggs, 1 apple, and 1 cup (80 grams) of oatmeal made with
-                1 cup (240 ml) of dairy or plant-based milk{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>
-                1 cup (226 grams) of plain yogurt with 1/4 cup (30 grams) of
-                granola and 1/2 cup (70 grams) of raspberries{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Lunch:{" "}
-                </span>{" "}
-                6-ounce (168-gram) chicken breast, 1 medium-sized (151-gram)
-                sweet potato, 3/4 cup (85 grams) of green beans, and 1 ounce (28
-                grams) of nuts{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Snack:{" "}
-                </span>{" "}
-                1/2 cup (130 grams) of chickpeas atop greens{" "}
-              </li>
-              <li>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
-                  Dinner:{" "}
-                </span>{" "}
-                burrito bowl with 6 ounces (170 grams) of chopped sirloin steak,
-                1/2 cup (130 grams) of black beans, 1/2 cup (90 grams) of brown
-                rice, 1 cup (35 grams) of shredded lettuce and spinach, and 2
-                tablespoons (16 grams) of salsa{" "}
-              </li>
-            </ul>
+            </Button>
+            <div className="cards">{showf ? <CardsMultipleFriday /> : null}</div>
 
             <h3
               style={{
@@ -571,7 +445,7 @@ export default function NavTabs() {
                   padding: 10,
                   // paddingLeft:30,
                   opacity: "80%",
-                  width: "50%",
+                  width: "100%",
                 }}
               >
                 <li style={{ color: "#63d471" }}>
@@ -613,341 +487,6 @@ export default function NavTabs() {
                 Count your Calorie{" "}
               </a>
             </center>
-
-            {/* <div id="TOC_TITLE_2" className="content_body"><div><section className="css-1nbsfox"><header className="css-cguqip"><h3 className="css-1bvkoki">Calorie Counter</h3></header><div className="css-ehx8xi"><form className="css-8g86ek"><div data-testid="units-row" className="css-17g9b7c"><label className="css-35ezg3">Units:</label><div><label className="css-1gy2u7f"><input type="radio" name="selectedUnitType" className="css-1f13l4q" defaultValue="imperial" defaultChecked />U.S. (Imperial)</label><label className="css-1gy2u7f"><input type="radio" name="selectedUnitType" className="css-1f13l4q" defaultValue="metric" />Metric</label></div></div><div data-testid="gender-row" className="css-17g9b7c"><label htmlFor="gender" className="css-35ezg3">Gender:</label><div className="css-v98mpv"><select name="gender" className="css-63c7xx"><option value="-" disabled>Select</option><option value="f">Female</option><option value="m">Male</option></select></div></div><div data-testid="age-row" className="css-17g9b7c"><label htmlFor="age" className="css-35ezg3">Age:</label><div className="css-xmmb76"><div className="css-1rr4qq7"><div className="css-t515a2">Years</div><input type="number" step={1} inputMode="numeric" min={0} name="age" max={125} className="css-12ffvwx" /></div></div></div><div data-testid="height-row" className="css-17g9b7c"><label htmlFor="heightCm" className="css-35ezg3">Height:</label><div className="css-xmmb76"><div className="css-1rr4qq7"><div className="css-t515a2">Centimeters</div><input type="number" step={1} inputMode="numeric" min={0} name="heightCm" className="css-12ffvwx" /></div></div></div><div data-testid="weight-row" className="css-17g9b7c"><label htmlFor="weightKg" className="css-35ezg3">Weight:</label><div className="css-xmmb76"><div className="css-1rr4qq7"><div className="css-t515a2">Kilograms</div><input type="number" step={1} inputMode="numeric" min={0} name="weightKg" className="css-12ffvwx" /></div></div></div><div data-testid="activityLevel-row" className="css-17g9b7c"><label htmlFor="activityLevel" className="css-35ezg3">Activity:</label><div className="css-v98mpv"><select name="activityLevel" className="css-63c7xx"><option value="-" disabled>Select</option><option value="sedentary">Sedentary lifestyle</option><option value="slightly_active">Slightly active</option><option value="moderately_active">Moderately active</option><option value="active">Active lifestyle</option><option value="very_active">Very active lifestyle</option></select></div></div><div className="css-1sa9xhh"><button className="css-bio8i4" type="submit"><span className="css-14ktbsh"><span className="css-1huyk6v">CALCULATE</span></span></button></div></form><div className="css-b0kjd9"><h3 className="css-1tft6i1">Estimated daily calories</h3><p>While this calculator provides an estimated caloric intake based on a number of factors, your nutritional needs may vary. Speak with a nutritionist or healthcare provider before you restrict your intake to ensure you’re choosing a diet that’s right for you.</p><div className="css-12v46xt"><div data-testid="maintain-weight-cell" className="css-1evws86"><div className="label">To maintain weight</div><div data-testid="cell-value" className="css-13nt69o">2145</div></div><div data-testid="lose-weight-cell" className="css-1evws86"><div className="label">To lose weight</div><div data-testid="cell-value" className="css-13nt69o">1716</div></div><div data-testid="lose-weight-fast-cell" className="css-1evws86"><div className="label">To lose weight fast</div><div data-testid="cell-value" className="css-13nt69o">1287</div></div></div></div><div className="css-8sow18">This calculator is for informational purposes only, you should consult a healthcare provider before making any health decisions. The calculator is based on the Mifflin-St. Jeor equation, a formula that has been shown to be an accurate way of estimating calorie needs in <a className="css-5r4717" target="_blank" rel="noopener noreferrer" href="https://www.ncbi.nlm.nih.gov/pubmed/15883556">numerous studies</a>.</div></div></section></div><p /></div> */}
-            {/* <div
-              style={{
-                display: "flex",
-                flexDirection:'column',
-                justifyContent:'center',
-                // alignItems:'center'
-              }}
-            >
-              <Button
-                variant="outlined"
-                color="#fefefe"
-                style={{ backgroundColor: "darkgreen",color:'white', borderColor: "darkgreen" ,padding:'10px',margin:'20px'}}
-                aria-describedby={mon}
-                type="button"
-                onClick={handleClick}
-              >
-                Monday
-              </Button>
-              <Button
-                variant="outlined"
-                color="#fefefe"
-                style={{ backgroundColor: "darkgreen",color:'white', borderColor: "darkgreen",padding:'10px',margin:'20px' }}
-                aria-describedby={tues}
-                type="button"
-                onClick={handleClick}
-              >
-                Tuesday
-              </Button>
-              <Button
-                variant="outlined"
-                color="#fefefe"
-                style={{ backgroundColor: "darkgreen",color:'white', borderColor: "darkgreen" ,padding:'10px',margin:'20px'}}
-                aria-describedby={wed}
-                type="button"
-                onClick={handleClick}
-              >
-                Wednesday
-              </Button>
-              <Button
-                variant="outlined"
-                color="#fefefe"
-                style={{ backgroundColor: "darkgreen",color:'white', borderColor: "darkgreen",padding:'10px',margin:'20px' }}
-                aria-describedby={thurs}
-                type="button"
-                onClick={handleClick}
-              >
-                Thursday
-              </Button>
-              <Button
-                variant="outlined"
-                color="#fefefe"
-                style={{ backgroundColor: "darkgreen",color:'white', borderColor: "darkgreen",padding:'10px',margin:'20px' }}
-                aria-describedby={fri}
-                type="button"
-                onClick={handleClick}
-              >
-                Friday
-              </Button>
-              <Popper id={mon} open={open} anchorEl={anchorEl} transition>
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <div className={classes.paper}>
-                      <ul style={{ textAlign: "justify" }}>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Breakfast:{" "}
-                          </span>
-                          1 cup (80 grams) of oats with 1 cup (240 ml) of dairy
-                          or plant-based milk, 1 sliced banana, and 2
-                          tablespoons (33 grams) of peanut butter{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>
-                          trail mix made with 1 cup (80 grams) of dry cereal,
-                          1/4 cup (30 grams) of granola, 1/4 cup (34 grams) of
-                          dried fruit, and 20 nuts
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Lunch:{" "}
-                          </span>{" "}
-                          1 cup (100 grams) of spaghetti with 3/4 cups (183
-                          grams) of tomato sauce and 4 ounces (112 grams) of
-                          cooked ground beef, as well as 1 medium breadstick
-                          with 1 tablespoon (14 grams) of butter
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>{" "}
-                          1 cup (226 grams) of cottage cheese and 1/2 cup (70
-                          grams) of blueberries
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Dinner:{" "}
-                          </span>{" "}
-                          4 ounces (110 grams) of salmon, 1 cup (100 grams) of
-                          brown rice, and 5 asparagus spears
-                        </li>
-                      </ul>
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
-              <Popper id={tues} open={open} anchorEl={anchorEl} transition>
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <div className={classes.paper}>
-                      <ul style={{ textAlign: "justify" }}>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Breakfast:{" "}
-                          </span>
-                          smoothie made with 2 cups (480 ml) of dairy or
-                          plant-based milk, 1 cup (227 grams) of yogurt, 1 cup
-                          (140 grams) of blueberries, and 2 tablespoons (33
-                          grams) of almond butter
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>
-                          1 granola bar, 1 piece of fruit, and 2 pieces of
-                          string cheese
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Lunch:{" "}
-                          </span>{" "}
-                          12-inch sub sandwich with meat, cheese, and veggies
-                          with 3 ounces (85 grams) of baby carrots, 2
-                          tablespoons (28 grams) of hummus, and apple slices on
-                          the side
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>{" "}
-                          1 scoop of whey protein powder mixed in 1 cup (240 ml)
-                          of dairy or plant-based milk
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Dinner:{" "}
-                          </span>{" "}
-                          4-ounce (113-gram) sirloin steak, 1 medium-sized
-                          (173-gram) baked potato with 1 tablespoon (14 grams)
-                          of butter, and 1 cup (85 grams) of broccoli
-                        </li>
-                      </ul>
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
-              <Popper id={wed} open={open} anchorEl={anchorEl} transition>
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <div className={classes.paper}>
-                      <ul style={{ textAlign: "justify" }}>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Breakfast:{" "}
-                          </span>
-                          3 whole-wheat waffles with 2 tablespoons (33 grams) of
-                          peanut butter, 1 orange, and 2 cups (480 ml) of dairy
-                          or plant-based milk{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>
-                          1 nut-based granola bar and 1 ounce (28 grams) of
-                          almonds
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Lunch:{" "}
-                          </span>{" "}
-                          6-ounce (170-gram) 90%-lean burger on a whole-wheat
-                          bun with 1 tomato slice and lettuce leaf, as well as 1
-                          1/2 cup (86 grams) of homemade sweet potato fries
-                          cooked in olive oil
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>{" "}
-                          1 cup (227 grams) of Greek yogurt and 1 cup (140
-                          grams) of strawberries
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Dinner:{" "}
-                          </span>{" "}
-                          4-ounce (112-gram) chicken breast, 1/2 cup (84 grams)
-                          of quinoa, and 1 1/3 cups (85 grams) of sugar snap
-                          peas{" "}
-                        </li>
-                      </ul>
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
-              <Popper id={thurs} open={open} anchorEl={anchorEl} transition>
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <div className={classes.paper}>
-                      <ul style={{ textAlign: "justify" }}>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Breakfast:{" "}
-                          </span>
-                          3-egg omelet with sliced onions, red and green bell
-                          peppers, and 1/4 cup (28 grams) of shredded cheese
-                          with 2 cups (480 ml) of dairy or plant-based milk to
-                          drink{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>
-                          2 tablespoons (33 grams) of peanut butter and 1 banana
-                          on 1 slice of whole-wheat bread{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Lunch:{" "}
-                          </span>{" "}
-                          8 ounces (226 grams) of tilapia fillets, 1/4 cup (32
-                          grams) of lentils, and a salad topped with 1/4 cup (30
-                          grams) of walnuts{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>{" "}
-                          2 sliced, hard-boiled eggs atop a mixed green salad{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Dinner:{" "}
-                          </span>{" "}
-                          turkey chili made with a 4-ounce (114-gram) turkey
-                          breast, chopped onions, garlic, celery, and sweet
-                          peppers, 1/2 cup (123 grams) of canned, diced
-                          tomatoes, and 1/2 cup (120 grams) of cannellini beans,
-                          topped with 1/4 cup (28 grams) of shredded cheese. Add
-                          oregano, bay leaves, chili powder, and cumin as
-                          desired for taste.{" "}
-                        </li>
-                      </ul>
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
-              <Popper id={fri} open={open} anchorEl={anchorEl} transition>
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <div className={classes.paper}>
-                      <ul style={{ textAlign: "justify" }}>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Breakfast:{" "}
-                          </span>
-                          3 whole eggs, 1 apple, and 1 cup (80 grams) of oatmeal
-                          made with 1 cup (240 ml) of dairy or plant-based milk{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>
-                          1 cup (226 grams) of plain yogurt with 1/4 cup (30
-                          grams) of granola and 1/2 cup (70 grams) of
-                          raspberries{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Lunch:{" "}
-                          </span>{" "}
-                          6-ounce (168-gram) chicken breast, 1 medium-sized
-                          (151-gram) sweet potato, 3/4 cup (85 grams) of green
-                          beans, and 1 ounce (28 grams) of nuts{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Snack:{" "}
-                          </span>{" "}
-                          1/2 cup (130 grams) of chickpeas atop greens{" "}
-                        </li>
-                        <li>
-                          <span style={{ color: "green", fontWeight: "bold" }}>
-                            {" "}
-                            Dinner:{" "}
-                          </span>{" "}
-                          burrito bowl with 6 ounces (170 grams) of chopped
-                          sirloin steak, 1/2 cup (130 grams) of black beans, 1/2
-                          cup (90 grams) of brown rice, 1 cup (35 grams) of
-                          shredded lettuce and spinach, and 2 tablespoons (16
-                          grams) of salsa{" "}
-                        </li>
-                      </ul>
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
-            </div> */}
           </div>
         </div>
       </TabPanel>
@@ -962,7 +501,7 @@ export default function NavTabs() {
             textTransform: "capitalize",
             // backgroundColor: "#f5f5f5",
             width: "100%",
-            color:'white',
+            color: "white",
             padding: 20,
             fontFamily: "sans-serif",
           }}
@@ -983,18 +522,18 @@ export default function NavTabs() {
               // background: "-webkit-linear-gradient(#000000, #166d3b)",
               // WebkitBackgroundClip: "text",
               // WebkitTextFillColor: "transparent",
-              color:'white'
+              color: "white",
               // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
               // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
             }}
-            >
+          >
             Want to Lean weight ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
-              color:'white',
-              fontWeight: "normal"
+              color: "white",
+              fontWeight: "normal",
               // background: "-webkit-linear-gradient(#000000, #166d3b)",
               // WebkitBackgroundClip: "text",
               // WebkitTextFillColor: "transparent",

@@ -98,7 +98,7 @@ export default function NavTabs() {
             display: "flex",
             flexDirection: "column",
             // backgroundColor: "#f5f5f5",
-            color: "white",
+            color: "#212121",
           }}
         >
           <h2
@@ -109,16 +109,16 @@ export default function NavTabs() {
             //   padding: 30,
             // }}
             style={{
-              color: "white",
+              color: "#212121",
               borderRadius: 50,
               padding: 10,
               // fontFamily:
               //   "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
               fontFamily: "fantasy",
               fontSize: "1.8rem",
-              backgroundColor: "#63d471",
-              backgroundImage:"linear-gradient(315deg, #63d471 0%, #166d3b 74%)",
-              width: "max-content",
+              // backgroundColor: "#63d471",
+              // backgroundImage:"linear-gradient(315deg, #63d471 0%, #166d3b 74%)",
+              width: "100%",
               // marginLeft: 20,
             }}
           >
@@ -127,18 +127,20 @@ export default function NavTabs() {
           </h2>
           <div className="leftHeadRightImage">
             <h1 className="heading">Squats</h1>
-            <img src="//i0.wp.com/thumbs.gfycat.com/RelievedGregariousIberianmole-size_restricted.gif?w=1155\u0026h=1226\"></img>
+            <img className="images" src="//i0.wp.com/thumbs.gfycat.com/RelievedGregariousIberianmole-size_restricted.gif?w=1155\u0026h=1226\"></img>
+            {/* <img width={400} src="https://images.squarespace-cdn.com/content/v1/54f9e84de4b0d13f30bba4cb/1530743652042-8AW6T0MPM6Q0JYEV6AO9/image-asset.gif"></img> */}
           </div>
           <div className="RightHeadLeftImage">
-            <img src="//i0.wp.com/thumbs.gfycat.com/EasyGoldenIndianpalmsquirrel-size_restricted.gif?w=1155\u0026h=1236\"></img>
+            <img className="images" src="//i0.wp.com/thumbs.gfycat.com/EasyGoldenIndianpalmsquirrel-size_restricted.gif?w=1155\u0026h=1236\"></img>
             <h1 className="heading">Overhead press</h1>
           </div>
           <div className="leftHeadRightImage">
             <h1 className="heading">Pull-ups</h1>
-            <img src="//i0.wp.com/thumbs.gfycat.com/BiodegradableDistantFreshwatereel-size_restricted.gif?w=1155\u0026h=1220\"></img>
+            <img className="images" src="//i0.wp.com/thumbs.gfycat.com/BiodegradableDistantFreshwatereel-size_restricted.gif?w=1155\u0026h=1220\"></img>
           </div>
           <div className="RightHeadLeftImage">
             <img
+            className="images"
               width="400px"
               src="https://i0.wp.com/thumbs.gfycat.com/AnyShinyGharial-size_restricted.gif?w=1575"
             ></img>
@@ -146,10 +148,10 @@ export default function NavTabs() {
           </div>
           <div className="leftHeadRightImage">
             <h1 className="heading">Bench press</h1>
-            <img src="//i0.wp.com/thumbs.gfycat.com/ConcernedHeftyCrayfish-size_restricted.gif?w=1155\u0026h=1228\"></img>
+            <img className="images" src="//i0.wp.com/thumbs.gfycat.com/ConcernedHeftyCrayfish-size_restricted.gif?w=1155\u0026h=1228\"></img>
           </div>
           <div className="RightHeadLeftImage">
-            <img src="	https://i0.wp.com/thumbs.gfycat.com/UnknownPleasedKodiakbear-size_restricted.gif?w=1575"></img>
+            <img className="images" src="	https://i0.wp.com/thumbs.gfycat.com/UnknownPleasedKodiakbear-size_restricted.gif?w=1575"></img>
             <h1 className="heading">Lunges</h1>
           </div>
         </div>

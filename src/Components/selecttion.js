@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form, Button, Container } from "react-bootstrap";
-import Paper from "@material-ui/core/Paper";
+// import Paper from "@material-ui/core/Paper";
 import "../App.css";
 
 // const { Formik } = formik;
@@ -28,7 +28,7 @@ class SelectApp extends React.Component {
       <div
         className="selection"
         style={{
-          background: "-webkit-linear-gradient(#233329, #166d3b)",
+          // background: "-webkit-linear-gradient(#233329, #166d3b)",
         }}
       >
         <h1
@@ -37,6 +37,7 @@ class SelectApp extends React.Component {
             textTransform: "uppercase",
             fontFamily: "fantasy",
             // fontWeight:'lighter'
+            fontStyle:'oblique'
           }}
         >
           Be a user or Train our user
@@ -66,7 +67,8 @@ class SelectApp extends React.Component {
                 backgroundColor: "#63d471",
                 textTransform: "uppercase",
                 fontWeight: "bold",
-                color:'#212121'
+                color:'#212121',
+
                 // background: "-webkit-linear-gradient(#233329, #166d3b)",
               }}
             >
@@ -90,13 +92,15 @@ class SelectApp extends React.Component {
               programs, creating meal plans, and teaching clients how to prevent
               injuries.
             </p>
+            <br></br>
+            <br></br>
             <Button variant="secondary" onClick={this.gotoCL}
              style={{
               backgroundColor: "#63d471",
               textTransform: "uppercase",
               fontWeight: "bold",
               color:'#212121',
-              marginTop:'50px'
+              // marginTop:'50px'
               // background: "-webkit-linear-gradient(#233329, #166d3b)",
             }}>
               Continue

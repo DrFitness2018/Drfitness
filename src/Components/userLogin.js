@@ -4,12 +4,14 @@ import { Wave, Random } from "react-animated-text";
 import { Formik, Form, Button, Container } from "react-bootstrap";
 
 class UserL extends React.Component {
+
   gotoUserR = () => {
     this.props.history.push("/UserReg");
   };
   gotoUserDash = () => {
     this.props.history.push("/userDash");
   };
+  
   render() {
     return (
       <div

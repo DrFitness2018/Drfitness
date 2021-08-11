@@ -196,7 +196,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "black",
     // background: "-webkit-linear-gradient(#233329, #166d3b)",
     backgroundColor:'#233329',
-    opacity:"95%",
+    // opacity:"95%",
     color: "white",
   },
   appBar: {
@@ -318,7 +318,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Exercises", "Diet Plan", "Angle Checker", ].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon style={{color:'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -329,7 +329,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
+          {["Chats", "Consult Doctor", "Consult Trainer"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon style={{color:'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

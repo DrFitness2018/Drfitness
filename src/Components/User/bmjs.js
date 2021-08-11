@@ -11,6 +11,7 @@ class BMApp extends React.Component {
   gotoSelect = () => {
     this.props.history.push("/usertabs");
   };
+
   constructor() {
     super();
 
@@ -233,12 +234,13 @@ class BMApp extends React.Component {
               {
                 this.render &&             
                 <button type="submit" onClick={BmiDisplay}>Preview</button>
-              }
+              // }
               {isPreviewShown && <BmiDisplay/>} */}
               <BmiDisplay
                 bmi={bmi}
                 label={results.label}
                 alertClass={results.alertClass}
+                // style={{display:'none'}}
               />
             </div>
           </div>
@@ -291,6 +293,7 @@ function BmiDisplay(props) {
 
 function Weight(props) {
   const [level, setlevel] = useState(0);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setlevel((newlevel) => (newlevel >= 100 ? 0 : newlevel + 10));
@@ -313,15 +316,15 @@ function Weight(props) {
         }}
       >
         <LinearProgress variant="buffer" value={level} style={{ width: 200 }} />
-        <img src={BMIs} width="200px" />
+        <img src={BMIs} width={300} />
         <h2
           className="wordings"
           style={{
             fontWeight: "normal",
             // background: "-webkit-linear-gradient(#166d3b, #63d471)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            background: "-webkit-linear-gradient(#ffff, #63d471)",
+            // WebkitBackgroundClip: "text",
+            // WebkitTextFillColor: "transparent",
+            // background: "-webkit-linear-gradient(#ffff, #63d471)",
 
           }}
         >

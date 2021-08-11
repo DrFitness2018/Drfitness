@@ -15,8 +15,7 @@
   padding: 20px;
   color: white;
   text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .formssP {
   /* background-color: #212121; */
@@ -45,7 +44,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items:flex-start;
+  align-items: flex-start;
   color: white;
   padding: 20px;
   width: 100%;
@@ -55,12 +54,16 @@
   flex-direction: "column";
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.61);
+  box-shadow:0px 5px 20px  #63d471 inset;
+  border-radius: 10px;
   /* border: solid 2px;
   border-color: red; */
   width: 30%;
   padding: 20px;
   margin-bottom: 20px;
   height: 350px;
+
 }
 @media only screen and (max-width: 600px) {
   .selection {
@@ -75,7 +78,7 @@
   .formss {
     width: 100%;
   }
-  
+
   .formssP {
     padding: 10px;
   }
@@ -97,7 +100,7 @@
   .HeadingUserGain {
     font-size: 1.5rem;
   }
-  .textarea{
+  .textarea {
     width: 100%;
     padding: 10px;
   }
@@ -105,12 +108,19 @@
     font-size: 1rem;
     color: #000;
   }
-  .text{
+  .text {
     font-size: 1rem;
   }
-  .splashImage{
+  .splashImage {
     width: 50%;
     height: 80%;
+  }
+  .main{
+  object-fit:contain;
+  width: 100%;
+  height: 125%;
+  background-image: url('./Images/bmi.jpg');
+  background-Size: 100% 100%;
   }
 }
 
@@ -132,9 +142,9 @@
   /* font-weight: 600; */
   font-size: 1.8rem;
   padding: 10px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: fit-content;
-  color:white;
+  color: white;
   background-color: #166d3b;
   background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
 }
@@ -142,13 +152,18 @@
   background-color: #121212;
 }
 .App-header {
-  background-color: #233329;
+  /* background-color: #233329; */
+  /* background-color: white; */
+  /* opacity: 30%; */
+  /* background-color: transparent; */
+  /* background-color: "rgba(255, 255, 255, 0.61)";
+  border: 1px solid black;
+  backdrop-filter: blur(10px); */
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  /* flex-direction: row; */
+  /* align-items: left; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
   font-weight: 600;
   text-align: center;
   /* width: 10; */
@@ -160,18 +175,15 @@
   color: #61dafb;
 }
 
-/* .text {
-  color: whitesmoke;
-  text-align: justify;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-} */
+.text {
+  font-size: 1rem;
+  /* color:#121212; */
+  color:#ffff;
+}
 .textarea {
   display: flex;
   padding: 30px;
-  width: 50%;
+  width: 100%;
   justify-content: center;
   color: whitesmoke;
   text-align: justify;
@@ -179,7 +191,7 @@
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   font-style: oblique;
   font-size: 3rem;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .splash {
   display: flex;
@@ -189,6 +201,21 @@
   background-color: #212121;
   padding: 40px;
 }
-.buttonSplash:hover{
-background-color: #63d471;
+.buttonSplash:hover {
+  background-color: #63d471;
+}
+.main{
+  display:flex;
+  flex-direction:column;
+  /* // alignItems:center; */
+  justify-content:center;
+  /* background-color: #166d3b; */
+  /* background-color: #485461;
+  background: -webkit-linear-gradient(#28313b, #485461); */
+  /* background-image: url(${imgs}); */
+  background-image: url('./Images/Chor.jpg');
+  background-Size: 100% 100%;
+  object-fit:contain;
+  background-repeat:no-repeat;
+/* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
 }

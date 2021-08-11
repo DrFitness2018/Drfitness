@@ -59,7 +59,7 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper,
     color: "black",
   },
 }));
@@ -81,6 +81,7 @@ export default function NavTabs() {
           backgroundColor: "#233329",
           // background: "-webkit-linear-gradient(#000000, #166d3b)",
           color: "white",
+          // position:'sticky'
         }}
       >
         <Tabs
