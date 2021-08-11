@@ -55,7 +55,7 @@ class Splash extends React.Component {
           }}
         >
           <h1>
-            Dr Fitness{" "}
+            Dr Fitness{" "} Is Back
             <span>
               <h3>Get Fit or Stay Sick</h3>
             </span>
