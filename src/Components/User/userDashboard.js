@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    //backgroundColor: theme.palette.background.paper,
     color: "black",
   },
 }));
@@ -17,7 +17,7 @@ function UserDash() {
   const classes = useStyles();
 
     return (
-      <div className={classes.root} style={{backgroundColor:'#121212',color:'white'}}>
+      <div className={classes.root} style={{color:'white'}}>
         {/* <Drawer /> */}
         <BMJS />
         {/* <UAppRouter /> */}

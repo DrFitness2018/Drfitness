@@ -17,7 +17,7 @@ class UserL extends React.Component {
       <div
         className="formssP"
         style={{
-          background: "-webkit-linear-gradient(#233329, #166d3b)",
+          //background: "-webkit-linear-gradient(#233329, #166d3b)",
         }}
       >
         <div className="formss">

@@ -214,8 +214,10 @@
   background: -webkit-linear-gradient(#28313b, #485461); */
   /* background-image: url(${imgs}); */
   background-image: url('./Images/Chor.jpg');
-  background-Size: 100% 100%;
+  background-Size: cover;
   object-fit:contain;
   background-repeat:no-repeat;
+  background-position: center;
+  
 /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
 }
