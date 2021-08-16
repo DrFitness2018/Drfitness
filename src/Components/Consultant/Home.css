@@ -1,0 +1,9 @@
+.docpages{
+    height: 84vh;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    /* align-items: center; */
+    color: #212121  ;
+    background-color: white;
+}

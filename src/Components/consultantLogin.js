@@ -6,7 +6,7 @@ import {Formik,Form,Button,Container} from 'react-bootstrap'
 
 class ConL extends React.Component{
     gotoConR = ()=>{
-        this.props.history.push('/ConReg')
+        this.props.history.push('/conDash')
       }
 render(){
   return (
@@ -32,7 +32,7 @@ render(){
   {/* <Form.Group>
     <Form.File id="exampleFormControlFile1" label="Example file input" />
   </Form.Group> */}
-  <Button variant="secondary" type="submit">
+  <Button variant="secondary" type="submit" onClick={this.gotoConR}>
     Login
   </Button>
 </Form>

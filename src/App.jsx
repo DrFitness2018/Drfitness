@@ -33,7 +33,8 @@ import Splash from './Components/Splash'
       }}
       className="main"
       >
-        <div style={{
+        <div 
+        style={{
           // backgroundColor: "rgba(100, 181, 246, 0.61)",
           // backgroundColor: "rgba(144, 202, 249, 0.61)",
           backgroundColor: "rgba(0, 0, 0, 0.61)",
@@ -43,7 +44,8 @@ import Splash from './Components/Splash'
           // backgroundColor: "rgba(67, 160, 71, 0.61)",
           // backgroundColor: "rgba(67, 160, 71, 0.61)",
           // backdropFilter: "blur(5px)",
-        }}> 
+        }}
+        > 
         <Header />
         {/* <Splash /> */}
       <Approuter />

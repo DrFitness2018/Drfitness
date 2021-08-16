@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     // backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#63d471",
     color: "black",
   },
   paper: {
@@ -346,7 +346,7 @@ export default function NavTabs() {
             className="wordingsUserGain"
             style={{
               fontWeight: "normal",
-              color: "#212121",
+              color: "#ffff",
               WebkitBackgroundClip: "text",
             }}
           >
@@ -365,7 +365,7 @@ export default function NavTabs() {
               style={{
                 width: "100%",
                 marginTop:20,
-                backgroundColor:'pink'
+                // backgroundColor:'pink'
               }}
               onClick={() => SetShow(!show)}
             >

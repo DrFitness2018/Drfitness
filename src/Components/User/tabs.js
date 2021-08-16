@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    backgroundColor:'#63d471',
     color: "black",
   },
 }));
@@ -89,6 +90,7 @@ export default function NavTabs() {
           value={value}
           onChange={handleChange}
           aria-label="nav tabs example"
+          // style={{backgroundColor:'#fefefe'}}
         >
           <LinkTab label="Exercises" href="/drafts" {...a11yProps(0)} />
           <LinkTab label="Diet Plans" href="/trash" {...a11yProps(1)} />

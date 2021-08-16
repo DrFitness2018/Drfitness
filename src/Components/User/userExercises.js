@@ -97,7 +97,7 @@ export default function NavTabs() {
             textAlign: "center",
             display: "flex",
             flexDirection: "column",
-            // backgroundColor: "#f5f5f5",
+            backgroundColor: "#63d471",
             color: "#212121",
           }}
         >
