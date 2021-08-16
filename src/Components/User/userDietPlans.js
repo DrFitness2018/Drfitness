@@ -8,7 +8,8 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Popper from "@material-ui/core/Popper";
-import Fade from "@material-ui/core/Fade";
+// import Fade from "@material-ui/core/Fade";
+import {Fade} from 'react-bootstrap'
 import Marquee from "react-fast-marquee";
 import Cards from "../User/DietCards";
 import "./userDietPlans.css";
@@ -368,6 +369,7 @@ export default function NavTabs() {
                 // backgroundColor:'pink'
               }}
               onClick={() => SetShow(!show)}
+              
             >
               Monday
             </Button>
