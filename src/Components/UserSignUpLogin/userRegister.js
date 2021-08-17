@@ -1,18 +1,16 @@
-import '../App.css';
+import '../../App.css';
 import React from 'react'
-import { Wave, Random } from 'react-animated-text';
-import {Formik,Form,Button,Container} from 'react-bootstrap'
+import {Form,Button,Container} from 'react-bootstrap'
 
 
-class ConL extends React.Component{
-    gotoConR = ()=>{
-        this.props.history.push('/conDash')
-      }
+class UserR extends React.Component{
+
 render(){
   return (
    
   <div className='formssP'>
 <div className='formss'>
+    <h2>Register as a user</h2>
 <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -32,16 +30,15 @@ render(){
   {/* <Form.Group>
     <Form.File id="exampleFormControlFile1" label="Example file input" />
   </Form.Group> */}
-  <Button variant="secondary" type="submit" onClick={this.gotoConR}>
-    Login
+  <Button variant="secondary" type="submit">
+    Register
   </Button>
 </Form>
-<p>Don't have any Account?</p>
-<Button variant="outline-secondary" onClick={this.gotoConR}>Sign up</Button>
+
 </div>
   </div>
   );
 }
 }
 
-export default ConL;
+export default UserR;

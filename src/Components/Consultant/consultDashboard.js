@@ -19,7 +19,7 @@ function ConsultantDash() {
         <Router>
             <Navbar/>
             <Switch>
-                <Route path='/' exact component={Profile} />
+                <Route exact path='/'  component={Profile} />
                 <Route path='/Availible' component={Availible}/>
                 <Route path='/Inbox' component={Inbox}/>
                 <Route path='/Appointments' component={Appointments}/>
