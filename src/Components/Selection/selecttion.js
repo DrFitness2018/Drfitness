@@ -78,7 +78,6 @@ class SelectApp extends React.Component {
               injuries.
             </p>
             <br></br>
-            <br></br>
             <Button variant="secondary" onClick={this.gotoCL}
              style={{
               backgroundColor: "#63d471",
