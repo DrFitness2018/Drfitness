@@ -1,15 +1,8 @@
-<<<<<<< HEAD:src/Components/consultantLogin.js
-import "../App.css";
-import React from "react";
-import { Wave, Random } from "react-animated-text";
-import { Formik, Form, Button, Container } from "react-bootstrap";
-import { AnimatePresence, motion } from "framer-motion";
-=======
 import '../../App.css';
 import React from 'react'
 import { Wave, Random } from 'react-animated-text';
 import {Formik,Form,Button,Container} from 'react-bootstrap'
->>>>>>> 82a36357f91de339ccc6b2b8f17491eb8213258e:src/Components/ConsultantSignUpLogin/consultantLogin.js
+import { AnimatePresence, motion } from "framer-motion";
 
 
 const pageTransition={

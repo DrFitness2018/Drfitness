@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const pageTransition={
   in:{
     opacity:1
-  },
+  },   
   out:{
     opacity:0
   }

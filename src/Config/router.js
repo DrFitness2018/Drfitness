@@ -7,6 +7,8 @@ import {
   Link,
   withRouter
 } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 
 export default class AppRouter extends React.Component{
     render(){
