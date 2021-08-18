@@ -1,9 +1,6 @@
 import { Fade, Button } from "react-bootstrap";
-import "../App.css";
+import "../../App.css";
 import React from "react";
-import logo from "../Images/main.png";
-import imgs from "../Images/squats.jpg";
-import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 class Splash extends React.Component {

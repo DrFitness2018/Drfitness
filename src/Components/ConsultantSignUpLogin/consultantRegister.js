@@ -1,17 +1,18 @@
-import '../App.css';
+import '../../App.css';
 import React from 'react'
 import { Wave, Random } from 'react-animated-text';
 import {Formik,Form,Button,Container} from 'react-bootstrap'
 
 
-class UserR extends React.Component{
+class ConR extends React.Component{
 
 render(){
   return (
    
   <div className='formssP'>
 <div className='formss'>
-    <h2>Register as a user</h2>
+<h2>Register as a Consultant</h2>
+
 <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -28,9 +29,9 @@ render(){
   <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Not a robot?" />
   </Form.Group>
-  {/* <Form.Group>
-    <Form.File id="exampleFormControlFile1" label="Example file input" />
-  </Form.Group> */}
+  <Form.Group>
+    <Form.File id="exampleFormControlFile1" label="Upload Professional GYM/PHYSIOTHERAPIST certificate"/>
+  </Form.Group>
   <Button variant="secondary" type="submit">
     Register
   </Button>
@@ -42,4 +43,4 @@ render(){
 }
 }
 
-export default UserR;
+export default ConR;

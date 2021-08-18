@@ -1,16 +1,5 @@
 import React from 'react'
-import Splash from '../Components/Splash'
-import Select from '../Components/selecttion'
-import UserLogin from '../Components/userLogin'
-import ConLogin from '../Components/consultantLogin'
-import UserReg from '../Components/userRegister'
-import ConReg from '../Components/consultantRegister'
-import userDash from '../Components/User/userDashboard'
-import usertabs from '../Components/User/tabs'
-import conDash from '../Components/Consultant/consultDashboard'
-import BMJS from '../Components/User/bmjs'
-import {AnimatePresence, motion} from 'framer-motion'
-
+import {UserLogin,UserReg,Select,Header,ConLogin,ConReg,Splash,userDash,usertabs,conDash,BMJS } from '../Components'
 import {
   BrowserRouter as Router,
   Switch,

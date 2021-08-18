@@ -1,22 +1,7 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Formik, Form, Button, Container } from "react-bootstrap";
+import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
-
-// import Paper from "@material-ui/core/Paper";
-import "../App.css";
-
-// const { Formik } = formik;
-
-// const schema = yup.object().shape({
-//   firstName: yup.string().required(),
-//   lastName: yup.string().required(),
-//   username: yup.string().required(),
-//   city: yup.string().required(),
-//   state: yup.string().required(),
-//   zip: yup.string().required(),
-//   file: yup.mixed().required(),
-//   terms: yup.bool().required().oneOf([true], 'terms must be accepted'),
-// });
 
 const pageTransition={
   in:{
@@ -38,11 +23,7 @@ class SelectApp extends React.Component {
     return (
       <motion.div initial="out" animate="in" exit="out" variants={pageTransition}
         className="selection"
-        style={
-          {
-            // background: "-webkit-linear-gradient(#233329, #166d3b)",
-          }
-        }
+        
       >
         <h1
           style={{
@@ -106,19 +87,13 @@ class SelectApp extends React.Component {
               injuries.
             </p>
             <br></br>
-            <br></br>
-            <Button
-              variant="secondary"
-              onClick={this.gotoCL}
-              style={{
-                backgroundColor: "#63d471",
-                textTransform: "uppercase",
-                fontWeight: "bold",
-                color: "#212121",
-                // marginTop:'50px'
-                // background: "-webkit-linear-gradient(#233329, #166d3b)",
-              }}
-            >
+            <Button variant="secondary" onClick={this.gotoCL}
+             style={{
+              backgroundColor: "#63d471",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              color:'#212121',
+            }}>
               Continue
             </Button>
           </div>

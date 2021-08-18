@@ -1,4 +1,4 @@
-import "../App.css";
+import "../../App.css";
 import React from "react";
 import { Wave, Random } from "react-animated-text";
 import { Formik, Form, Button, Container } from "react-bootstrap";
@@ -13,13 +13,13 @@ const pageTransition={
     opacity:0
   }
 }
-class ConL extends React.Component {
+class UserL extends React.Component {
 
   gotoUserR = () => {
-    this.props.history.push("/ConReg");
+    this.props.history.push("/UserReg");
   };
   gotoUserDash = () => {
-    this.props.history.push("/conDash");
+    this.props.history.push("/userDash");
   };
   
   render() {
@@ -115,4 +115,4 @@ class ConL extends React.Component {
   }
 }
 
-export default ConL;
+export default UserL;

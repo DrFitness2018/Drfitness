@@ -1,8 +1,15 @@
+<<<<<<< HEAD:src/Components/consultantLogin.js
 import "../App.css";
 import React from "react";
 import { Wave, Random } from "react-animated-text";
 import { Formik, Form, Button, Container } from "react-bootstrap";
 import { AnimatePresence, motion } from "framer-motion";
+=======
+import '../../App.css';
+import React from 'react'
+import { Wave, Random } from 'react-animated-text';
+import {Formik,Form,Button,Container} from 'react-bootstrap'
+>>>>>>> 82a36357f91de339ccc6b2b8f17491eb8213258e:src/Components/ConsultantSignUpLogin/consultantLogin.js
 
 
 const pageTransition={
@@ -13,13 +20,13 @@ const pageTransition={
     opacity:0
   }
 }
-class UserL extends React.Component {
+class ConL extends React.Component {
 
   gotoUserR = () => {
-    this.props.history.push("/UserReg");
+    this.props.history.push("/ConReg");
   };
   gotoUserDash = () => {
-    this.props.history.push("/userDash");
+    this.props.history.push("/conDash");
   };
   
   render() {
@@ -115,4 +122,4 @@ class UserL extends React.Component {
   }
 }
 
-export default UserL;
+export default ConL;
