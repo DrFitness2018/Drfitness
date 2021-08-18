@@ -3,6 +3,7 @@
     height: 80px;
     display: flex;
     justify-content: start;
+    position: inherit;
     align-items: center;
   }
   

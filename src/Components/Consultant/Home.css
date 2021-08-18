@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   color: #212121;
-  text-align: center;
+  /* text-align: center; */
   background-color: white;
   padding: 10px;
 }
@@ -72,4 +72,8 @@
   .AcceptDecButton {
     width: 50%;
   }
+}
+label{
+  font-weight: bold;
+  color: #060b26;
 }
