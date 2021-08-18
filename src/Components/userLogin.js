@@ -2,7 +2,17 @@ import "../App.css";
 import React from "react";
 import { Wave, Random } from "react-animated-text";
 import { Formik, Form, Button, Container } from "react-bootstrap";
+import { AnimatePresence, motion } from "framer-motion";
 
+
+const pageTransition={
+  in:{
+    opacity:1
+  },
+  out:{
+    opacity:0
+  }
+}
 class UserL extends React.Component {
 
   gotoUserR = () => {
@@ -14,7 +24,7 @@ class UserL extends React.Component {
   
   render() {
     return (
-      <div
+      <motion.div initial="out" animate="in" exit="out" variants={pageTransition}
         className="formssP"
         style={{
           //background: "-webkit-linear-gradient(#233329, #166d3b)",
@@ -99,8 +109,8 @@ class UserL extends React.Component {
           >
             Sign up
           </Button>
-        </div>
       </div>
+        </motion.div>
     );
   }
 }

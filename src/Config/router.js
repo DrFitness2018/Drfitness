@@ -9,6 +9,7 @@ import userDash from '../Components/User/userDashboard'
 import usertabs from '../Components/User/tabs'
 import conDash from '../Components/Consultant/consultDashboard'
 import BMJS from '../Components/User/bmjs'
+import {AnimatePresence, motion} from 'framer-motion'
 
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ import {
 export default class AppRouter extends React.Component{
     render(){
         return(
+            <AnimatePresence>
             <Router>
                 <Route exact path='/' component={Splash} />
                 <Route path='/select' component={Select} />
@@ -33,6 +35,7 @@ export default class AppRouter extends React.Component{
                 <Route path='/conDash' component={conDash} />
                 <Route path='/BMJS' component={BMJS} />                
             </Router>
+            </AnimatePresence>
         )
     }
 }

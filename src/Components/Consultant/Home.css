@@ -1,9 +1,75 @@
-.docpages{
-    height: 84vh;
-    display: flex;
-    padding-top: 20px;
-    justify-content: center;
-    /* align-items: center; */
-    color: #212121  ;
-    background-color: white;
+.docpages {
+  /* height: 84vh; */
+  display: flex;
+  padding-top: 20px;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  color: #212121;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+.appoinmentCards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 50%;
+  /* box-shadow: 0px 2px 5px #888888; */
+  box-shadow: 0px 2px 5px #888888;
+  padding: 10px;
+  margin-top: 20px;
+  flex-flow: row wrap;
+  color: white;
+  background-color: #0d47a1;
+  /* margin-bottom: 20px; */
+/* font-family: fantasy; */
+  /* margin: 20px; */
+}
+.cardsbutton {
+  display: flex;
+  flex-direction: column;
+  /* align-items:flex-start; */
+  justify-content: right;
+  /* padding:10px; */
+  /* padding-top: 10px; */
+  /* background-color: lightgray; */
+}
+.AcceptDecButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.heading {
+  font-size: 5rem;
+  font-family: fantasy;
+}
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.5rem;
+    font-family: fantasy;
+  }
+  .leftHeadRightImage {
+    flex-direction: column;
+  }
+  .RightHeadLeftImage {
+    flex-direction: column-reverse;
+  }
+  .images {
+    width: 200px;
+  }
+  .cardsbutton {
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    /* padding:; */
+  }
+  .appoinmentCards {
+    width: 100%;
+  }
+  .AcceptDecButton {
+    width: 50%;
+  }
 }

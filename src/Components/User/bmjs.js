@@ -4,9 +4,18 @@ import { Route, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import BMIs from "../../Images/bmi.jpg";
 import "../../App.css";
+import { AnimatePresence, motion } from "framer-motion";
+
 
 const { CircularProgress, LinearProgress } = require("@material-ui/core");
-
+const pageTransition={
+  in:{
+    opacity:1
+  },
+  out:{
+    opacity:0
+  }
+}
 class BMApp extends React.Component {
   gotoSelect = () => {
     this.props.history.push("/usertabs");
@@ -96,7 +105,7 @@ class BMApp extends React.Component {
     let results = this.getBMIResults(bmi);
 
     return (
-      <div
+      <motion.div initial="out" animate="in" exit="out" variants={pageTransition}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -287,7 +296,7 @@ class BMApp extends React.Component {
             {/* <Button variant="outline-light" onClick={this.gotoSelect}  >Let's See</Button> */}
           
         </div>
-      </div>
+      </motion.div>
       
     );
   }

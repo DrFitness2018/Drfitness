@@ -10,7 +10,6 @@ import VideoConsult from './VideoConsult'
 import RecentAct from './RecenAct'
 import Navbar from '../Consultant/navbar'
 
-
 function ConsultantDash() {  
 //   const classes = useStyles();
 

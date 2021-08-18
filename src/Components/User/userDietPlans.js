@@ -369,7 +369,6 @@ export default function NavTabs() {
                 // backgroundColor:'pink'
               }}
               onClick={() => SetShow(!show)}
-              
             >
               Monday
             </Button>

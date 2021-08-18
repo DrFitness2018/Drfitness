@@ -1,5 +1,7 @@
 import React from "react";
-import { Formik, Form, Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { AnimatePresence, motion } from "framer-motion";
+
 // import Paper from "@material-ui/core/Paper";
 import "../App.css";
 
@@ -16,6 +18,15 @@ import "../App.css";
 //   terms: yup.bool().required().oneOf([true], 'terms must be accepted'),
 // });
 
+const pageTransition={
+  in:{
+    opacity:1
+  },
+  out:{
+    opacity:0
+  }
+}
+
 class SelectApp extends React.Component {
   gotoUL = () => {
     this.props.history.push("/UserLogin");
@@ -25,11 +36,13 @@ class SelectApp extends React.Component {
   };
   render() {
     return (
-      <div
+      <motion.div initial="out" animate="in" exit="out" variants={pageTransition}
         className="selection"
-        style={{
-          // background: "-webkit-linear-gradient(#233329, #166d3b)",
-        }}
+        style={
+          {
+            // background: "-webkit-linear-gradient(#233329, #166d3b)",
+          }
+        }
       >
         <h1
           style={{
@@ -37,7 +50,7 @@ class SelectApp extends React.Component {
             textTransform: "uppercase",
             fontFamily: "fantasy",
             // fontWeight:'lighter'
-            fontStyle:'oblique'
+            fontStyle: "oblique",
           }}
         >
           Be a user or Train our user
@@ -67,7 +80,7 @@ class SelectApp extends React.Component {
                 backgroundColor: "#63d471",
                 textTransform: "uppercase",
                 fontWeight: "bold",
-                color:'#212121',
+                color: "#212121",
 
                 // background: "-webkit-linear-gradient(#233329, #166d3b)",
               }}
@@ -94,20 +107,23 @@ class SelectApp extends React.Component {
             </p>
             <br></br>
             <br></br>
-            <Button variant="secondary" onClick={this.gotoCL}
-             style={{
-              backgroundColor: "#63d471",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color:'#212121',
-              // marginTop:'50px'
-              // background: "-webkit-linear-gradient(#233329, #166d3b)",
-            }}>
+            <Button
+              variant="secondary"
+              onClick={this.gotoCL}
+              style={{
+                backgroundColor: "#63d471",
+                textTransform: "uppercase",
+                fontWeight: "bold",
+                color: "#212121",
+                // marginTop:'50px'
+                // background: "-webkit-linear-gradient(#233329, #166d3b)",
+              }}
+            >
               Continue
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 }
