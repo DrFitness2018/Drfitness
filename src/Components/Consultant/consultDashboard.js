@@ -9,6 +9,7 @@ import Appointments from './Appointments'
 import VideoConsult from './VideoConsult'
 import RecentAct from './RecenAct'
 import Navbar from '../Consultant/navbar'
+import Schedule from './Schedule';
 
 function ConsultantDash() {  
 //   const classes = useStyles();
@@ -20,6 +21,7 @@ function ConsultantDash() {
             <Switch>
                 <Route exact path='/'  component={Profile} />
                 <Route path='/Availible' component={Availible}/>
+                <Route path='/Schedule' component={Schedule}/>
                 <Route path='/Inbox' component={Inbox}/>
                 <Route path='/Appointments' component={Appointments}/>
                 <Route path='/VideoConsult' component={VideoConsult}/>
