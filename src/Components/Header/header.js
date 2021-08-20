@@ -9,6 +9,8 @@ function Header() {
       <div className="App-header" style={{
                 backgroundColor: "rgba(255, 255, 255, 0.61)",
                 backdropFilter: "blur(5px)",
+                // backgroundColor:'white',
+                // border:'10px solid #63d471'
       }}>
         <img src={logo} width="150" style={{marginRight:''}}></img>
       </div>

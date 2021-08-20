@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Profile_Pic from "../../Images/lambi7.jpg";
 import { Button } from "react-bootstrap";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { BackgroundColor } from "jest-matcher-utils/node_modules/chalk";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
   return (
     <div className="docpages">
       <div
-        className="container emp-profile mt-5 mb-4"
+        className="container emp-profile mt-5 mb-4 "
         style={{
           backgroundColor: "#FAFAFA",
           padding: 20,
@@ -51,9 +52,9 @@ export default function Home() {
                   <li className="nav-item">
                     <a
                       className="nav-link active"
-                      id="homes-tab"
+                      id="home-tab"
                       data-toggle="tab"
-                      href="#homes"
+                      href="#home"
                       role="tab"
                     >
                       About
@@ -62,9 +63,9 @@ export default function Home() {
                   <li className="nav-item">
                     <a
                       className="nav-link active"
-                      id="profiles-tab"
+                      id="profile-tab"
                       data-toggle="tab"
-                      href="#profiles"
+                      href="#profile"
                       role="tab"
                     >
                       Timeline
@@ -134,9 +135,9 @@ export default function Home() {
               <div className="tab-content profile-tab" id="myTabContent">
                 <div
                   className="tab-pane fade show active"
-                  id="homes"
+                  id="home"
                   role="tabpanel"
-                  aria-labelledby="homes-tab"
+                  aria-labelledby="home-tab"
                 >
                   <div style={{ color: "black" }} className="row">
                     <div className="col-md-6">

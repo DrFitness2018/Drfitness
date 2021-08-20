@@ -1,5 +1,6 @@
 import React from 'react'
 import {UserLogin,UserReg,Select,Header,ConLogin,ConReg,Splash,userDash,usertabs,conDash,BMJS } from '../Components'
+import Profile from "../Components/Consultant/Home"
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +25,7 @@ export default class AppRouter extends React.Component{
                 <Route path='/userDash' component={userDash} />
                 <Route path='/usertabs' component={usertabs} />
                 <Route path='/conDash' component={conDash} />
+                <Route path='/Profile'  component={Profile} />
                 <Route path='/BMJS' component={BMJS} />                
             </Router>
             </AnimatePresence>
