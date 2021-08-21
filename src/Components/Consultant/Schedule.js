@@ -60,9 +60,10 @@ const EditingOptionsSelector = ({
             )}
             classes={{ label: classes.formControlLabel }}
             label={text}
+            
             key={id}
             disabled={(id === 'allowDragging' || id === 'allowResizing') && !options.allowUpdating}
-          />
+            />
         ))}
       </FormGroup>
     </div>
