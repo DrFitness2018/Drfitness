@@ -1,4 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import ChatComponent from './ChatComponent'
+
+
+
 export default function Inbox() {
     return (
         <div className="docpages">
@@ -10,7 +15,8 @@ export default function Inbox() {
           boxShadow: "0px 2px 5px #888888",
         }}
       >
-          Index Page
+        <ChatComponent />
+        {/* { ReactDOM.render(<ChatComponent />, document.getElementById('root')) } */}
       </div>
       </div>
     )
