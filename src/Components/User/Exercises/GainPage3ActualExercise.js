@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Profile = () => {
+export default function GainPage3ActualExercise() {
     return (
         <div>
             

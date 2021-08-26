@@ -1,0 +1,15 @@
+.availList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 10px;
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    /* background-color: #fff; */
+}
+@media only screen and (max-width: 600px) {
+    .availList{
+        flex-direction: column;
+    }
+}

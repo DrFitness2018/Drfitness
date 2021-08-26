@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import { Button } from "react-bootstrap";
-import Typography from "@material-ui/core/Typography";
 import "./Home.css";
 import shera from "../../Images/sheraa.PNG";
 import tulaib from "../../Images/tulaibs.PNG";
 import mehmaam from "../../Images/mehmaams.PNG";
-import shah from "../../Images/shahzaibs.PNG";
 
 const useStyles = makeStyles((theme) => ({
   root: {

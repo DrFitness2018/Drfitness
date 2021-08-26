@@ -48,11 +48,17 @@ class Splash extends React.Component {
             // backdropFilter: "blur(5px)",
             boxShadow:'0px 5px 20px  #63d471',
             // color:'#212121'
+            textAlign:'center',
+            fontWeight:'bold',
             color:'#ffff',
           }}
         >
-          <h1>
-            Dr Fitness{" "} Is Back
+          <h1 style={{
+            textAlign:'center',
+            
+            fontWeight:'bold',
+          }}>
+            Dr Fitness
             <span>
               <h3>Get Fit or Stay Sick</h3>
             </span>

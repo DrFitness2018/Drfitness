@@ -21,7 +21,11 @@ import './App.css';
         > 
         <Header />
         {/* <Splash /> */}
+        <div style={{
+          paddingTop:'100px'
+        }}>
       <Approuter />
+      </div>
         </div>
  
       </div>

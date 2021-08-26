@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "react-bootstrap";
-import { Route, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import BMIs from "../../Images/bmi.jpg";
 import "../../App.css";

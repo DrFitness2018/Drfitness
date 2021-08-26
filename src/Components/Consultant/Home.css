@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .docpages {
   /* height: 84vh; */
@@ -11,6 +11,7 @@
   /* text-align: center; */
   background-color: white;
   padding: 10px;
+  padding-top: 80px;
 }
 .appoinmentCards {
   display: flex;
@@ -19,15 +20,30 @@
   justify-content: space-around;
   min-width: 50%;
   /* box-shadow: 0px 2px 5px #888888; */
-  box-shadow: 0px 2px 5px #888888;
+  box-shadow: 0px 2px 10px #888888;
   padding: 10px;
   margin-top: 20px;
   flex-flow: row wrap;
-  color: white;
-  background-color: #0d47a1;
+  color: whitesmoke;
+  /* background-color: #0d47a1; */
+  /* border: 1px solid #0d47a1; */
   /* margin-bottom: 20px; */
-/* font-family: fantasy; */
+  /* font-family: fantasy; */
   /* margin: 20px; */
+}
+.appoinmentCardsR {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 50%;
+  box-shadow: 0px 2px 10px #888888;
+  padding: 10px;
+  margin-top: 20px;
+  flex-flow: row wrap;
+  background-color: #ffff;
+  color: #212121;
+  border: 1px solid #0d47a1;
 }
 .cardsbutton {
   display: flex;
@@ -45,10 +61,51 @@
   width: 100%;
 }
 .heading {
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: fantasy;
-  text-shadow: 1px 1px 3px #212121
+  text-shadow: 0px 1px 3px #212121;
+}
+.dash{
+  display: flex;
+  flex-direction: row;
+  /* margin: 10px; */
+  padding: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
+}
+.dashcards{
+  background-color: pink;
+  padding: 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width:220px;
+  height:100px;
+  align-items:center;
+  text-align:left;
+  border-radius:10px;
+  margin-top: 10px;
+}
+.bg1{
+  background-color: tomato;
+  color: whitesmoke;
+  text-shadow: whitesmoke;
+}
+.bg2{
+  background-color: #448aff;
+  color: whitesmoke;
+  text-shadow: whitesmoke;
+}
+.bg3{
+  background-color: #388e3c;
+  color: whitesmoke;
+  text-shadow: whitesmoke;
+}
+.bg4{
+  background-color: #ffab00;
+  color: whitesmoke;
+  text-shadow: whitesmoke;
 }
 @media only screen and (max-width: 600px) {
   .heading {
@@ -76,19 +133,23 @@
   .AcceptDecButton {
     width: 50%;
   }
+  .dash{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-
-label{
+label {
   font-weight: bold;
   color: #060b26;
 }
 
-.iconss{
-  color:'red';
+.iconss {
+  color: "red";
   /* background-color: aqua; */
 }
-.iconss:hover{
+.iconss:hover {
   /* background-color: azure; */
   box-shadow: 0px 0px 10px blue;
 }

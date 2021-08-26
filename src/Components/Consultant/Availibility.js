@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import "./Home.css";
+import "./Availibility.css";
 import * as FaIcons from "react-icons/fa";
 import Input from "@material-ui/core/Input";
 
@@ -156,18 +156,8 @@ const AddItem = ({ name, onChange, onAdd }) => (
 
 const List = ({ list, onRemove }) => (
   <ul
-    style={{
-      //   backgroundColor: "pink",
-      listStyle: "none",
-      marginTop: 10,
-      margin: "10px",
-      // alignItems: "center",
-      // alignSelf: "center",
-      // justifyContent: "center",
-      // alignItems: "center",
-      display: "flex",
-      flexDirection: "column",
-    }}
+
+    className="availList"
   >
     {list.map((item) => (
       <li

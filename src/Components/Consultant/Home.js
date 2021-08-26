@@ -2,8 +2,10 @@ import React from "react";
 import "./Home.css";
 import Profile_Pic from "../../Images/lambi7.jpg";
 import { Button } from "react-bootstrap";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import { BackgroundColor } from "jest-matcher-utils/node_modules/chalk";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Divider from "@material-ui/core/Divider";
+import CountUp from 'react-countup';
+import Recent from "./RecenAct"
 
 export default function Home() {
   const mystyle = {
@@ -20,8 +22,11 @@ export default function Home() {
   };
   return (
     <div className="docpages">
+      <div className="container mt-4">
+        <h3 className="heading">Dashboard</h3>
+      </div>
       <div
-        className="container emp-profile mt-5 mb-4 "
+        className="container emp-profile mt-2 mb-2 "
         style={{
           backgroundColor: "#FAFAFA",
           padding: 20,
@@ -37,9 +42,7 @@ export default function Home() {
             </div>
             <div className="col-md-6">
               <div className="profile-head">
-                <h3 style={{ color: "black", fontWeight: "bold" }}>
-                  Consultant Profile
-                </h3>
+                <h3 >My Profile</h3>
                 <h5 style={{ color: "darkgray" }}>Fitness Specialist</h5>
                 <p
                   style={{ color: "#060b26" }}
@@ -92,14 +95,16 @@ export default function Home() {
                 <a style={underline} href="https://www.instagram.com">
                   Instagram
                 </a>
-                <br />
+                <Divider />
+
+                {/* <br /> */}
                 <a
                   style={underline}
                   href="https://www.facebook.com/wahaj.shera"
                 >
                   Facebook
                 </a>
-                <br />
+                <Divider />
                 <a
                   style={underline}
                   href="https://www.youtube.com/watch?v=kHEhhV3EyPU"
@@ -231,6 +236,29 @@ export default function Home() {
             </div>
           </div>
         </form>
+      </div>
+      <Divider />
+      <div className="container mt-4 mb-5">
+        <div className="dash">
+          <div className="dashcards bg1">
+            <h5 style={{fontSize:'3rem'}}><CountUp redraw={true} end={30} duration={2}/></h5>
+            <h6 style={{marginLeft:20}}>Pending Appointments</h6>
+          </div>
+          <div className="dashcards bg2">
+          <h5 style={{fontSize:'3rem'}}><CountUp redraw={true} end={2} duration={2}/></h5>
+            <h6 style={{marginLeft:20}}>Today's Appointments</h6>
+          </div>
+          <div className="dashcards bg3">
+          <h5 style={{fontSize:'3rem'}}><CountUp redraw={true} end={0} duration={2}/></h5>
+            <h6 style={{marginLeft:20}}>Total Appointments</h6>
+          </div>
+          <div className="dashcards bg4">
+          <h5 style={{fontSize:'3rem'}}><CountUp redraw={true} end={21} duration={2}/></h5>
+            <h6 style={{marginLeft:20}}>Total Patients</h6>
+          </div>
+        </div>
+          <h3 className="heading"  style={{ marginTop:20}}>Recent Activity</h3>
+          <Recent/>
       </div>
     </div>
   );
