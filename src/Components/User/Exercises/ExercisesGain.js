@@ -18,7 +18,7 @@ function ExercisesCards() {
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
-        //   backgroundColor: "#63d471",
+          // backgroundColor: "#63d471",
         color: "#212121",
       }}
     >
@@ -48,6 +48,17 @@ function ExercisesCards() {
           color: "white",
         }}
       >
+        <div style={{
+          backgroundColor: "rgba(0, 0, 0, 0.61)",
+          width:'100%',
+          height:'100%',
+          justifyContent:'center',
+          alignItems:'center',
+          display:'flex',
+          flexDirection:'column',
+          padding:20
+        }}>
+
         <h1>Want to gain weight in 30 Days?</h1>
         <h4>Try these Exercises and Gain Weight</h4>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -62,6 +73,7 @@ function ExercisesCards() {
           >
             Start Plan
           </Button>
+        </div>
         </div>
       </div>
 
