@@ -26,7 +26,7 @@ function ExercisesCards() {
 
       {/* To Yaha P Gainpage1 show hojy jisme Cards hoon Weight Gain k Ek example uski mn
       nechay bna kr dikha deta hun*/}
-      {/* <GainCards/> */}
+      <GainCards/>
 
       {/* Phr jb card p start plan p click kre to wo next page p chala gae week wale ... phr exercise wale 
       iss trah s ho */}
@@ -63,6 +63,8 @@ function ExercisesCards() {
         <h4>Try these Exercises and Gain Weight</h4>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Button variant="outline-light">See details</Button>
+
+
 
           <Button
             variant="outline"

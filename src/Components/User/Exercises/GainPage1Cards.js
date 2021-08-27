@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button } from "react-bootstrap";
 import imgs from "../../../Images/lambi8.jpg";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import config from '../../../Config/router'
 export default function GainPage1() {
     return (
         <div>
@@ -27,15 +29,18 @@ export default function GainPage1() {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Button variant="outline-light">See details</Button>
 
-          <Button
-            variant="outline"
+          <Link
+            to='/GainWeek2'
+            className="btn"
             style={{
               backgroundColor: "white",
               marginLeft: "5px",
             }}
           >
             Start Plan
-          </Button>
+          </Link>
+  
+  
         </div>
       </div>
 

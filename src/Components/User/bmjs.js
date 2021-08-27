@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import BMIs from "../../Images/bmi.jpg";
 import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from 'react-router-dom'
 
 
 const { CircularProgress, LinearProgress } = require("@material-ui/core");
@@ -17,9 +18,7 @@ const pageTransition={
   }
 }
 class BMApp extends React.Component {
-  gotoSelect = () => {
-    this.props.history.push("/usertabs");
-  };
+  
 
   constructor() {
     super();
@@ -450,9 +449,9 @@ function Weight(props) {
         >
           Don't know how to Lean? Follow our Exercise and Diet plan Accordingly
         </h4>
-        <Button variant="outline-light" onClick={props.fnc}>
+        <Link to='/usertabs' variant="outline-light" className="btn btn-primary">
           Let's See
-        </Button>
+        </Link>
       </div>
     );
   }

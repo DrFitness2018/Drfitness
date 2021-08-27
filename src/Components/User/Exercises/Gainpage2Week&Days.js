@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Gainpage2() {
     return (
-        <div>
+        <div className="bg-success">
             <h1>Week 1</h1>
             <h4>Day 1 -5 </h4>
             <h1>Week 2</h1>
