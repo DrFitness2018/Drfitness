@@ -33,6 +33,7 @@ class UserL extends React.Component {
         <div className="formss">
           <h2
             style={{
+              color:'#212121',
               fontFamily: "fantasy",
             }}
           >

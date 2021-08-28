@@ -261,6 +261,25 @@
 .buttonSplash:hover {
   background-color: #63d471;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #121212;
+}
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(#212121,#63d471);
+  border-radius: 55px;
+}
+::-webkit-scrollbar-thumb:hover{
+  /* background-image: linear-gradient(#575656,#7cda87); */
+  background-image: linear-gradient(#222222,#49db5a);
+
+}
+
+
+
 .main{
   display:flex;
   flex-direction:column;
@@ -270,7 +289,7 @@
   /* background-color: #485461;
   background: -webkit-linear-gradient(#28313b, #485461); */
   /* background-image: url(${imgs}); */
-  background-image: url('./Images/Chor.jpg');
+  /* background-image: url('./Images/Chor.jpg'); */
   background-Size: cover;
   object-fit:contain;
   background-repeat:no-repeat;

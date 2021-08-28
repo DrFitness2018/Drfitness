@@ -150,7 +150,7 @@ class SelectApp extends React.Component {
         <div classname="selection">
           <h1
             style={{
-              color: "",
+              color: "#212121",
               textTransform: "uppercase",
               fontFamily: "fantasy",
               // fontWeight:'lighter'

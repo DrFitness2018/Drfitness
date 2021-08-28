@@ -59,8 +59,8 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    backgroundColor:'#fafafa',
+    // backgroundColor: theme.palette.background.paper,
+    // backgroundColor:'#fafafa',
     color: "black",
   },
 }));
@@ -92,8 +92,8 @@ export default function NavTabs() {
           aria-label="nav tabs example"
           // style={{backgroundColor:'#fefefe'}}
         >
-          <LinkTab label="Exercises" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Diet Plans" href="/trash" {...a11yProps(1)} />
+          <LinkTab label="Exercises" href="/Exercises" {...a11yProps(0)} />
+          <LinkTab label="Diet Plans" href="/Diets" {...a11yProps(1)} />
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>

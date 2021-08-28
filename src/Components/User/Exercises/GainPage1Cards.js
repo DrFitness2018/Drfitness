@@ -23,7 +23,7 @@ export default function GainPage1() {
         }}
       >
         <h1>Want to gain weight in 30 Days?</h1>
-        <h4>Try these Exercises and Gain Weight</h4>
+        <h4 >Try these Exercises and Gain Weight</h4>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Button variant="outline-light">See details</Button>
 

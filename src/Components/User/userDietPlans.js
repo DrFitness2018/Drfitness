@@ -9,7 +9,7 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Popper from "@material-ui/core/Popper";
 // import Fade from "@material-ui/core/Fade";
-import {Fade} from 'react-bootstrap'
+import { Fade } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Cards from "../User/DietCards";
 import "./userDietPlans.css";
@@ -66,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     // backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#63d471",
+    backgroundColor: "#EEEEEE",
+    // backgroundColor: "#63d471",
     color: "black",
   },
   paper: {
@@ -334,7 +335,7 @@ export default function NavTabs() {
             </p>
           </Marquee>
           <h2
-            className="HeadingUserGain"
+            className="heading"
             style={{
               color: "#212121",
               WebkitBackgroundClip: "text",
@@ -347,25 +348,26 @@ export default function NavTabs() {
             className="wordingsUserGain"
             style={{
               fontWeight: "normal",
-              color: "#ffff",
+              color: "#212121",
               WebkitBackgroundClip: "text",
+              fontFamily:'serif'
             }}
           >
             Follow our diet plan for a month accordingly and gain 2500-3000
             Calories a day!
           </h4>
 
-          <div 
-          style={{
-            padding:0,
-            // backgroundColor:'lightgray'
-          }}>
-            
+          <div
+            style={{
+              padding: 0,
+              // backgroundColor:'lightgray'
+            }}
+          >
             <Button
               variant="outlined"
               style={{
                 width: "100%",
-                marginTop:20,
+                marginTop: 20,
                 // backgroundColor:'pink'
               }}
               onClick={() => SetShow(!show)}
@@ -378,50 +380,54 @@ export default function NavTabs() {
               variant="outlined"
               style={{
                 width: "100%",
-                marginTop:20
-
+                marginTop: 20,
               }}
               onClick={() => SetShowt(!showt)}
             >
               Tuesday
             </Button>
-            <div className="cards">{showt ? <CardsMultipleTuesday /> : null}</div>
+            <div className="cards">
+              {showt ? <CardsMultipleTuesday /> : null}
+            </div>
             <Button
               variant="outlined"
               style={{
                 width: "100%",
-                marginTop:20
-
+                marginTop: 20,
               }}
               onClick={() => SetShoww(!showw)}
             >
               Wednesday
             </Button>
-            <div className="cards">{showw ? <CardsMultipleWednesday /> : null}</div>
+            <div className="cards">
+              {showw ? <CardsMultipleWednesday /> : null}
+            </div>
             <Button
               variant="outlined"
               style={{
                 width: "100%",
-                marginTop:20
-
+                marginTop: 20,
               }}
               onClick={() => SetShowth(!showth)}
             >
               Thursday
             </Button>
-            <div className="cards">{showth ? <CardsMultipleThursday /> : null}</div>
+            <div className="cards">
+              {showth ? <CardsMultipleThursday /> : null}
+            </div>
             <Button
               variant="outlined"
               style={{
                 width: "100%",
-                marginTop:20
-
+                marginTop: 20,
               }}
               onClick={() => SetShowf(!showf)}
             >
               Friday
             </Button>
-            <div className="cards">{showf ? <CardsMultipleFriday /> : null}</div>
+            <div className="cards">
+              {showf ? <CardsMultipleFriday /> : null}
+            </div>
 
             <h3
               style={{

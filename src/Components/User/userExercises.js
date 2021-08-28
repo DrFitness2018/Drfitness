@@ -93,6 +93,7 @@ export default function NavTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
+        
         <ExercisesG />
       </TabPanel>
       <TabPanel value={value} index={1}>
