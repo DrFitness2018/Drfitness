@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Form, Button, Container } from "react-bootstrap";
 import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 const pageTransition = {
   in: {
@@ -177,7 +179,7 @@ class SelectApp extends React.Component {
                 our app provides workout routines for Bodybuilding, Fat Loss,
                 Mass Gain and Gain Strength.
               </p>
-              <Button
+              {/* <Button
                 variant="secondary"
                 onClick={this.gotoUL}
                 style={{
@@ -188,7 +190,17 @@ class SelectApp extends React.Component {
                 }}
               >
                 Continue
-              </Button>
+              </Button> */}
+              <Link
+                  to="/UserLogin"
+                  className="btn"
+                  style={{
+                    backgroundColor: "white",
+                    marginLeft: "5px",
+                  }}
+                >
+                  Let's get Fit
+                </Link>
             </div>
 
             <div className="userBox">
@@ -208,7 +220,7 @@ class SelectApp extends React.Component {
                 clients how to prevent injuries.
               </p>
               <br></br>
-              <Button
+              {/* <Button
                 variant="secondary"
                 onClick={this.gotoCL}
                 style={{
@@ -219,7 +231,17 @@ class SelectApp extends React.Component {
                 }}
               >
                 Continue
-              </Button>
+              </Button> */}
+              <Link
+                  to="/ConLogin"
+                  className="btn"
+                  style={{
+                    backgroundColor: "white",
+                    marginLeft: "5px",
+                  }}
+                >
+                  Become part of our family
+                </Link>
             </div>
           </div>
         </div>

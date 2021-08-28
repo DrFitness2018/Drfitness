@@ -3,6 +3,7 @@ import React from "react";
 import { Wave, Random } from "react-animated-text";
 import { Formik, Form, Button, Container } from "react-bootstrap";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const pageTransition={
@@ -38,7 +39,7 @@ class UserL extends React.Component {
             }}
           >
             Login
-            <Button
+            {/* <Button
               variant="outline-secondary"
               onClick={this.gotoUserDash}
               style={{
@@ -49,7 +50,19 @@ class UserL extends React.Component {
               }}
             >
               Skip
-            </Button>
+            </Button> */}
+                  <Link
+                  to="/userDash"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Skip
+                </Link>
           </h2>
           <Form>
             <Form.Group controlId="formBasicEmail">
@@ -83,7 +96,7 @@ class UserL extends React.Component {
             {/* <Form.Group>
     <Form.File id="exampleFormControlFile1" label="Example file input" />
   </Form.Group> */}
-            <Button
+            {/* <Button
               variant="secondary"
               type="submit"
               onClick={this.gotoUserDash}
@@ -94,10 +107,22 @@ class UserL extends React.Component {
               }}
             >
               Login
-            </Button>
+            </Button> */}
+               <Link
+                  to="/userDash"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Login
+                </Link>
           </Form>
-          <p>Don't have any Account?</p>
-          <Button
+          <p style={{color:"#212121"}}>Don't have any Account?</p>
+          {/* <Button
             variant="outline-secondary"
             onClick={this.gotoUserR}
             style={{
@@ -109,7 +134,19 @@ class UserL extends React.Component {
             }}
           >
             Sign up
-          </Button>
+          </Button> */}
+             <Link
+                  to="/UserReg"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Signup
+                </Link>
       </div>
         </motion.div>
     );

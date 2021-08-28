@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import BMIs from "../../Images/bmi.jpg";
 import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from 'react-router-dom'
 
 
 const { CircularProgress, LinearProgress } = require("@material-ui/core");
@@ -17,9 +18,7 @@ const pageTransition={
   }
 }
 class BMApp extends React.Component {
-  gotoSelect = () => {
-    this.props.history.push("/usertabs");
-  };
+  
 
   constructor() {
     super();
@@ -366,7 +365,7 @@ function Weight(props) {
         }}
       >
         <LinearProgress variant="buffer" value={level} style={{ width: 200 }} />
-        <img src={BMIs} width={300} />
+        {/* <img src={BMIs} width={300} /> */}
         <h2
           className="wordings"
           style={{
@@ -450,9 +449,9 @@ function Weight(props) {
         >
           Don't know how to Lean? Follow our Exercise and Diet plan Accordingly
         </h4>
-        <Button variant="outline-light" onClick={props.fnc}>
+        <Link to='/usertabs' className="btn btn-outline-light">
           Let's See
-        </Button>
+        </Link>
       </div>
     );
   }

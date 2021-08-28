@@ -169,13 +169,13 @@
     width: 50%;
     height: 80%;
   }
-  .main{
+  /* .main{
   object-fit:contain;
   width: 100%;
   height: 125%;
   background-image: url('./Images/bmi.jpg');
   background-Size: 100% 100%;
-  }
+  } */
 }
 
 .marquee {
