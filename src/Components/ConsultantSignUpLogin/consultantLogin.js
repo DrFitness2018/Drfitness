@@ -3,6 +3,7 @@ import React from 'react'
 import { Wave, Random } from 'react-animated-text';
 import {Formik,Form,Button,Container} from 'react-bootstrap'
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const pageTransition={
@@ -15,12 +16,12 @@ const pageTransition={
 }
 class ConL extends React.Component {
 
-  gotoUserR = () => {
-    this.props.history.push("/ConReg");
-  };
-  gotoUserDash = () => {
-    this.props.history.push("/conDash");
-  };
+  // gotoUserR = () => {
+  //   this.props.history.push("/ConReg");
+  // };
+  // gotoUserDash = () => {
+  //   this.props.history.push("/conDash");
+  // };
   
   render() {
     return (
@@ -34,21 +35,22 @@ class ConL extends React.Component {
           <h2
             style={{
               fontFamily: "fantasy",
+              color:'#212121'
             }}
           >
             Login
-            <Button
-              variant="outline-secondary"
-              onClick={this.gotoUserDash}
-              style={{
-                fontFamily: "serif",
-                marginLeft: 20,
-                border: "1px solid",
-                color: "#63d471",
-              }}
-            >
-              Skip
-            </Button>
+            <Link
+                  to="/conDash"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Skip
+                </Link>
           </h2>
           <Form>
             <Form.Group controlId="formBasicEmail">
@@ -82,33 +84,32 @@ class ConL extends React.Component {
             {/* <Form.Group>
     <Form.File id="exampleFormControlFile1" label="Example file input" />
   </Form.Group> */}
-            <Button
-              variant="secondary"
-              type="submit"
-              onClick={this.gotoUserDash}
-              style={{
-                color: "#212121",
-                backgroundColor: "#63d471",
-                textTransform: "uppercase",
-              }}
-            >
-              Login
-            </Button>
+               <Link
+                  to="/conDash"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Login
+                </Link>
           </Form>
-          <p>Don't have any Account?</p>
-          <Button
-            variant="outline-secondary"
-            onClick={this.gotoUserR}
-            style={{
-              color: "#63d471",
-              // backgroundColor: "#63d471",
-              border: "1px solid",
-
-              textTransform: "uppercase",
-            }}
-          >
-            Sign up
-          </Button>
+          {/* <p>Don't have any Account?</p>
+          <Link
+                  to="/ConReg"
+                  className="btn"
+                  style={{
+                    fontFamily: "serif",
+                    marginLeft: 20,
+                    border: "1px solid",
+                    color: "#63d471",
+                  }}
+                >
+                  Sign Up
+                </Link> */}
       </div>
         </motion.div>
     );

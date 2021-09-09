@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext} from "react";
 import "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -7,8 +7,8 @@ import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from 'react-router-dom'
 
-
 const { CircularProgress, LinearProgress } = require("@material-ui/core");
+
 const pageTransition={
   in:{
     opacity:1
@@ -343,14 +343,14 @@ function BmiDisplay(props) {
 function Weight(props) {
   const [level, setlevel] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setlevel((newlevel) => (newlevel >= 100 ? 0 : newlevel + 10));
-    }, 500);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setlevel((newlevel) => (newlevel >= 100 ? 0 : newlevel + 10));
+  //   }, 500);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
   if (props.bmi <= 18.5) {
     return (

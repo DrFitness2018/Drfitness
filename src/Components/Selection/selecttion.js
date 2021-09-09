@@ -1,8 +1,12 @@
-import React from "react";
-import { Formik, Form, Button, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Tab, Tabs, Row, Col } from "react-bootstrap";
 import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import UserLogin from '../UserSignUpLogin/userLogin'
+import UserReg from '../UserSignUpLogin/userRegister'
+import ConLogin from '../ConsultantSignUpLogin/consultantLogin'
+import ConReg from '../ConsultantSignUpLogin/consultantRegister'
 
 
 const pageTransition = {
@@ -14,25 +18,20 @@ const pageTransition = {
   },
 };
 
-class SelectApp extends React.Component {
-  gotoUL = () => {
-    this.props.history.push("/UserLogin");
-  };
-  gotoCL = () => {
-    this.props.history.push("/ConLogin");
-  };
-  render() {
-    return (
-      <motion.div
-        initial="out"
-        animate="in"
-        exit="out"
-        variants={pageTransition}
-        className="selection"
-      >
-        {/* Dosra Kaam */}
+export default function Selection(props) {
+  const [key, setKey] = useState('user');
 
-        {/* <div className="col">
+  return (
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      className="selection"
+    >
+      {/* Dosra Kaam */}
+
+      {/* <div className="col">
           <h1
             style={{
               color: "",
@@ -145,17 +144,16 @@ class SelectApp extends React.Component {
         </div> 
         */}
 
-        {/* Dosra Kaam  khatam*/}
+      {/* Dosra Kaam  khatam*/}
 
-        {/* pehla kaam shuru*/}
-
+      {/* pehla kaam shuru*/}
+      {/* 
         <div classname="selection">
           <h1
             style={{
               color: "#212121",
               textTransform: "uppercase",
               fontFamily: "fantasy",
-              // fontWeight:'lighter'
               fontStyle: "oblique",
             }}
           >
@@ -179,28 +177,16 @@ class SelectApp extends React.Component {
                 our app provides workout routines for Bodybuilding, Fat Loss,
                 Mass Gain and Gain Strength.
               </p>
-              {/* <Button
-                variant="secondary"
-                onClick={this.gotoUL}
+              <Link
+                to="/UserLogin"
+                className="btn"
                 style={{
-                  backgroundColor: "#63d471",
-                  textTransform: "uppercase",
-                  fontWeight: "bold",
-                  color: "#212121",
+                  backgroundColor: "white",
+                  marginLeft: "5px",
                 }}
               >
-                Continue
-              </Button> */}
-              <Link
-                  to="/UserLogin"
-                  className="btn"
-                  style={{
-                    backgroundColor: "white",
-                    marginLeft: "5px",
-                  }}
-                >
-                  Let's get Fit
-                </Link>
+                Let's get Fit
+              </Link>
             </div>
 
             <div className="userBox">
@@ -220,9 +206,10 @@ class SelectApp extends React.Component {
                 clients how to prevent injuries.
               </p>
               <br></br>
-              {/* <Button
-                variant="secondary"
-                onClick={this.gotoCL}
+
+              <Link
+                to="/ConLogin"
+                className="btn"
                 style={{
                   backgroundColor: "#63d471",
                   textTransform: "uppercase",
@@ -230,25 +217,59 @@ class SelectApp extends React.Component {
                   color: "#212121",
                 }}
               >
-                Continue
-              </Button> */}
-              <Link
-                  to="/ConLogin"
-                  className="btn"
-                  style={{
-                    backgroundColor: "white",
-                    marginLeft: "5px",
-                  }}
-                >
-                  Become part of our family
-                </Link>
+                Become part of our family
+              </Link>
             </div>
           </div>
         </div>
-        {/* pehla kaam khatam*/}
-      </motion.div>
-    );
-  }
-}
+ */}
 
-export default SelectApp;
+      {/* pehla kaam khatam*/}
+
+      {/* third kaam */}
+      <h1
+        style={{
+          color: "#212121",
+          textTransform: "uppercase",
+          fontFamily: "fantasy",
+          fontStyle: "oblique",
+        }}
+      >
+        Be a user or Train our user
+      </h1>
+      {/* <div style={{backgroundColor:'lightgray',width:'500px'}}>
+        <Tabs
+          id="controlled-tab-example"
+          activeKey={key}
+          onSelect={(k) => setKey(k)}
+          className="mb-3"
+        >
+          <Tab eventKey="user" title="User">
+            <UserLogin />
+          </Tab>
+          <Tab eventKey="consultant" title="Consultant">
+            <ConLogin />
+          </Tab>
+        </Tabs>
+
+      </div> */}
+      <Container className="abc">
+        <Row>
+          <Col>
+            <Tabs defaultActiveKey="user"
+              id="controlled-tab-example">
+              <Tab eventKey="user" title="User">
+                <UserReg />
+              </Tab>
+              <Tab eventKey="consultant" title="Consultant">
+                <ConReg />
+              </Tab>
+            </Tabs>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* third kaam khatam */}
+    </motion.div>
+  );
+}
