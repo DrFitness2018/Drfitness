@@ -93,6 +93,25 @@ export default function ConsultantRegister(props) {
               }}
               type="name" placeholder="+92 300 1234567" />
           </Form.Group>
+          <Form.Group controlId="formFile" className="mb-3">
+            <Form.Label style={{ color: 'white', float: 'left' }} >Upload you Professional/Doctor Certificate</Form.Label>
+            <Form.Control  style={{
+                backgroundColor: "transparent",
+                border: "2px solid #233329",
+                color: "#63d471",
+                paddingBottom:35
+              }} type="file" />
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label style={{ color: 'white', float: 'left' }}>Gender</Form.Label>
+            <Form.Control
+              style={{
+                backgroundColor: "transparent",
+                border: "2px solid #233329",
+                color: "#63d471",
+              }}
+              type="name" placeholder="Male/Female" />
+          </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Agree with Terms and Conditions" />
           </Form.Group>

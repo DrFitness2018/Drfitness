@@ -23,7 +23,9 @@ function ExercisesCards() {
       <h2 className="heading"> These Exercises will help you Gain weight</h2>
       {/* To Yaha P Gainpage1 show hojy jisme Cards hoon Weight Gain k Ek example uski mn
       nechay bna kr dikha deta hun*/}
+      
       <GainCards />
+      
     </div>
   );
 }
