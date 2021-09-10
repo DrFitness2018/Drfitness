@@ -3,14 +3,29 @@ import "../../App.css";
 import React from "react";
 import "reactjs-popup/dist/index.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const pageTransition={
+  in:{
+    opacity:1
+  },
+  out:{
+    opacity:0
+  }
+}
 
 class Splash extends React.Component {
+
   gotoSelect = () => {
     this.props.history.push("/select");
   };
   render() {
     return (
-      <div style={{ height: "100vh", margin: "0%" }}>
+      <div
+        // className="parallax"
+        style={{ height: "85vh", margin: "0%" }}
+
+      >
         <div
           style={{
             display: "flex",
@@ -28,26 +43,21 @@ class Splash extends React.Component {
             fontFamily: "fantasy",
             color: "white",
             textAlign: "center",
-
-            // backgroundImage:
           }}
         >
-          <div
+          <motion.div transition={{delay:0.2,type:'spring',stiffness:100}} initial={{y:-150}} animate={{y:-10}} 
+          // <motion.div transition={{delay:1.5}} initial="out" animate="in" exit="out" variants={pageTransition}
             style={{
-              // backgroundColor: "grey",
-              //  justifyContent:'center',
-              width: "fit-content",
+              alignSelf: 'start',
+              width: 'max',
               padding: 40,
               marginTop: 50,
-              // border: "1px solid black",
+              marginLeft: 20,
               borderRadius: "20px ",
-              // opacity:'50%'
               backgroundColor: "rgba(0, 0, 0, 0.61)",
               // backgroundColor: "rgba(102, 187, 106, 0.61)",
-              // backgroundColor: "rgba(238, 238, 238, 0.61)",
-              // backgroundColor: "rgba(67, 160, 71, 0.61)",
               // backdropFilter: "blur(5px)",
-              boxShadow: "0px 5px 20px  #63d471",
+              // boxShadow: "0px 5px 20px  #63d471",
               // color:'#212121'
               textAlign: "center",
               fontWeight: "bold",
@@ -56,9 +66,9 @@ class Splash extends React.Component {
           >
             <h1
               style={{
-                textAlign: "center",
-
+                textAlign: "left",
                 fontWeight: "bold",
+                fontFamily: 'Pacifico'
               }}
             >
               Dr Fitness
@@ -66,26 +76,15 @@ class Splash extends React.Component {
                 <h3>Get Fit or Stay Sick</h3>
               </span>
             </h1>
-            {/* <Header /> */}
-            {/* <Wave text="WELCOME TO DR FITNESS" effect="stretch" effectChange={2.0}  /> */}
-            <div
-              style={
-                {
-                  // display: "flex",
-                  // flexDirection: "row",
-                  // justifyContent: "space-evenly",
-                  // alignItems: 'normal',
-                }
-              }
-            >
+            <div>
               <div className="textarea">
                 <p className="text">
-                  Perfect app for starting your Fitness journey or taking your
+                  Perfect app for starting your Fitness journey <br /> or taking your
                   fitness to the next level!
                 </p>
-                {/* <Button
-                  variant="outline-light"
-                  onClick={this.gotoSelect}
+                <Link
+                  to="/select"
+                  className="btn"
                   style={{
                     backgroundColor: "#63d471",
                     textTransform: "uppercase",
@@ -99,43 +98,13 @@ class Splash extends React.Component {
                     alignSelf: "center",
                   }}
                 >
-                  Get Started
-                </Button> */}
-                <Link
-                  to="/select"
-                  className="btn"
-                  style={{
-                    backgroundColor: "white",
-                    marginLeft: "5px",
-                  }}
-                >
-                  Start Plan
+                  Lets Go
                 </Link>
-                {/* <Popup trigger={<button> Trigger</button>} position="right center">
-              <div style={{
-                display:"flex",
-                flexDirection:'column',
-                alignItems:'center',
-                justifyContent:'center'
-              }}>
-                <h1>
-                  Daily Tips
-                </h1>
-                <h4>
-                  Okay Lorey weight uthaa !
-                </h4>
               </div>
-            </Popup> */}
-              </div>
-              {/* <img
-            className="splashImage"
-            src={logo}
-            width=""
-            height="400"
-            style={{ marginRight: "" }}
-          ></img> */}
             </div>
-          </div>
+          </motion.div>
+
+
         </div>
       </div>
     );

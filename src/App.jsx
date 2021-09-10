@@ -16,7 +16,8 @@ function App() {
         backgroundColor: "transparent",
       }}
     >
-      <div className="main">
+      <div     className="parallax"
+>
         {/* <div
           style={{
             // backgroundColor: "rgba(0, 0, 0, 0.61)",
@@ -49,7 +50,7 @@ function App() {
 
       </div>
       <Footer />
-      <ParticlesBg type="cobweb"  color="#63d471" bg={true}  /> 
+      {/* <ParticlesBg type="cobweb"  color="#63d471" bg={true}  />  */}
 
     </div>
   );
