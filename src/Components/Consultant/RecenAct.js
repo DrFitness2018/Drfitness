@@ -25,7 +25,7 @@ export default function RecentAct() {
   const usersList = [
     {
       id: 1,
-      profile: { tulaib },
+      profile:  tulaib ,
       name: "Tulaib",
       phone: "0305-2504520",
       selectedSlot: "2:00 - 3:00 PM",
@@ -33,7 +33,7 @@ export default function RecentAct() {
     },
     {
       id: 2,
-      profile: { shera },
+      profile:  shera ,
       name: "Shera",
       phone: "0300-2517225",
       selectedSlot: "3:00 - 4:00 PM",
@@ -41,7 +41,7 @@ export default function RecentAct() {
     },
     {
       id: 3,
-      profile: { mehmaam },
+      profile:  mehmaam ,
       name: "Mehmaam",
       phone: "0332-8733232",
       selectedSlot: "3:00 - 4:00 PM",

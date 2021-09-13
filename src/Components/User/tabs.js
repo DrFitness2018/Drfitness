@@ -6,10 +6,12 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Dash from "../User/Drawer";
+import Navbar from "./drawerusernew/navbar";
 import UserExercise from "../../Components/User/userExercises";
 import UserDiets from "../../Components/User/userDietPlans";
 import "../../App.css";
+import ExercisesG from "../User/Exercises/ExercisesGain";
+import ExercisesL from "./Exercises/ExercisesLean";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,11 +77,11 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
-      <Dash />
+      {/* <Navbar /> */}
       <AppBar
         position="static"
         style={{
-          backgroundColor: "#233329",
+          backgroundColor: "#060b26",
           // background: "-webkit-linear-gradient(#000000, #166d3b)",
           color: "white",
           // position:'sticky'
@@ -92,16 +94,16 @@ export default function NavTabs() {
           aria-label="nav tabs example"
           // style={{backgroundColor:'#fefefe'}}
         >
-          <LinkTab label="Exercises" href="/Exercises" {...a11yProps(0)} />
-          <LinkTab label="Diet Plans" href="/Diets" {...a11yProps(1)} />
+          <LinkTab label="Gain" href="/GainExercises" {...a11yProps(0)} />
+          <LinkTab label="Lean" href="/LeanExercises" {...a11yProps(1)} />
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <UserExercise />
+      <ExercisesG />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <UserDiets />
+      <ExercisesL />
       </TabPanel>
     </div>
   );

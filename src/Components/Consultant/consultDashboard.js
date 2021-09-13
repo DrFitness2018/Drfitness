@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {BrowserRouter as Router , Switch, Route} from 'react-router-dom' 
+import {BrowserRouter as Router , Switch, Route,HashRouter} from 'react-router-dom' 
 import './dash.css'
 import Profile from './Home'
 import Availible from './Availibility'
@@ -19,7 +19,7 @@ function ConsultantDash() {
         <Router>
             <Navbar/>
             <Switch>
-                <Route exact path='/'  component={Profile} />
+                <Route exact path='/conDash'  component={Profile} />
                 <Route path='/Availible' component={Availible}/>
                 <Route path='/Schedule' component={Schedule}/>
                 <Route path='/Inbox' component={Inbox}/>

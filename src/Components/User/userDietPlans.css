@@ -23,3 +23,26 @@
         width: 250px;
     }
 }
+.headingDiet{
+    color: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    font-family:lobster;
+    text-align: center;
+    font-size: 6rem;
+    color: #233329;
+}
+.DietLean{
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+.DietLeanHeading{
+    font-weight: bold;
+    color: #233329;
+    font-family:'lobster';
+    /* font-family:'Dancing Script'; */
+
+}

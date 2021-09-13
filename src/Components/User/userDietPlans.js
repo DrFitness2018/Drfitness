@@ -13,9 +13,39 @@ import { Fade } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Cards from "../User/DietCards";
 import "./userDietPlans.css";
+import bf1 from "../../Images/Foods/Break Fast/1.jpg"
+import bf2 from "../../Images/Foods/Break Fast/2.jpg"
+import bf3 from "../../Images/Foods/Break Fast/3.jpg"
+import bf4 from "../../Images/Foods/Break Fast/4.jpg"
+import bf5 from "../../Images/Foods/Break Fast/5.jpg"
+import din1 from "../../Images/Foods/Dinner/1.jpg"
+import din2 from "../../Images/Foods/Dinner/2.jpg"
+import din3 from "../../Images/Foods/Dinner/3.jpg"
+import din4 from "../../Images/Foods/Dinner/4.jpg"
+import din5 from "../../Images/Foods/Dinner/5.jpg"
+import l1 from "../../Images/Foods/Lunch/1.jpg"
+import l2 from "../../Images/Foods/Lunch/2.jpg"
+import l3 from "../../Images/Foods/Lunch/3.jpg"
+import l4 from "../../Images/Foods/Lunch/4.jpg"
+import l5 from "../../Images/Foods/Lunch/5.jpg"
+import sn1 from "../../Images/Foods/Snacks/1.jpg"
+import sn2 from "../../Images/Foods/Snacks/2.jpg"
+import sn3 from "../../Images/Foods/Snacks/3.jpg"
+import sn4 from "../../Images/Foods/Snacks/4.jpg"
+import sn5 from "../../Images/Foods/Snacks/5.jpg"
+import sn11 from "../../Images/Foods/Snacks/11.jpg"
+import sn12 from "../../Images/Foods/Snacks/12.jpg"
+import sn13 from "../../Images/Foods/Snacks/13.jpg"
+import sn14 from "../../Images/Foods/Snacks/14.jpg"
+import sn15 from "../../Images/Foods/Snacks/15.jpg"
+import bannerimg from "../../Images/Chor.jpg";
+
+import { useHistory } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
 
 // import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import "../../App.css";
+import BannerWithText from "../BannerImgComponents/BannerImgComponents";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,19 +110,25 @@ const useStyles = makeStyles((theme) => ({
 function CardsMultipleMonday() {
   return (
     <>
+
       <Cards
+        imgs={bf1}
         FoodTime="Break Fast"
         Description="1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
             plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams)
             of peanut butter "
       />
       <Cards
+        imgs={sn1}
+
         FoodTime="Snacks"
         Description=" trail mix made with 1 cup (80 grams) of dry cereal, 1/4 cup (30
               grams) of granola, 1/4 cup (34 grams) of dried fruit, and 20
               nuts"
       />
       <Cards
+        imgs={l1}
+
         FoodTime="Lunch"
         Description=" 1 cup (100 grams) of spaghetti with 3/4 cups (183 grams) of
               tomato sauce and 4 ounces (112 grams) of cooked ground beef, as
@@ -100,11 +136,15 @@ function CardsMultipleMonday() {
               butter"
       />
       <Cards
+        imgs={sn11}
+
         FoodTime="Snacks"
         Description="1 cup (226 grams) of cottage cheese and 1/2 cup (70 grams) of
               blueberries"
       />
       <Cards
+        imgs={din1}
+
         FoodTime="Dinner"
         Description="4 ounces (110 grams) of salmon, 1 cup (100 grams) of brown rice,
               and 5 asparagus spears"
@@ -116,27 +156,36 @@ function CardsMultipleTuesday() {
   return (
     <>
       <Cards
+        imgs={bf2}
         FoodTime="Break Fast"
         Description="smoothie made with 2 cups (480 ml) of dairy or plant-based milk,
       1 cup (227 grams) of yogurt, 1 cup (140 grams) of blueberries,
       and 2 tablespoons (33 grams) of almond butter"
       />
       <Cards
+        imgs={sn2}
+
         FoodTime="Snacks"
         Description="  1 granola bar, 1 piece of fruit, and 2 pieces of string cheese"
       />
       <Cards
+        imgs={l2}
+
         FoodTime="Lunch"
         Description="  12-inch sub sandwich with meat, cheese, and veggies with 3
       ounces (85 grams) of baby carrots, 2 tablespoons (28 grams) of
       hummus, and apple slices on the side"
       />
       <Cards
+        imgs={sn12}
+
         FoodTime="Snacks"
         Description="1 scoop of whey protein powder mixed in 1 cup (240 ml) of dairy
       or plant-based milk"
       />
       <Cards
+        imgs={din2}
+
         FoodTime="Dinner"
         Description="    4-ounce (113-gram) sirloin steak, 1 medium-sized (173-gram)
       baked potato with 1 tablespoon (14 grams) of butter, and 1 cup
@@ -149,27 +198,36 @@ function CardsMultipleWednesday() {
   return (
     <>
       <Cards
+        imgs={bf3}
         FoodTime="Break Fast"
         Description="3 whole-wheat waffles with 2 tablespoons (33 grams) of peanut
       butter, 1 orange, and 2 cups (480 ml) of dairy or plant-based
       milk "
       />
       <Cards
+        imgs={sn3}
+
         FoodTime="Snacks"
         Description="  1 nut-based granola bar and 1 ounce (28 grams) of almonds"
       />
       <Cards
+        imgs={l3}
+
         FoodTime="Lunch"
         Description="  6-ounce (170-gram) 90%-lean burger on a whole-wheat bun with 1
       tomato slice and lettuce leaf, as well as 1 1/2 cup (86 grams)
       of homemade sweet potato fries cooked in olive oil"
       />
       <Cards
+        imgs={sn13}
+
         FoodTime="Snacks"
         Description="  1 cup (227 grams) of Greek yogurt and 1 cup (140 grams) of
       strawberries"
       />
       <Cards
+        imgs={din3}
+
         FoodTime="Dinner"
         Description=" 4-ounce (112-gram) chicken breast, 1/2 cup (84 grams) of quinoa,
       and 1 1/3 cups (85 grams) of sugar snap peas"
@@ -181,26 +239,36 @@ function CardsMultipleThursday() {
   return (
     <>
       <Cards
+        imgs={bf4}
+      
         FoodTime="Break Fast"
         Description=" 3-egg omelet with sliced onions, red and green bell peppers, and
       1/4 cup (28 grams) of shredded cheese with 2 cups (480 ml) of
       dairy or plant-based milk to drink "
       />
       <Cards
+        imgs={sn4}
+
         FoodTime="Snacks"
         Description="   2 tablespoons (33 grams) of peanut butter and 1 banana on 1
       slice of whole-wheat bread"
       />
       <Cards
+        imgs={l4}
+
         FoodTime="Lunch"
         Description=" 8 ounces (226 grams) of tilapia fillets, 1/4 cup (32 grams) of
       lentils, and a salad topped with 1/4 cup (30 grams) of walnuts"
       />
       <Cards
+        imgs={sn14}
+
         FoodTime="Snacks"
         Description=" 2 sliced, hard-boiled eggs atop a mixed green salad"
       />
       <Cards
+        imgs={din4}
+
         FoodTime="Dinner"
         Description="  turkey chili made with a 4-ounce (114-gram) turkey breast,
       chopped onions, garlic, celery, and sweet peppers, 1/2 cup (123
@@ -216,26 +284,36 @@ function CardsMultipleFriday() {
   return (
     <>
       <Cards
+        imgs={bf5}
+
         FoodTime="Break Fast"
         Description=" 3 whole eggs, 1 apple, and 1 cup (80 grams) of oatmeal made with
       1 cup (240 ml) of dairy or plant-based milk "
       />
       <Cards
+        imgs={sn5}
+
         FoodTime="Snacks"
         Description=" 1 cup (226 grams) of plain yogurt with 1/4 cup (30 grams) of
       granola and 1/2 cup (70 grams) of raspberries"
       />
       <Cards
+        imgs={l5}
+
         FoodTime="Lunch"
         Description="   6-ounce (168-gram) chicken breast, 1 medium-sized (151-gram)
       sweet potato, 3/4 cup (85 grams) of green beans, and 1 ounce (28
       grams) of nuts"
       />
       <Cards
+        imgs={sn15}
+
         FoodTime="Snacks"
         Description="  1/2 cup (130 grams) of chickpeas atop greens"
       />
       <Cards
+        imgs={din5}
+
         FoodTime="Dinner"
         Description=" burrito bowl with 6 ounces (170 grams) of chopped sirloin steak,
       1/2 cup (130 grams) of black beans, 1/2 cup (90 grams) of brown
@@ -272,6 +350,22 @@ export default function NavTabs() {
   const wed = open ? "simple-popper" : undefined;
   const thurs = open ? "simple-popper" : undefined;
   const fri = open ? "simple-popper" : undefined;
+
+  let history = useHistory();
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+    {
+      subLinkName: 'Diet Plan',
+      subDash: '/',
+      subLink: '/diets'
+    },
+
+  ];
+
   return (
     <div className={classes.root}>
       <AppBar
@@ -281,6 +375,16 @@ export default function NavTabs() {
           color: "white",
         }}
       >
+        <BannerWithText 
+      imgSrc={bf1}
+      heading={"Diet Plan"}
+      subHeading={`Gain And Lean`}
+      LinksBan={LinksBan}
+      height={"400px"}
+      backgroundSize={"100% 400px"}
+      conmarpad={"mt-5 pt-5"}
+      fontsize={"60px"}
+      />
         <Tabs
           variant="fullWidth"
           value={value}
@@ -292,7 +396,15 @@ export default function NavTabs() {
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
+
       <TabPanel value={value} index={0}>
+      <FaIcons.FaLongArrowAltLeft
+            className="iconss"
+            color="#233329"
+            onClick={() => history.goBack()}
+            size="30px"
+          >back</FaIcons.FaLongArrowAltLeft>
+
         <div
           style={{
             // justifyContent:'center',
@@ -350,7 +462,7 @@ export default function NavTabs() {
               fontWeight: "normal",
               color: "#212121",
               WebkitBackgroundClip: "text",
-              fontFamily:'serif'
+              fontFamily: 'serif'
             }}
           >
             Follow our diet plan for a month accordingly and gain 2500-3000
@@ -497,6 +609,13 @@ export default function NavTabs() {
           </div>
         </div>
       </TabPanel>
+
+
+
+      {/* lean */}
+
+
+
       <TabPanel value={value} index={1}>
         <div
           style={{
@@ -508,9 +627,9 @@ export default function NavTabs() {
             textTransform: "capitalize",
             // backgroundColor: "#f5f5f5",
             width: "100%",
-            color: "white",
+            color: "#121212",
             padding: 20,
-            fontFamily: "sans-serif",
+            fontFamily: 'Dancing Script',
           }}
         >
           <Marquee className="marquee" speed={100} gradient={false}>
@@ -522,54 +641,30 @@ export default function NavTabs() {
             </p>
           </Marquee>
           <h2
-            className="HeadingUserGain"
-            style={{
-              // color:'pink
-              fontWeight: "600",
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
-              // WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
-              color: "white",
-              // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
-              // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
-            }}
+            className="headingDiet"
           >
             Want to Lean weight ?
           </h2>
-          <h4
+          <h6
             className="wordingsUserGain"
             style={{
-              color: "white",
+              color: "#121212",
               fontWeight: "normal",
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
-              // WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
+              textAlign: 'center'
             }}
           >
             The following evidence-based eating and lifestyle changes have been
             shown to help people lose weight.
-          </h4>
-          <div>
+          </h6>
+          <div className="DietLean mt-3">
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
             >
               Eat More Protein
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
+              <li style={{ fontFamily: 'Dancing Script', textAlign: 'justify' }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   When it comes to losing weight, protein is the king of
                   nutrients{" "}
                 </span>
@@ -580,24 +675,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Avoid sugary soft drinks and fruit juices
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Dancing Script',}}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Another relatively easy change you can make is to eliminate
                   liquid sugar calories from your diet.{" "}
@@ -609,24 +694,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Drink more water
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Dancing Script',}} >
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   One very simple trick to increase weight loss is to drink more
                   water{" "}
@@ -640,24 +715,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Exercise and lift weights
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Dancing Script', marginLeft: "" }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   When you eat fewer calories, your body compensates by saving
                   energy, making you burn fewer calories{" "}
@@ -671,24 +736,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Reduce your refined carb intake
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Dancing Script', marginLeft: "" }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Cutting carbs is a very effective way to lose weight, as it
                   reduces appetite and makes you eat fewer calories{" "}

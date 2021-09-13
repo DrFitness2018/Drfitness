@@ -18,11 +18,12 @@ export default function UserRegister(props) {
       <div className='formss'>
         <h2
           style={{
-            color: '#ffff',
+            color: '#121212',
             fontFamily: "fantasy",
+            textAlign:'center'
           }}
         >
-          Provide your details
+          Provide your<span style={{color:"#63d471", fontFamily: "fantasy",textAlign:'left'}}>details</span>
           {/* <Link
             to="/UserLogin"
             className="btn"
@@ -38,7 +39,7 @@ export default function UserRegister(props) {
           <Button variant="primary-outlined"  style={{  fontFamily: "serif",
               marginLeft: 20,
               border: "1px solid",
-              color: "#63d471",}}
+              color: "",}}
           onClick={() => setModalShow(true)}>
             Skip to Login
           </Button>
@@ -46,11 +47,11 @@ export default function UserRegister(props) {
         </h2>
         <Form>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Name</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left',fontWeight:'lighter' }}>Name</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="name" placeholder="Enter username"
@@ -58,51 +59,53 @@ export default function UserRegister(props) {
           </Form.Group>
           {/* <br /> */}
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Email address</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left',fontWeight:'lighter'  }}>Email address</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="email" placeholder="Enter email" />
-            <Form.Text className="text" style={{ color: 'lightgray' }}>
+            <Form.Text className="text" style={{ color: 'black' }}>
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Password</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left' ,fontWeight:'lighter' }}>Password</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #63d471",
+                border: "2px solid darkgray",
                 color: "#63d471"
               }}
               type="password" placeholder="Password" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Contact</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left',fontWeight:'lighter'  }}>Contact</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="name" placeholder="+92 300 1234567" />
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Agree with Terms and Conditions" />
+            <Form.Check style={{fontWeight:'lighter' }} type="checkbox" label="Agree with Terms and Conditions" />
           </Form.Group>
           <br />
           <Link
-            to="/userDash"
+            to="/BMJS"
             className="btn"
             style={{
               fontFamily: "serif",
               marginLeft: 20,
-              border: "1px solid",
-              color: "#63d471",
+              // border: "1px solid",
+              color:'#121212',
+              fontWeight:'bold',
+              backgroundColor: "#63d471",
             }}
           >
             Register

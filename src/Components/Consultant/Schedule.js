@@ -4,6 +4,8 @@ import FormGroup from '@material-ui/core/FormGroup';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/FormControl';
+import BannerWithText from '../BannerImgComponents/BannerImgComponents';
+import bannerimg from "../../Images/Chor.jpg";
 import { makeStyles } from '@material-ui/core/styles';
 import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
 import {
@@ -135,8 +137,27 @@ export default () => {
     () => allowResizing && allowUpdating,
     [allowResizing, allowUpdating],
   );
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+ 
 
+  ];
   return (
+    <>
+      <BannerWithText
+      imgSrc={bannerimg}
+      heading={"Schedule"}
+      subHeading={`Schedule`}
+      LinksBan={LinksBan}
+      height={"400px"}
+      backgroundSize={"100% 400px"}
+      conmarpad={"mt-5 pt-5"}
+      fontsize={"60px"}
+      />
         <div className="docpages">
              <h2 className="heading">Schedule Of Consultant</h2>
         <div
@@ -192,5 +213,6 @@ export default () => {
     </React.Fragment>
       </div>
       </div>
+      </>
   );
 };

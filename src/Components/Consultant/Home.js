@@ -6,6 +6,8 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Divider from "@material-ui/core/Divider";
 import CountUp from 'react-countup';
 import Recent from "./RecenAct"
+import BannerWithText from '../BannerImgComponents/BannerImgComponents';
+import bannerimg from "../../Images/Chor.jpg";
 
 export default function Home() {
   const mystyle = {
@@ -20,8 +22,29 @@ export default function Home() {
     paddingTop: "10px",
     display: "inline-block",
   };
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+ 
+
+  ];
   return (
-    <div className="docpages">
+    <>
+    <BannerWithText
+    imgSrc={bannerimg}
+    heading={"Consultant Dash"}
+    subHeading={`Consultant Dash`}
+    LinksBan={LinksBan}
+    height={"400px"}
+    backgroundSize={"100% 400px"}
+    conmarpad={"mt-5 pt-5"}
+    fontsize={"60px"}
+    />
+
+<div className="docpages">
       <div className="container mt-4">
         <h3 className="heading">Dashboard</h3>
       </div>
@@ -261,5 +284,6 @@ export default function Home() {
           <Recent/>
       </div>
     </div>
+    </>
   );
 }

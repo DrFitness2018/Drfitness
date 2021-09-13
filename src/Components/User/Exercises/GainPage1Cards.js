@@ -27,7 +27,7 @@ export default function GainPage1() {
               <Button variant="outline-light">See details</Button>
               <Link
                 to={{
-                  pathname: '/GainWeek2',
+                  pathname: '/ExerciseGain/GainPage2',
                   data: '30days Plan'
                 }}
                 className="btn"
@@ -328,7 +328,7 @@ export default function GainPage1() {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <Link
                   to={{
-                    pathname: '/GainWeek2',
+                    pathname: '/GainPage2',
                     data: '30days Plan'
                   }}
                   className="btn"

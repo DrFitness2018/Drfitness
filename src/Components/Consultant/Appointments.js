@@ -6,6 +6,8 @@ import "./Home.css";
 import shera from "../../Images/sheraa.PNG";
 import tulaib from "../../Images/tulaibs.PNG";
 import mehmaam from "../../Images/mehmaams.PNG";
+import BannerWithText from '../BannerImgComponents/BannerImgComponents';
+import bannerimg from "../../Images/Chor.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,35 +27,54 @@ export default function Appointments() {
   const usersList = [
     {
       id: 1,
-      profile: { tulaib },
+      profile:  tulaib ,
       name: "Tulaib",
       phone: "0305-2504520",
       selectedSlot: "2:00 - 3:00 PM",
     },
     {
       id: 2,
-      profile: { shera },
+      profile:  shera ,
       name: "Shera",
       phone: "0300-2517225",
       selectedSlot: "3:00 - 4:00 PM",
     },
     {
       id: 3,
-      profile: { mehmaam },
+      profile:  mehmaam ,
       name: "Mehmaam",
       phone: "0332-8733232",
       selectedSlot: "3:00 - 4:00 PM",
     },
     {
       id: 3,
-      profile: { mehmaam },
+      profile: mehmaam,
       name: "Mehmaam",
       phone: "0332-8733232",
       selectedSlot: "3:00 - 4:00 PM",
     },
   ];
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+ 
 
+  ];
   return (
+    <>
+      <BannerWithText
+      imgSrc={bannerimg}
+      heading={"Appointments"}
+      subHeading={`Appointments`}
+      LinksBan={LinksBan}
+      height={"400px"}
+      backgroundSize={"100% 400px"}
+      conmarpad={"mt-5 pt-5"}
+      fontsize={"60px"}
+      />
     <div className="docpages">
       <h2 className="heading">New/Pending clients requests</h2>
 
@@ -95,5 +116,6 @@ export default function Appointments() {
         );
       })}
     </div>
+    </>
   );
 }

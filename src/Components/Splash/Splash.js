@@ -22,7 +22,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div
-        // className="parallax"
+        className="parallax"
         style={{ height: "85vh", margin: "0%" }}
 
       >

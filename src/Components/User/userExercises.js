@@ -9,9 +9,15 @@ import Box from "@material-ui/core/Box";
 import "./userExercise.css";
 import ExercisesG from "./Exercises/ExercisesGain";
 import ExercisesL from "./Exercises/ExercisesLean";
+import BannerWithText from "../BannerImgComponents/BannerImgComponents";
+import bannerimg from "../../Images/Chor.jpg";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+
+
+  
+
 
   return (
     <div
@@ -65,6 +71,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function NavTabs() {
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+    {
+      subLinkName: 'Diet Plan',
+      subDash: '/',
+      subLink: '/diets'
+    },
+
+  ];
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -74,13 +93,26 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
+      <BannerWithText 
+      imgSrc={bannerimg}
+      heading={"Exercises"}
+      subHeading={`Gain And Lean`}
+      LinksBan={LinksBan}
+      height={"400px"}
+      backgroundSize={"100% 400px"}
+      conmarpad={"mt-5 pt-5"}
+      fontsize={"60px"}
+      />
+      
       <AppBar
         position="static"
         style={{
           backgroundColor: "#233329",
           color: "white",
+          marginTop:'-40px'
         }}
       >
+         
         <Tabs
           variant="fullWidth"
           value={value}
@@ -91,7 +123,9 @@ export default function NavTabs() {
           <LinkTab label="Lean" href="/trash" {...a11yProps(1)} />
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
+        
       </AppBar>
+     
       <TabPanel value={value} index={0}>
         <ExercisesG />
       </TabPanel>
