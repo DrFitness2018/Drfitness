@@ -4,7 +4,7 @@ import "./Availibility.css";
 import * as FaIcons from "react-icons/fa";
 import Input from "@material-ui/core/Input";
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
-import bannerimg from "../../Images/Chor.jpg";
+import bannerimg from "../../Images/BannerImages/2.jpg";
 
 // ** with useState ** //
 
@@ -105,6 +105,11 @@ const Availible = () => {
 
 
 
+
+
+
+
+
       <div
         style={{
           margin: 10,
@@ -138,7 +143,6 @@ const Availible = () => {
       >
         <List list={list} onRemove={handleRemove} />
         <FaIcons.FaRegPlusSquare
-<<<<<<< HEAD
             className="iconss"
             color="blue"
             onClick={() => SetShow(!show)}
@@ -178,62 +182,10 @@ const Availible = () => {
       >
         <List list={list} onRemove={handleRemove} />
         <FaIcons.FaRegPlusSquare
-=======
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
             className="iconss"
             color="blue"
             onClick={() => SetShow(!show)}
           />
-      </div>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
-      <div
-        style={{
-          margin: 10,
-          textAlign:'center'
-        }}
-      >
-        <h2>
-<<<<<<< HEAD
-          Thursday{" "}
-=======
-          Wednesday{" "}
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
-         
-        </h2>
-  
-      </div>
-      <div>
-        {show ? (
-          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
-        ) : null}
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "80%",
-          backgroundColor: "#f5f5f5",
-          height: "100%",
-          borderRadius: "10px",
-          flexDirection: "row",
-          boxShadow: "0px 0px 4px #888888",
-          margin: 10,
-        }}
-      >
-        <List list={list} onRemove={handleRemove} />
-        <FaIcons.FaRegPlusSquare
-            className="iconss"
-            color="blue"
-            onClick={() => SetShow(!show)}
-          />
-<<<<<<< HEAD
-      </div>
-=======
       </div>
 
 
@@ -275,7 +227,6 @@ const Availible = () => {
             onClick={() => SetShow(!show)}
           />
       </div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
       <div
         style={{
@@ -393,19 +344,10 @@ const Availible = () => {
             onClick={() => SetShow(!show)}
           />
       </div>
-<<<<<<< HEAD
 
     </div>
 
     </>
-=======
-        <button className="btn btn-outline-primary" onClick={()=>{
-          alert("Slots Has been pushed to Database !")
-        }}>Update Slots in Database</button>
-    </div>
-
-    
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
   );
 };
 

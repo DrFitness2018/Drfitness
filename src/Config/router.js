@@ -2,11 +2,9 @@ import React from 'react'
 import { UserLogin, UserReg, Select, Header, ConLogin, ConReg, Splash, UserDash,Usertabs, ConDash, BMJS } from '../Components'
 import Profile from "../Components/Consultant/Home";
 import Consult from "../Components/User/Consult";
-<<<<<<< HEAD
-=======
 import HomePage from "../Components/HomePage/HomePage";
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 import Gainpage2 from "../Components/User/Exercises/Gainpage2Week&Days"
+import Footer from "../Components/FooterUp/FooterUp"
 // import HomePage from "../Components/HomePage/HomePage"
 
 import {
@@ -27,13 +25,10 @@ export default class AppRouter extends React.Component {
                 <Router>
                     <Switch>
                         <Route exact path='/'>
-<<<<<<< HEAD
-                            <Splash/>
-=======
                             {/* <Splash/> */}
                         <HomePage/>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                         </Route>
+                       
                         <Route path='/select'>
                             <Select />
                         </Route>
@@ -70,6 +65,7 @@ export default class AppRouter extends React.Component {
                         <Route path='/GainWeek2'>
                             <Gainpage2 />
                         </Route>
+                       
                     </Switch>
                 </Router>
             </AnimatePresence>

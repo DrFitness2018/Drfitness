@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import bannerimg from "../../../Images/Chor.jpg";
 import BannerWithText from '../../BannerImgComponents/BannerImgComponents';
 import './Gainpage2Week&Days.css'
-<<<<<<< HEAD
 import { 
   Day1, 
   Day2, 
@@ -37,9 +36,6 @@ import {
   Day30,
 
 } from './ExercisesObjectData';
-=======
-import { Day1 } from './ExercisesObjectData';
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import "../../Consultant/Home.css";
@@ -137,20 +133,13 @@ export default function Gainpage2(props) {
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
             <div className="">
               <div className="">
                 <div className="col ">
-=======
-            <div className="container d-flex justify-content-center">
-              <div className="row mt-1">
-                <div className="col">
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
                   {
                     selectedTabdays === "Day1" ? (
                       <>
-<<<<<<< HEAD
 
                         <div className="">
                           <div className="">
@@ -159,16 +148,6 @@ export default function Gainpage2(props) {
                               {Day1.map((user, id) => {
                                 return (
                                   <div className="appoinmentCards w-50 d-flex justify-content-center">
-=======
-                     
-                        <div className="container d-flex flex-column ">
-                          <div className="row mt-1">
-                            <div className="col">
-
-                              {Day1.map((user, id) => {
-                                return (
-                                  <div className="appoinmentCards w-50">
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                                     <div>
                                       <Avatar
                                         alt=''
@@ -198,11 +177,7 @@ export default function Gainpage2(props) {
                                       </div>
                                     </div>
                                   </div>
-<<<<<<< HEAD
 
-=======
-                                      
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
                                 );
                               })}
@@ -211,7 +186,6 @@ export default function Gainpage2(props) {
 
                             </div>
                           </div>
-<<<<<<< HEAD
 
                         </div>
 
@@ -262,25 +236,11 @@ export default function Gainpage2(props) {
 
 
                               </div>
-=======
-                          <button 
-                          style={{ marginTop: "20px"}} className="btn btn-primary">Start Exercise</button>
-
-                        </div>
-                         
-                      </>) :
-                      selectedTabdays === "Day2" ? (
-                        <>
-                          <div className="container">
-                            <div className="row mt-1">
-                              <div className="col">World</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                             </div>
                           </div>
                         </>) :
                         selectedTabdays === "Day3" ? (
                           <>
-<<<<<<< HEAD
                             <div className="">
                               <div className="">
                               <div className="d-flex flex-column align-items-center">
@@ -325,17 +285,11 @@ export default function Gainpage2(props) {
 
 
 </div>
-=======
-                            <div className="container">
-                              <div className="row mt-1">
-                                <div className="col">DrFit</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                               </div>
                             </div>
                           </>) :
                           selectedTabdays === "Day4" ? (
                             <>
-<<<<<<< HEAD
                               <div className="">
                                 <div className="">
                                 <div className="d-flex flex-column align-items-center">
@@ -380,17 +334,11 @@ export default function Gainpage2(props) {
 
 
 </div>
-=======
-                              <div className="container">
-                                <div className="row mt-1">
-                                  <div className="col">App</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                                 </div>
                               </div>
                             </>) :
                             selectedTabdays === "Day5" ? (
                               <>
-<<<<<<< HEAD
                                 <div className="">
                                   <div className="">
                                   <div className="d-flex flex-column align-items-center">
@@ -435,17 +383,11 @@ export default function Gainpage2(props) {
 
 
 </div>
-=======
-                                <div className="container">
-                                  <div className="row mt-1">
-                                    <div className="col">App Native</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                                   </div>
                                 </div>
                               </>) :
                               selectedTabdays === "Day6" ? (
                                 <>
-<<<<<<< HEAD
                                   <div className="">
                                     <div className="">
                                     <div className="d-flex flex-column align-items-center">
@@ -490,17 +432,11 @@ export default function Gainpage2(props) {
 
 
 </div>
-=======
-                                  <div className="container">
-                                    <div className="row mt-1">
-                                      <div className="col">React</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                                     </div>
                                   </div>
                                 </>) :
                                 selectedTabdays === "Day7" ? (
                                   <>
-<<<<<<< HEAD
                                     <div className="">
                                       <div className="">
                                       <div className="d-flex flex-column align-items-center">
@@ -545,16 +481,10 @@ export default function Gainpage2(props) {
 
 
 </div>
-=======
-                                    <div className="container">
-                                      <div className="row mt-1">
-                                        <div className="col">Js</div>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                                       </div>
                                     </div>
                                   </>) : null
 
-<<<<<<< HEAD
 
                   }
 
@@ -565,11 +495,6 @@ export default function Gainpage2(props) {
                   <button
                     style={{ marginTop: "20px" }} className="btn btn-primary">Start Exercise</button>
 
-=======
-                  }
-
-
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 </div>
               </div>
             </div>
@@ -577,7 +502,6 @@ export default function Gainpage2(props) {
         ) :
           selectedTab === "Week2" ? (
             <>
-<<<<<<< HEAD
             {[
               "Day8",
               "Day9",
@@ -1873,29 +1797,6 @@ export default function Gainpage2(props) {
               </div>
             </div>
           </>
-=======
-              <div className="container">
-                <div className="row mt-5">
-                </div>
-              </div>
-            </>
-          ) :
-            selectedTab === "Week3" ? (
-              <>
-                <div className="container">
-                  <div className="row mt-5">
-                  </div>
-                </div>
-              </>
-            ) :
-              selectedTab === "Week4" ? (
-                <>
-                  <div className="container">
-                    <div className="row mt-5">
-                    </div>
-                  </div>
-                </>
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
               ) : null
         }
       </div>

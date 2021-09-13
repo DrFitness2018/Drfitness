@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Splash, Header ,Usertabs} from "./Components";
 import Approuter from "./Config/router";
-import Footer from "./Components/footer/Footer";
 import "./App.css";
 import ParticlesBg from "particles-bg";
+import Footer from "./Components/FooterUp/FooterUp"
 
 
 function App() {
@@ -41,11 +41,7 @@ function App() {
         {/* <Header /> */}
         {/* <Splash /> */}
         <div style={{
-<<<<<<< HEAD
-          paddingTop:'100px'  
-=======
           // paddingTop:'100px'  
->>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
         }}>
       <Approuter />
       {/* <Usertabs/> */}
@@ -53,7 +49,7 @@ function App() {
         </div>
 
       </div>
-      <Footer />
+      <Footer/>
       {/* <ParticlesBg type="cobweb"  color="#63d471" bg={true}  />  */}
 
     </div>

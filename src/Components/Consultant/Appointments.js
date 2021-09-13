@@ -7,7 +7,7 @@ import shera from "../../Images/sheraa.PNG";
 import tulaib from "../../Images/tulaibs.PNG";
 import mehmaam from "../../Images/mehmaams.PNG";
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
-import bannerimg from "../../Images/Chor.jpg";
+import bannerimg from "../../Images/BannerImages/1.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {

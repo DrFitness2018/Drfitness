@@ -5,7 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/FormControl';
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
-import bannerimg from "../../Images/Chor.jpg";
+import bannerimg from "../../Images/BannerImages/4.jpg";
 import { makeStyles } from '@material-ui/core/styles';
 import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
 import {
