@@ -6,8 +6,11 @@ import "../Consultant/Home.css";
 import shera from "../../Images/sheraa.PNG";
 import tulaib from "../../Images/tulaibs.PNG";
 import doc from "../../Images/lap-consul/1.JPG";
+<<<<<<< HEAD
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
 import bannerimg from "../../Images/Chor.jpg";
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,6 +44,7 @@ export default function Appointments() {
     },
  
   ];
+<<<<<<< HEAD
   const LinksBan = [
     {
       subLinkName: 'Home',
@@ -62,6 +66,10 @@ export default function Appointments() {
     conmarpad={"mt-5 pt-5"}
     fontsize={"60px"}
     />
+=======
+
+  return (
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
     <div className="docpages">
       <h2 className="heading">Upcoming Appointments</h2>
 
@@ -103,6 +111,9 @@ export default function Appointments() {
         );
       })}
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
   );
 }

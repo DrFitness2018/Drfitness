@@ -43,6 +43,9 @@
     background-Size: cover;
     color: white;
 }
+.begAbs{
+    background-image: url('../../../Images/lambi7.jpg');
+}
 .LosebellyMen{
     background-color: #1E88E5;
     min-width: 50%;

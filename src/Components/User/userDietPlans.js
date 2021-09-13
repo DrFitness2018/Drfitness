@@ -13,6 +13,7 @@ import { Fade } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Cards from "../User/DietCards";
 import "./userDietPlans.css";
+<<<<<<< HEAD
 import bf1 from "../../Images/Foods/Break Fast/1.jpg"
 import bf2 from "../../Images/Foods/Break Fast/2.jpg"
 import bf3 from "../../Images/Foods/Break Fast/3.jpg"
@@ -40,6 +41,9 @@ import sn14 from "../../Images/Foods/Snacks/14.jpg"
 import sn15 from "../../Images/Foods/Snacks/15.jpg"
 import bannerimg from "../../Images/Chor.jpg";
 
+=======
+import abcd from "../../Images/lap-consul/1.JPG"
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 import { useHistory } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 
@@ -112,7 +116,11 @@ function CardsMultipleMonday() {
     <>
 
       <Cards
+<<<<<<< HEAD
         imgs={bf1}
+=======
+        imgs={abcd}
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
         FoodTime="Break Fast"
         Description="1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
             plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams)
@@ -352,6 +360,7 @@ export default function NavTabs() {
   const fri = open ? "simple-popper" : undefined;
 
   let history = useHistory();
+<<<<<<< HEAD
   const LinksBan = [
     {
       subLinkName: 'Home',
@@ -365,6 +374,9 @@ export default function NavTabs() {
     },
 
   ];
+=======
+
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
   return (
     <div className={classes.root}>
@@ -447,22 +459,28 @@ export default function NavTabs() {
             </p>
           </Marquee>
           <h2
-            className="heading"
-            style={{
-              color: "#212121",
-              WebkitBackgroundClip: "text",
-              fontWeight: "600",
-            }}
+            className="headingDiet"
+            // style={{
+            //   color: "#212121",
+            //   WebkitBackgroundClip: "text",
+            //   fontWeight: "600",
+            // }}
           >
             Want to Gain More than 5 KG a Month ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
+              color: "#121212",
               fontWeight: "normal",
+<<<<<<< HEAD
               color: "#212121",
               WebkitBackgroundClip: "text",
               fontFamily: 'serif'
+=======
+              textAlign: 'center',
+              fontFamily:"Dancing Script"
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
             }}
           >
             Follow our diet plan for a month accordingly and gain 2500-3000
@@ -663,7 +681,11 @@ export default function NavTabs() {
               Eat More Protein
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
+<<<<<<< HEAD
               <li style={{ fontFamily: 'Dancing Script', textAlign: 'justify' }}>
+=======
+              <li style={{ fontFamily: 'Roboto', textAlign: 'justify' }}>
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   When it comes to losing weight, protein is the king of
                   nutrients{" "}
@@ -681,7 +703,11 @@ export default function NavTabs() {
               Avoid sugary soft drinks and fruit juices
             </h3>
             <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+<<<<<<< HEAD
               <li style={{fontFamily: 'Dancing Script',}}>
+=======
+              <li style={{fontFamily: 'Roboto',}}>
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Another relatively easy change you can make is to eliminate
@@ -700,7 +726,11 @@ export default function NavTabs() {
               Drink more water
             </h3>
             <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+<<<<<<< HEAD
               <li style={{fontFamily: 'Dancing Script',}} >
+=======
+              <li style={{fontFamily: 'Roboto',}} >
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   One very simple trick to increase weight loss is to drink more
@@ -721,7 +751,11 @@ export default function NavTabs() {
               Exercise and lift weights
             </h3>
             <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+<<<<<<< HEAD
               <li style={{fontFamily: 'Dancing Script', marginLeft: "" }}>
+=======
+              <li style={{fontFamily: 'Roboto', marginLeft: "" }}>
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   When you eat fewer calories, your body compensates by saving
@@ -742,7 +776,11 @@ export default function NavTabs() {
               Reduce your refined carb intake
             </h3>
             <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+<<<<<<< HEAD
               <li style={{fontFamily: 'Dancing Script', marginLeft: "" }}>
+=======
+              <li style={{fontFamily: 'Roboto', marginLeft: "" }}>
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
                 <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Cutting carbs is a very effective way to lose weight, as it

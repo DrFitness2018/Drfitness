@@ -15,12 +15,18 @@ import tr4 from "../../Images/tr4.jpg";
 import tr5 from "../../Images/tr5.jpg";
 import ConsultantCards from "../../Components/ConsultantsCards/consultantcard";
 import { useHistory } from "react-router-dom";
+<<<<<<< HEAD
 import bannerimg from "../../Images/Chor.jpg";
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
 
 import HeadingComponent from '../HeadingComponent';
 import './Consult.css'
+<<<<<<< HEAD
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 
 const Consult = () => {
     const LabConsultantsData = [
@@ -116,6 +122,7 @@ const Consult = () => {
   const [selectedTab, setSelectedTab] = useState("Doctors");
   let history = useHistory();
 
+<<<<<<< HEAD
   const LinksBan = [
     {
       subLinkName: 'Home',
@@ -144,6 +151,13 @@ const Consult = () => {
       />
         <div className="mt-5">
        
+=======
+
+  
+  return (
+        <>
+        <div className="mt-5">
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
         <button className="btn btn-outline-primary ml-3" onClick={() => history.goBack()}>Back</button>
         <HeadingComponent heading={"Consultants"} />
         {/* <h2>Consultants</h2> */}

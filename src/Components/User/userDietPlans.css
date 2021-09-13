@@ -22,6 +22,13 @@
         margin-left: 0px;
         width: 250px;
     }
+<<<<<<< HEAD
+=======
+    .headingDiet{
+    font-size: 3rem;
+
+    }
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 }
 .headingDiet{
     color: linear-gradient(315deg, #63d471 0%, #233329 74%);
@@ -42,7 +49,11 @@
 .DietLeanHeading{
     font-weight: bold;
     color: #233329;
+<<<<<<< HEAD
     font-family:'lobster';
+=======
+    font-family:'Roboto';
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
     /* font-family:'Dancing Script'; */
 
 }

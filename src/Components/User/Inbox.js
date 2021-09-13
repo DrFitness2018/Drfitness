@@ -1,5 +1,6 @@
 import React from 'react'
 import ChatComponent from '../Consultant/ChatComponent'
+<<<<<<< HEAD
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
 import bannerimg from "../../Images/Chor.jpg";
 
@@ -27,6 +28,12 @@ const Inbox = () => {
         />
        <ChatComponent/>
        </>
+=======
+
+const Inbox = () => {
+    return (
+       <ChatComponent/>
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
     )
 }
 

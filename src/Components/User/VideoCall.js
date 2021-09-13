@@ -4,9 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import VideoPlayer from '../VideoPlayer';
 import Sidebar from '../Sidebar';
 import Notifications from '../Notifications';
+<<<<<<< HEAD
 import BannerWithText from '../BannerImgComponents/BannerImgComponents';
 import bannerimg from "../../Images/Chor.jpg";
 
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
 const useStyles = makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
@@ -50,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 const VideoCall = () => {
   const classes = useStyles();
+<<<<<<< HEAD
   const LinksBan = [
     {
       subLinkName: 'Home',
@@ -71,6 +75,10 @@ const VideoCall = () => {
     conmarpad={"mt-5 pt-5"}
     fontsize={"60px"}
     />
+=======
+
+  return (
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
     <div className={classes.wrapper}>
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography variant="h3" align="center">Live Video Session</Typography>
@@ -83,7 +91,10 @@ const VideoCall = () => {
         <Notifications />
       </Sidebar>
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
   );
 }
 

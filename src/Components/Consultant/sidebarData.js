@@ -40,6 +40,8 @@ export const SidebarData = [
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
+
+  
   // {
   //   title: 'Recent Activity',
   //   path: '/RecentAct',

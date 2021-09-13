@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Profile_Pic from "../../Images/lambi7.jpg";
+import Profile_Pic from "../../Images/lap-consul/1.JPG";
 import { Button } from "react-bootstrap";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Divider from "@material-ui/core/Divider";
@@ -128,13 +128,7 @@ export default function Home() {
                   Facebook
                 </a>
                 <Divider />
-                <a
-                  style={underline}
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU"
-                  target="_thapa"
-                >
-                  Thapa Technical
-                </a>
+            
                 <br />
                 <a
                   style={underline}
@@ -143,19 +137,9 @@ export default function Home() {
                   DrFitness Github
                 </a>
                 <br />
-                <a
-                  style={underline}
-                  href="https://www2.kickassanime.ro/anime/that-time-i-got-reincarnated-as-a-slime-season-2-part-2-694666"
-                >
-                  Slime Datta Ken
-                </a>
+               
                 <br />
-                <a
-                  style={underline}
-                  href="https://www2.kickassanime.ro/anime/tokyo-revengers-uncensored-434278/episode-19-461870"
-                >
-                  Tokyo Manji Gang
-                </a>
+            
                 <br />
               </div>
             </div>
@@ -180,7 +164,7 @@ export default function Home() {
                       <label>Name</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Demon Lord</p>
+                      <p>Dr Shaheda Anwar</p>
                     </div>
                   </div>
                   <div style={{ color: "black" }} className="row mt-3">
@@ -188,7 +172,7 @@ export default function Home() {
                       <label>Email</label>
                     </div>
                     <div className="col-md-6">
-                      <p>https://github.com/DrFitness2018/Drfitness</p>
+                      <p>Drshaheda@gmail.com</p>
                     </div>
                   </div>
                   <div style={{ color: "black" }} className="row mt-3">

@@ -1,0 +1,26 @@
+.global-cont{
+    width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media (max-width: 1225px) {
+    .global-cont{
+    max-width: 90%;}
+  }
+
+  .global-btn{
+    text-decoration: none;
+    display: inline-block;
+    background: #63d471;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 14px;
+    transition: all 500ms ease-in-out;
+    
+  }
+  .global-btn:hover {
+    background: #7eca87;
+  }
+  #global-img{
+    margin: 20px 0;
+  }

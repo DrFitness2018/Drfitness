@@ -38,10 +38,14 @@ function App() {
           // backgroundColor: "rgba(0, 0, 0, 0.61)",
         }}
         > 
-        <Header />
+        {/* <Header /> */}
         {/* <Splash /> */}
         <div style={{
+<<<<<<< HEAD
           paddingTop:'100px'  
+=======
+          // paddingTop:'100px'  
+>>>>>>> 5a90b58d1b2d6d89228668615f642dfc96a658a5
         }}>
       <Approuter />
       {/* <Usertabs/> */}
