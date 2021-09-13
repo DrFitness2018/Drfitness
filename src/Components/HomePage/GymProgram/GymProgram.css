@@ -1,0 +1,107 @@
+.gymProgram{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 120px 0;
+}
+.gym-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+
+  @media (max-width: 700px) {
+    .gym-cont {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 1100px) {
+    .gym-cont {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+/* GymProgramCard */
+
+
+.gym-card{
+    width: 100%;
+  max-width: 47%;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  text-align: left;
+  margin: 30px 0;
+}
+  #GymProgramCard-img {
+    margin-right: 30px;
+    
+  }
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    #GymProgramCard-h4 {
+      color: #232d39;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    #GymProgramCard-p    {
+      color:rgb(26, 25, 25);
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    #GymProgramCard-a {
+      color: #63d471;
+      text-decoration: none;
+      transition: color 600ms ease-in-out;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    #GymProgramCard-a:hover {
+        color: #63d471;
+      }
+  @media (max-width: 700px) {
+      .gym-card{
+    max-width: 100%;
+  }
+  }
+  @media (min-width: 701px) and (max-width: 1100px){
+      .gym-card{
+    max-width: 80%;
+
+}
+  }
+
+  /* gymsubtitle */
+
+  #p1{
+    color: #7a7a7a;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  @media (max-width: 700px) {
+      #p1{
+    padding: 0 40px;}
+    br {
+      display: none;
+    }
+  }
+
+  /* GymTitle */
+
+  #gym-title{
+    color: #232d39;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1;
+}
+    #gym-span {
+      color: #63d471;
+    }

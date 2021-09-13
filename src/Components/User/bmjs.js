@@ -6,6 +6,7 @@ import BMIs from "../../Images/bmi.jpg";
 import "../../App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from 'react-router-dom'
+import imgs from '../../Images/fullbody.jpg'
 
 const { CircularProgress, LinearProgress } = require("@material-ui/core");
 
@@ -27,6 +28,7 @@ class BMApp extends React.Component {
       heightFeet: "",
       heightInch: "",
       weight: "",
+      on :false
     };
 
     this.handleHeightFeetChange = this.handleHeightFeetChange.bind(this);
@@ -35,6 +37,11 @@ class BMApp extends React.Component {
     this.calculateBMI = this.calculateBMI.bind(this);
   }
 
+  toggle = () =>{
+    this.setState({
+      on:!this.state.on
+    })
+  }
   handleHeightFeetChange(event) {
     this.setState({
       heightFeet: event.target.value,
@@ -108,13 +115,19 @@ class BMApp extends React.Component {
         style={{
           display: "flex",
           flexDirection: "column",
-          padding: "10px",
+          // padding: "10px",
           alignItems: "center",
-          height: 'fit-content',
+          height: '100%',
+          // minHeight:'85vh',
           // backgroundColor: "#166d3b",
           // backgroundColor: "red",
           // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)",
-          // backgroundImage: `url(${imgs})`,
+          backgroundImage: `url(${imgs})`,
+          objectFit:'contain',
+          backgroundRepeat:'no-repeat',
+          backgroundPosition:'center',
+          width: '100%',
+          backgroundSize:'cover',
           // backgroundSize:'1600px 600px',
           // backgroundRepeat:'no-repeat',
           // background: "-webkit-linear-gradient(#233329, #166d3b)",
@@ -122,28 +135,39 @@ class BMApp extends React.Component {
           fontFamily: "fantasy",
           color: "white",
           textAlign: "center",
-          paddingBottom: '50px'
+          // paddingBottom: '50px'
           //backgroundImage: 
         }} //className="main"
       >
+        <div style={{
+        width: '100%', height: '100%', 
+        display: 'flex',justifyContent: 'center',
+        padding:20,
+        // paddingBottom: 20,
+        backgroundColor: "rgba(58, 83, 155, 0.4)",
+        backdropFilter: "blur(5px)"
+      }}
+      >
+
+    
         <div
           style={{
             // backgroundColor: "grey",
             //  justifyContent:'center',
-            width: "fit-content",
+            width: "40%",
             padding: 40,
             marginTop: 50,
             // border: "1px solid black",
             borderRadius: "20px ",
             // opacity:'50%'
-            backgroundColor: "rgba(0, 0, 0, 0.61)", 
+            backgroundColor: "whitesmoke", 
             // backgroundColor: "rgba(102, 187, 106, 0.61)",
             // backgroundColor: "rgba(238, 238, 238, 0.61)",
             // backgroundColor: "rgba(67, 160, 71, 0.61)",
             // backdropFilter: "blur(5px)",
-            boxShadow:'0px 5px 20px  #63d471',
+            // boxShadow:'0px 5px 20px  #63d471',
             // color:'#212121'
-            color:'#ffff',
+            color:'#121212',
             display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -169,33 +193,36 @@ class BMApp extends React.Component {
               >
                 <h3
                   style={{
-                    color: "white",
+                    color: "#121212",
                     borderRadius: 50,
                     padding: 10,
                     // fontFamily:
                     //   "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
                     fontFamily: "fantasy",
                     fontSize: "1.8rem",
-                    backgroundColor: "#63d471",
-                    backgroundImage:"linear-gradient(315deg, #63d471 0%, #166d3b 74%)",
+                    // backgroundColor: "#63d471",
+                    // backgroundImage:"linear-gradient(315deg, #63d471 0%, #166d3b 74%)",
                     width: "max-content",
                     // marginLeft: 20,
                   }}
                 >
-                  Let us Analyze your BMI
+                  Let Us<span style={{   fontFamily: "fantasy",
+                    fontSize: "1.8rem",color:"#63d471"}}>Analyze</span> Your<span style={{   fontFamily: "fantasy",
+                    fontSize: "1.8rem",color:"#63d471"}}>BMI</span> 
                 </h3>
                 {/* <h1>Let us Analyze your BMI</h1> */}
-                <h5
+                <h6
                   className="wordingsUserGain"
                   style={{
+                    color:'#121212',
                     fontWeight: "normal",
-                    background: "-webkit-linear-gradient(#ffff, #63d471)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    // background: "-webkit-linear-gradient(#ffff, #63d471)",
+                    // WebkitBackgroundClip: "text",
+                    // WebkitTextFillColor: "transparent",
                   }}
                 >
                   Enter your weight(lbs) and height(ft and inches) below !
-                </h5>
+                </h6>
                 {/* <p>Enter your weight(lbs) and height(ft and inches) below !</p> */}
               </div>
             </div>
@@ -217,7 +244,7 @@ class BMApp extends React.Component {
                           max="1000"
                           style={{
                             backgroundColor: "transparent",
-                            border: "2px solid #63d471",
+                            border: "2px solid darkgray",
                             color: "#63d471",
                           }}
                           value={this.state.weight}
@@ -243,7 +270,7 @@ class BMApp extends React.Component {
                           value={this.state.heightFeet}
                           style={{
                             backgroundColor: "transparent",
-                            border: "2px solid #63d471",
+                            border: "2px solid darkgray",
                             color: "#63d471",
                           }}
                           onChange={this.handleHeightFeetChange}
@@ -263,7 +290,7 @@ class BMApp extends React.Component {
                           onChange={this.handleHeightInchChange}
                           style={{
                             backgroundColor: "transparent",
-                            border: "2px solid #63d471",
+                            border: "2px solid darkgray",
                             color: "#63d471",
                           }}
                         />
@@ -282,18 +309,22 @@ class BMApp extends React.Component {
                     <button type="submit" onClick={BmiDisplay}>Preview</button>
                   // }
                   {isPreviewShown && <BmiDisplay/>} */}
+                  <Button variant="outline-success" onClick={this.toggle}  >Calculate BMI</Button>
+                   { this.state.on && 
                   <BmiDisplay
                     bmi={bmi}
                     label={results.label}
                     alertClass={results.alertClass}
                     // style={{display:'none'}}
                   />
+                   }
                 </div>
               </div>
             </div>
-            <Weight bmi={bmi} label={results.label} fnc={this.gotoSelect} />
-            {/* <Button variant="outline-light" onClick={this.gotoSelect}  >Let's See</Button> */}
+            
+            { this.state.on && <Weight bmi={bmi} label={results.label} fnc={this.gotoSelect} />}
           
+        </div>
         </div>
       </motion.div>
       
@@ -305,7 +336,7 @@ function BmiDisplay(props) {
   var disp = "none";
   return (
     <div
-      className={"bmi-result alert " + props.alertClass}
+      className={"bmi-result alert mt-3 " + props.alertClass}
       style={{
         display: { disp },
       }}
@@ -355,38 +386,48 @@ function Weight(props) {
   if (props.bmi <= 18.5) {
     return (
       <div
+      style={{
+        display: "flex",
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        textAlign: "center",
+        maxWidth: "70%"
+      }}
+    >
+      <h2
+        className="wordings"
         style={{
-          display: "flex",
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          textAlign: "center",
+          fontWeight: "normal",
+          // background: "-webkit-linear-gradient(#ffff  , #63d471)",
+          // WebkitBackgroundClip: "text",
+          // WebkitTextFillColor: "transparent",
+          color:'#121212',
+
+          fontSize: "22px",
         }}
       >
-        <LinearProgress variant="buffer" value={level} style={{ width: 200 }} />
-        {/* <img src={BMIs} width={300} /> */}
-        <h2
-          className="wordings"
-          style={{
-            fontWeight: "normal",
-            // background: "-webkit-linear-gradient(#166d3b, #63d471)",
-            // WebkitBackgroundClip: "text",
-            // WebkitTextFillColor: "transparent",
-            // background: "-webkit-linear-gradient(#ffff, #63d471)",
-
-          }}
-        >
-          According to your BMI ({props.bmi}) Your Weight is Low, we sugess you
-          to Gain some weight
-        </h2>
-        <h4 className="wordings2">
-          Don't know how to gain? Follow our Exercise and Diet plan Accordingly
-        </h4>
-        <Button variant="outline-light" onClick={props.fnc}>
-          Let's See
-        </Button>
-      </div>
+        According to your <span style={{color:'#63d471'}}> BMI ({props.bmi})</span> Your Weight is Too Low, we sugess
+        you to Gain some weight
+      </h2>
+      <h4
+        className="wordings2"
+        style={{
+          fontWeight: "normal",
+          // background: "-webkit-linear-gradient(#ffff, #63d471)",
+          // WebkitBackgroundClip: "text",
+          // WebkitTextFillColor: "transparent",
+          color:'#121212',
+          fontSize: "22px",
+        }}
+      >
+        Don't know how to Gain? <span style={{color:'#63d471'}}> Follow our Exercise and Diet plan Accordingly</span>
+      </h4>
+      <Link to='/userDash' className="btn btn-outline-success">
+        Let's See
+      </Link>
+    </div>
     );
   } else if (props.bmi <= 24.9) {
     return (
@@ -398,18 +439,42 @@ function Weight(props) {
           alignItems: "center",
           flexDirection: "column",
           textAlign: "center",
+        maxWidth: "70%"
+
         }}
       >
-        <h2 className="wordings">
-          According to your BMI ({props.bmi}) Your Weight is Normal, we sugess
-          you to Maintain your Body
+        <h2
+          className="wordings"
+          style={{
+            fontWeight: "normal",
+            // background: "-webkit-linear-gradient(#ffff  , #63d471)",
+            // WebkitBackgroundClip: "text",
+            // WebkitTextFillColor: "transparent",
+            fontSize: "22px",
+          color:'#121212',
+
+          }}
+        >
+          According to your <span style={{color:'#63d471'}}> BMI ({props.bmi})</span> Your Weight is Normal, we sugess
+          you to Maintain weight
         </h2>
-        <h4 className="wordings2">
-          Don't know how to ? Follow our Exercise and Diet plan Accordingly
+        <h4
+          className="wordings2"
+          style={{
+            fontWeight: "normal",
+            // background: "-webkit-linear-gradient(#ffff, #63d471)",
+            // WebkitBackgroundClip: "text",
+            // WebkitTextFillColor: "transparent",
+          color:'#121212',
+
+            fontSize: "22px",
+          }}
+        >
+        Don't know how to Maintain? <span style={{color:'#63d471'}}> Follow our Exercise and Diet plan Accordingly</span>
         </h4>
-        <Button variant="outline-light" onClick={props.fnc}>
+        <Link to='/userDash' className="btn btn-outline-light">
           Let's See
-        </Button>
+        </Link>
       </div>
     );
   } else {
@@ -422,34 +487,41 @@ function Weight(props) {
           alignItems: "center",
           flexDirection: "column",
           textAlign: "center",
+        maxWidth: "70%",
+        // backgroundColor:'red'
+
         }}
       >
         <h2
           className="wordings"
           style={{
             fontWeight: "normal",
-            background: "-webkit-linear-gradient(#ffff  , #63d471)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            // background: "-webkit-linear-gradient(#ffff  , #63d471)",
+            // WebkitBackgroundClip: "text",
+            // WebkitTextFillColor: "transparent",
+          color:'#121212',
+
             fontSize: "22px",
           }}
         >
-          According to your BMI ({props.bmi}) Your Weight is Too much, we sugess
+          According to your <span style={{color:'#63d471'}}> BMI ({props.bmi})</span> Your Weight is Too much, we sugess
           you to Lean some weight
         </h2>
         <h4
           className="wordings2"
           style={{
             fontWeight: "normal",
-            background: "-webkit-linear-gradient(#ffff, #63d471)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            // background: "-webkit-linear-gradient(#ffff, #63d471)",
+            // WebkitBackgroundClip: "text",
+            // WebkitTextFillColor: "transparent",
+          color:'#121212',
+
             fontSize: "22px",
           }}
         >
-          Don't know how to Lean? Follow our Exercise and Diet plan Accordingly
+        Don't know how to Lean? <span style={{color:'#63d471'}}> Follow our Exercise and Diet plan Accordingly</span>
         </h4>
-        <Link to='/usertabs' className="btn btn-outline-light">
+        <Link to='/userDash' className="btn btn-outline-success">
           Let's See
         </Link>
       </div>

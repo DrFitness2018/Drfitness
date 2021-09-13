@@ -13,6 +13,9 @@ import { Fade } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Cards from "../User/DietCards";
 import "./userDietPlans.css";
+import abcd from "../../Images/lap-consul/1.JPG"
+import { useHistory } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
 
 // import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import "../../App.css";
@@ -81,6 +84,7 @@ function CardsMultipleMonday() {
   return (
     <>
       <Cards
+        imgs={abcd}
         FoodTime="Break Fast"
         Description="1 cup (80 grams) of oats with 1 cup (240 ml) of dairy or
             plant-based milk, 1 sliced banana, and 2 tablespoons (33 grams)
@@ -272,6 +276,10 @@ export default function NavTabs() {
   const wed = open ? "simple-popper" : undefined;
   const thurs = open ? "simple-popper" : undefined;
   const fri = open ? "simple-popper" : undefined;
+
+  let history = useHistory();
+
+
   return (
     <div className={classes.root}>
       <AppBar
@@ -293,6 +301,13 @@ export default function NavTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
+      <FaIcons.FaLongArrowAltLeft
+            className="iconss"
+            color="#233329"
+            onClick={() => history.goBack()}
+            size="30px"
+          >back</FaIcons.FaLongArrowAltLeft>
+
         <div
           style={{
             // justifyContent:'center',
@@ -335,22 +350,22 @@ export default function NavTabs() {
             </p>
           </Marquee>
           <h2
-            className="heading"
-            style={{
-              color: "#212121",
-              WebkitBackgroundClip: "text",
-              fontWeight: "600",
-            }}
+            className="headingDiet"
+            // style={{
+            //   color: "#212121",
+            //   WebkitBackgroundClip: "text",
+            //   fontWeight: "600",
+            // }}
           >
             Want to Gain More than 5 KG a Month ?
           </h2>
           <h4
             className="wordingsUserGain"
             style={{
+              color: "#121212",
               fontWeight: "normal",
-              color: "#212121",
-              WebkitBackgroundClip: "text",
-              fontFamily:'serif'
+              textAlign: 'center',
+              fontFamily:"Dancing Script"
             }}
           >
             Follow our diet plan for a month accordingly and gain 2500-3000
@@ -497,6 +512,13 @@ export default function NavTabs() {
           </div>
         </div>
       </TabPanel>
+
+
+
+      {/* lean */}
+
+
+
       <TabPanel value={value} index={1}>
         <div
           style={{
@@ -508,9 +530,9 @@ export default function NavTabs() {
             textTransform: "capitalize",
             // backgroundColor: "#f5f5f5",
             width: "100%",
-            color: "white",
+            color: "#121212",
             padding: 20,
-            fontFamily: "sans-serif",
+            fontFamily: 'Dancing Script',
           }}
         >
           <Marquee className="marquee" speed={100} gradient={false}>
@@ -522,54 +544,30 @@ export default function NavTabs() {
             </p>
           </Marquee>
           <h2
-            className="HeadingUserGain"
-            style={{
-              // color:'pink
-              fontWeight: "600",
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
-              // WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
-              color: "white",
-              // color: "linear-gradient(147deg, #166d3b 0%, #000000 54%)",
-              // backgroundImage: "linear-gradient(147deg, #166d3b 0%, #000000 74%)"
-            }}
+            className="headingDiet"
           >
             Want to Lean weight ?
           </h2>
-          <h4
+          <h6
             className="wordingsUserGain"
             style={{
-              color: "white",
+              color: "#121212",
               fontWeight: "normal",
-              // background: "-webkit-linear-gradient(#000000, #166d3b)",
-              // WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
+              textAlign: 'center'
             }}
           >
             The following evidence-based eating and lifestyle changes have been
             shown to help people lose weight.
-          </h4>
-          <div>
+          </h6>
+          <div className="DietLean mt-3">
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
             >
               Eat More Protein
             </h3>
             <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
-                  {" "}
+              <li style={{ fontFamily: 'Roboto', textAlign: 'justify' }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   When it comes to losing weight, protein is the king of
                   nutrients{" "}
                 </span>
@@ -580,24 +578,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Avoid sugary soft drinks and fruit juices
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Roboto',}}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Another relatively easy change you can make is to eliminate
                   liquid sugar calories from your diet.{" "}
@@ -609,24 +597,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Drink more water
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Roboto',}} >
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   One very simple trick to increase weight loss is to drink more
                   water{" "}
@@ -640,24 +618,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Exercise and lift weights
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Roboto', marginLeft: "" }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   When you eat fewer calories, your body compensates by saving
                   energy, making you burn fewer calories{" "}
@@ -671,24 +639,14 @@ export default function NavTabs() {
               </li>
             </ul>
             <h3
-              style={{
-                color: "white",
-                borderRadius: 50,
-                padding: 10,
-                fontFamily:
-                  "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                fontSize: "1.8rem",
-                backgroundColor: "#63d471",
-                backgroundImage:
-                  "linear-gradient(315deg, #63d471 0%, #233329 74%)",
-                width: "max-content",
-              }}
+              className="DietLeanHeading"
+
             >
               Reduce your refined carb intake
             </h3>
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li style={{ marginLeft: "-30px" }}>
-                <span style={{ color: "#63d471", fontWeight: "bold" }}>
+            <ul style={{ fontFamily: 'Dancing Script', textAlign: "left", listStyle: "none" }}>
+              <li style={{fontFamily: 'Roboto', marginLeft: "" }}>
+                <span style={{ fontFamily: 'Dancing Script', color: "#63d471", fontWeight: "bold" }}>
                   {" "}
                   Cutting carbs is a very effective way to lose weight, as it
                   reduces appetite and makes you eat fewer calories{" "}

@@ -52,7 +52,7 @@ class UserL extends React.Component {
               Skip
             </Button> */}
                   <Link
-                  to="/userDash"
+                  to="/BMJS"
                   className="btn"
                   style={{
                     fontFamily: "serif",
@@ -113,7 +113,8 @@ class UserL extends React.Component {
                   className="btn"
                   style={{
                     fontFamily: "serif",
-                    marginLeft: 20,
+                    // marginLeft: 20,
+                    marginTop:10,
                     border: "1px solid",
                     color: "#63d471",
                   }}
@@ -121,7 +122,6 @@ class UserL extends React.Component {
                   Login
                 </Link>
           </Form>
-          <p style={{color:"#212121"}}>Don't have any Account?</p>
           {/* <Button
             variant="outline-secondary"
             onClick={this.gotoUserR}
@@ -135,18 +135,6 @@ class UserL extends React.Component {
           >
             Sign up
           </Button> */}
-             <Link
-                  to="/UserReg"
-                  className="btn"
-                  style={{
-                    fontFamily: "serif",
-                    marginLeft: 20,
-                    border: "1px solid",
-                    color: "#63d471",
-                  }}
-                >
-                  Signup
-                </Link>
       </div>
         </motion.div>
     );

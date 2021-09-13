@@ -36,19 +36,15 @@ const Availible = () => {
       <div
         style={{
           margin: 10,
+          textAlign:'center',
         }}
       >
-        <h2>
-          Monday{" "}
-          <FaIcons.FaRegPlusSquare
-            className="iconss"
-            color="blue"
-            onClick={() => SetShow(!show)}
-          />
-        </h2>
         <h6>
           <FaIcons.FaRegPlusSquare color="blue" /> click me to add slots
         </h6>
+        <h2 >
+          Monday{" "}
+        </h2>
       </div>
       <div>
         {show ? (
@@ -79,23 +75,26 @@ const Availible = () => {
           SLOTS:{" "}
         </h6> */}
         <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
       </div>
+
+
+
       <div
         style={{
           margin: 10,
+          textAlign:'center'
         }}
       >
         <h2>
           Tuesday{" "}
-          <FaIcons.FaRegPlusSquare
-            className="iconss"
-            color="blue"
-            onClick={() => SetShow(!show)}
-          />
+         
         </h2>
-        <h6>
-          <FaIcons.FaRegPlusSquare color="blue" /> click me to add slots
-        </h6>
+  
       </div>
       <div>
         {show ? (
@@ -116,20 +115,220 @@ const Availible = () => {
           margin: 10,
         }}
       >
-        {/* <h6
-          style={{
-            //   alignSelf:'left',
-            fontWeight: "bold",
-            marginTop: "10px",
-          }}
-        >
-          SLOTS:{" "}
-        </h6> */}
         <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
       </div>
+
+      <div
+        style={{
+          margin: 10,
+          textAlign:'center'
+        }}
+      >
+        <h2>
+          Wednesday{" "}
+         
+        </h2>
+  
+      </div>
+      <div>
+        {show ? (
+          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+          backgroundColor: "#f5f5f5",
+          height: "100%",
+          borderRadius: "10px",
+          flexDirection: "row",
+          boxShadow: "0px 0px 4px #888888",
+          margin: 10,
+        }}
+      >
+        <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
+      </div>
+
+
+      <div
+        style={{
+          margin: 10,
+          textAlign:'center'
+        }}
+      >
+        <h2>
+          Thursday{" "}
+         
+        </h2>
+  
+      </div>
+      <div>
+        {show ? (
+          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+          backgroundColor: "#f5f5f5",
+          height: "100%",
+          borderRadius: "10px",
+          flexDirection: "row",
+          boxShadow: "0px 0px 4px #888888",
+          margin: 10,
+        }}
+      >
+        <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
+      </div>
+
+      <div
+        style={{
+          margin: 10,
+          textAlign:'center'
+        }}
+      >
+        <h2>
+          Friday{" "}
+         
+        </h2>
+  
+      </div>
+      <div>
+        {show ? (
+          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+          backgroundColor: "#f5f5f5",
+          height: "100%",
+          borderRadius: "10px",
+          flexDirection: "row",
+          boxShadow: "0px 0px 4px #888888",
+          margin: 10,
+        }}
+      >
+        <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
+      </div>
+
+      <div
+        style={{
+          margin: 10,
+          textAlign:'center'
+        }}
+      >
+        <h2>
+          Saturday{" "}
+         
+        </h2>
+  
+      </div>
+      <div>
+        {show ? (
+          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+          backgroundColor: "#f5f5f5",
+          height: "100%",
+          borderRadius: "10px",
+          flexDirection: "row",
+          boxShadow: "0px 0px 4px #888888",
+          margin: 10,
+        }}
+      >
+        <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
+      </div>
+
+      <div
+        style={{
+          margin: 10,
+          textAlign:'center'
+        }}
+      >
+        <h2>
+          Sunday{" "}
+         
+        </h2>
+  
+      </div>
+      <div>
+        {show ? (
+          <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+          backgroundColor: "#f5f5f5",
+          height: "100%",
+          borderRadius: "10px",
+          flexDirection: "row",
+          boxShadow: "0px 0px 4px #888888",
+          margin: 10,
+        }}
+      >
+        <List list={list} onRemove={handleRemove} />
+        <FaIcons.FaRegPlusSquare
+            className="iconss"
+            color="blue"
+            onClick={() => SetShow(!show)}
+          />
+      </div>
+        <button className="btn btn-outline-primary" onClick={()=>{
+          alert("Slots Has been pushed to Database !")
+        }}>Update Slots in Database</button>
     </div>
+
+    
   );
 };
+
+
+
 
 const AddItem = ({ name, onChange, onAdd }) => (
   <div

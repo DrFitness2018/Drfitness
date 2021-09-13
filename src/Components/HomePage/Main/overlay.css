@@ -1,0 +1,20 @@
+.overlay{
+    position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(35, 45, 57, 0.8);
+}
+.home-video{
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+} 
+.main{
+
+    width: 100% !important;
+  height: 100vh;
+}

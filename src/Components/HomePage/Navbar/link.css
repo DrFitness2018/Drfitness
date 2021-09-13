@@ -1,0 +1,18 @@
+#link-a{
+    text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  transition: color 600ms ease-in-out;
+}
+  #link-a:first-of-type,
+  #link-a:hover {
+    color: #63d471;
+  }
+  @media (max-width: 1000px) {
+      #link-a{
+    padding: 14px 0;
+    width: 100%;
+    font-size: 18px;}
+  }

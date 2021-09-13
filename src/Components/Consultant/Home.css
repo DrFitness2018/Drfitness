@@ -24,7 +24,8 @@
   padding: 10px;
   margin-top: 20px;
   flex-flow: row wrap;
-  color: whitesmoke;
+  color: #212121;
+  border-radius: 10px;
   /* background-color: #0d47a1; */
   /* border: 1px solid #0d47a1; */
   /* margin-bottom: 20px; */
@@ -150,6 +151,5 @@ label {
   /* background-color: aqua; */
 }
 .iconss:hover {
-  /* background-color: azure; */
-  box-shadow: 0px 0px 10px blue;
+  color: #63d471;
 }

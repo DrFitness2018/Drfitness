@@ -12,11 +12,11 @@ function App() {
   return (
     <div
       style={{
-        // backgroundColor: "#fafafa",
-        backgroundColor: "transparent",
+        backgroundColor: "#fafafa",
+        // backgroundColor: "transparent",
       }}
     >
-      <div     className="parallax"
+      <div    
 >
         {/* <div
           style={{
@@ -38,10 +38,10 @@ function App() {
           // backgroundColor: "rgba(0, 0, 0, 0.61)",
         }}
         > 
-        <Header />
+        {/* <Header /> */}
         {/* <Splash /> */}
         <div style={{
-          paddingTop:'100px'
+          // paddingTop:'100px'  
         }}>
       <Approuter />
       {/* <Usertabs/> */}

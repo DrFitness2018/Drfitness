@@ -27,7 +27,7 @@ export default function GainPage1() {
               <Button variant="outline-light">See details</Button>
               <Link
                 to={{
-                  pathname: '/GainWeek2',
+                  pathname: '/ExerciseGain/GainPage2',
                   data: '30days Plan'
                 }}
                 className="btn"
@@ -97,10 +97,13 @@ export default function GainPage1() {
         </div>
         </div>
       </div>
+
+
+
       <h4 className="mt-4" style={{textTransform:"uppercase",fontFamily:'fantasy',textAlign:'left'}}>Beginner</h4>
       <div className="row mt-2">
         <div className="col mt-2">
-          <div className="fullbody">
+          <div className="fullbody begAbs" >
             <div className="overlaycard">
               <h2>ABS</h2>
               <h5>15 - 20 MINS</h5>
@@ -328,7 +331,7 @@ export default function GainPage1() {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <Link
                   to={{
-                    pathname: '/GainWeek2',
+                    pathname: '/GainPage2',
                     data: '30days Plan'
                   }}
                   className="btn"

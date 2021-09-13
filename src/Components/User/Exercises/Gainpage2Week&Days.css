@@ -1,0 +1,23 @@
+.labTeamBtn {
+    width: auto;
+    float: left;
+    padding: 10px 15px;
+    margin-right: 8px;
+    border-radius: 3px;
+    background: #f2f2f2;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .labTeamBtnActive{
+    width: auto;
+    float: left;
+    padding: 10px 15px;
+    margin-right: 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #476b8f 0%, #1a4774 100%) !important;
+  }
+  .light-Color-Para {
+    color: #787878;
+  }

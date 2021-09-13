@@ -18,11 +18,11 @@ export default function ConsultantRegister(props) {
       <div className='formss'>
         <h2
           style={{
-            color: '#ffff',
+            color: '#121212',
             fontFamily: "fantasy",
           }}
         >
-          Profile Information
+          Profile<span style={{color:"#63d471", fontFamily: "fantasy",textAlign:'left'}}>Information</span>
           {/* <Link
             to="/UserLogin"
             className="btn"
@@ -48,11 +48,11 @@ export default function ConsultantRegister(props) {
         </h2>
         <Form>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Name</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left' ,fontWeight: 'lighter'}}>Name</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="name" placeholder="Enter username"
@@ -60,54 +60,54 @@ export default function ConsultantRegister(props) {
           </Form.Group>
           {/* <br /> */}
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Email address</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left' ,fontWeight: 'lighter'}}>Email address</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="email" placeholder="Enter email" />
-            <Form.Text className="text" style={{ color: 'lightgray' }}>
+            <Form.Text className="text" style={{ color: '#121212' }}>
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Password</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left' ,fontWeight: 'lighter'}}>Password</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #63d471",
+                border: "2px solid darkgray",
                 color: "#63d471"
               }}
               type="password" placeholder="Password" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Contact</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left' ,fontWeight: 'lighter'}}>Contact</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="name" placeholder="+92 300 1234567" />
           </Form.Group>
           <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label style={{ color: 'white', float: 'left' }} >Upload you Professional/Doctor Certificate</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left',textAlign:'left',marginTop:5 ,fontWeight: 'lighter'}} >Upload you Professional/Doctor Certificate</Form.Label>
             <Form.Control  style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
                 paddingBottom:35
               }} type="file" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: 'white', float: 'left' }}>Gender</Form.Label>
+            <Form.Label style={{ color: '#121212', float: 'left',fontWeight: 'lighter' }}>Gender</Form.Label>
             <Form.Control
               style={{
                 backgroundColor: "transparent",
-                border: "2px solid #233329",
+                border: "2px solid darkgray",
                 color: "#63d471",
               }}
               type="name" placeholder="Male/Female" />

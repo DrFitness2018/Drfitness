@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io';
 export const SidebarData = [
   {
     title: 'Profile',
-    path: '/',
+    path: '/conDash',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
@@ -40,6 +40,8 @@ export const SidebarData = [
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
+
+  
   // {
   //   title: 'Recent Activity',
   //   path: '/RecentAct',

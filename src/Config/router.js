@@ -1,13 +1,18 @@
 import React from 'react'
 import { UserLogin, UserReg, Select, Header, ConLogin, ConReg, Splash, UserDash,Usertabs, ConDash, BMJS } from '../Components'
 import Profile from "../Components/Consultant/Home";
+import Consult from "../Components/User/Consult";
+import HomePage from "../Components/HomePage/HomePage";
 import Gainpage2 from "../Components/User/Exercises/Gainpage2Week&Days"
+// import HomePage from "../Components/HomePage/HomePage"
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    withRouter
+    withRouter,
+    
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -19,7 +24,8 @@ export default class AppRouter extends React.Component {
                 <Router>
                     <Switch>
                         <Route exact path='/'>
-                            <Splash />
+                            {/* <Splash/> */}
+                        <HomePage/>
                         </Route>
                         <Route path='/select'>
                             <Select />
@@ -41,6 +47,9 @@ export default class AppRouter extends React.Component {
                         </Route>
                         <Route path='/usertabs'>
                             <Usertabs/>
+                        </Route>
+                        <Route path='/consult'>
+                            <Consult/>
                         </Route>
                         <Route path='/conDash'>
                             <ConDash />
